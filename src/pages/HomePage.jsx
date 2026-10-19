@@ -5,24 +5,19 @@ export default function HomePage() {
   return (
     <main id="main-content">
       
-      {/* Hero Section */}
-      <section className="hero-section" aria-label="Hero Introduction">
-        <div className="container hero-container">
+      {/* Hero Section (Full-Bleed Matching Template Screenshot) */}
+      <section className="hero-section" aria-labelledby="hero-title">
+        <div className="container">
           <div className="hero-content">
-            
-            <div className="hero-badge">
-              <span className="hero-badge-dot" aria-hidden="true"></span>
-              <span className="hero-badge-text">CYBER SECURITY DIVISION</span>
-            </div>
-
-            <h1 className="hero-title">
-              Fortifying Modern Business with <span className="hero-title-highlight">Intelligent Cybersecurity</span>
+            <span className="hero-eyebrow">CYBERSECURITY FOR A SAFER TOMORROW</span>
+            <h1 id="hero-title">
+              Secure Your Digital<br />
+              Future with Intelligent<br />
+              <span className="cyan-text">Cybersecurity</span>
             </h1>
-
-            <p className="hero-subtitle">
-              Comprehensive vulnerability assessment, threat intelligence, and tailored defense strategies to secure your digital infrastructure against advanced threats.
+            <p className="hero-paragraph">
+              We help businesses protect their digital assets, infrastructure and data from evolving cyber threats with advanced security solutions and expert guidance.
             </p>
-
             <div className="hero-ctas">
               <Link to="/services" className="btn-pill btn-pill-primary">
                 <span>Explore Services</span>
@@ -31,171 +26,405 @@ export default function HomePage() {
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </Link>
-              <Link to="/contact" className="btn-pill btn-pill-secondary">
-                <span>Contact Us</span>
+              <Link to="/about" className="btn-pill btn-pill-secondary">
+                <span>About Infronixx</span>
               </Link>
             </div>
 
-            <div className="hero-micro-features" aria-label="Key security highlights">
-              <div className="micro-feature">
-                <span className="micro-feature-check" aria-hidden="true">&#10003;</span>
-                <span className="micro-feature-text">Proactive Defense</span>
+            {/* Micro Features Row */}
+            <div className="hero-micro-features">
+              <div className="micro-feature-item">
+                <div className="micro-feature-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <div className="micro-feature-text">
+                  <strong>Proactive Protection</strong>
+                  <span>Stop threats before they strike.</span>
+                </div>
               </div>
-              <div className="micro-feature">
-                <span className="micro-feature-check" aria-hidden="true">&#10003;</span>
-                <span className="micro-feature-text">Cloud &amp; Network Security</span>
+
+              <div className="micro-feature-item">
+                <div className="micro-feature-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="m14 10-4 4"></path>
+                    <path d="M10 10l4 4"></path>
+                    <circle cx="12" cy="12" r="6"></circle>
+                  </svg>
+                </div>
+                <div className="micro-feature-text">
+                  <strong>Risk-Focused Security</strong>
+                  <span>Identify. Assess. Mitigate.</span>
+                </div>
               </div>
-              <div className="micro-feature">
-                <span className="micro-feature-check" aria-hidden="true">&#10003;</span>
-                <span className="micro-feature-text">Compliance Advisory</span>
+
+              <div className="micro-feature-item">
+                <div className="micro-feature-icon-circle" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <rect x="9" y="11" width="6" height="5" rx="1"></rect>
+                    <path d="M10 11V9.5a2 2 0 0 1 4 0V11"></path>
+                  </svg>
+                </div>
+                <div className="micro-feature-text">
+                  <strong>Business-Ready Compliance</strong>
+                  <span>Stay secure. Stay compliant.</span>
+                </div>
               </div>
             </div>
 
-          </div>
-        </div>
-
-        {/* Stats Strip with Glowing Accent Bar */}
-        <div className="stats-strip">
-          <div className="container stats-flex-container">
-            <div className="stats-intro-col">
-              <span className="stats-intro-eyebrow">OUR STRENGTH IN NUMBERS</span>
-              <h2 className="stats-intro-title">Securing Enterprise Ecosystems Across India</h2>
-            </div>
-
-            <div className="stats-items-row">
-              <div className="stat-card">
-                <div className="stat-value">99.8%</div>
-                <div className="stat-label">Threat Neutralization</div>
-                <div className="stat-sub">Enterprise protection rate across managed endpoints</div>
-              </div>
-
-              <div className="stat-card">
-                <div className="stat-value">24/7</div>
-                <div className="stat-label">Continuous Monitoring</div>
-                <div className="stat-sub">Real-time alerts, proactive scanning &amp; rapid response</div>
-              </div>
-
-              <div className="stat-card">
-                <div className="stat-value">100%</div>
-                <div className="stat-label">Compliance Focus</div>
-                <div className="stat-sub">DPDP, ISO 27001 &amp; CERT-In aligned security frameworks</div>
-              </div>
+            {/* Mobile-only visual fallback */}
+            <div className="hero-visual-mobile">
+              <img
+                src="/assets/images/hero-globe-shield.png"
+                alt="Intelligent Cybersecurity Defense Shield"
+                className="hero-visual-mobile-img"
+                width="500"
+                height="397"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Glowing Divider Line */}
+      <div className="hero-stats-divider"></div>
+
+      {/* Stats Strip: "Trusted Security. Real Impact." */}
+      <section className="stats-strip" aria-labelledby="stats-title">
+        <div className="container stats-grid">
+          <div className="stats-intro">
+            <div className="stats-intro-eyebrow">OUR STRENGTH IN NUMBERS</div>
+            <h2 id="stats-title" className="stats-intro-title">
+              Trusted Security.<br />
+              Real Impact.
+            </h2>
+            <p className="stats-intro-text">
+              Built on expertise, powered by technology,<br />
+              focused on your success.
+            </p>
+          </div>
+
+          <div className="stats-items-row">
+            {/* Stat 1 */}
+            <div className="stat-col">
+              <div className="stat-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div className="stat-number">360°</div>
+              <div className="stat-label">Threat Protection</div>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="stat-col">
+              <div className="stat-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">Monitoring &amp; Response</div>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="stat-col">
+              <div className="stat-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="5" r="2.5"></circle>
+                  <circle cx="6" cy="18" r="2.5"></circle>
+                  <circle cx="18" cy="18" r="2.5"></circle>
+                  <line x1="12" y1="7.5" x2="6" y2="15.5"></line>
+                  <line x1="12" y1="7.5" x2="18" y2="15.5"></line>
+                  <line x1="8.5" y1="18" x2="15.5" y2="18"></line>
+                </svg>
+              </div>
+              <div className="stat-number">99.9%</div>
+              <div className="stat-label">System Uptime</div>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="stat-col">
+              <div className="stat-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <rect x="9" y="11" width="6" height="5" rx="1"></rect>
+                  <path d="M10 11V9.5a2 2 0 0 1 4 0V11"></path>
+                </svg>
+              </div>
+              <div className="stat-number">100%</div>
+              <div className="stat-label">Data Protection Focus</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section: 9 Horizontal Cards in 3x3 Grid */}
       <section className="section" aria-labelledby="services-title">
         <div className="container">
           
-          <div className="section-header-split">
-            <div>
-              <span className="section-eyebrow">SERVICES</span>
+          {/* Section Header with View All Link */}
+          <div className="section-heading-bar">
+            <div className="section-heading-left">
+              <span className="section-eyebrow">OUR SERVICES</span>
               <h2 id="services-title">Comprehensive Cybersecurity Services</h2>
+              <p>
+                End-to-end security solutions to protect your business, data and digital operations from modern cyber threats.
+              </p>
             </div>
             <Link to="/services" className="section-view-all">
               <span>View All Services</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </Link>
           </div>
 
+          {/* 3x3 Grid of Horizontal Cards */}
           <div className="services-horizontal-grid">
+            
+            {/* Card 1: Endpoint Security */}
             <Link to="/services#endpoint-security" className="service-card-h">
-              <div className="service-card-h-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="18" height="12" x="3" y="4" rx="2"></rect><line x1="2" x2="22" y1="20" y2="20"></line></svg>
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
               </div>
-              <div className="service-card-h-body">
-                <h3>Endpoint Security</h3>
-                <p>Advanced protection for workstations, servers, and mobile devices against zero-day threats.</p>
+              <div className="service-card-text">
+                <div className="service-card-title">Endpoint Security</div>
+                <p className="service-card-desc">Protect your devices and endpoints from modern threats.</p>
               </div>
-              <div className="service-card-h-arrow" aria-hidden="true">&rarr;</div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </Link>
 
+            {/* Card 2: Network Security */}
             <Link to="/services#network-security" className="service-card-h">
-              <div className="service-card-h-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"></rect><rect width="6" height="6" x="9" y="9" rx="1"></rect></svg>
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="16" y="16" width="6" height="6" rx="1"></rect>
+                  <rect x="2" y="16" width="6" height="6" rx="1"></rect>
+                  <rect x="9" y="2" width="6" height="6" rx="1"></rect>
+                  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
+                  <path d="M12 12V8"></path>
+                </svg>
               </div>
-              <div className="service-card-h-body">
-                <h3>Network Security</h3>
-                <p>Next-gen firewalls, intrusion detection, and micro-segmentation to guard perimeter defenses.</p>
+              <div className="service-card-text">
+                <div className="service-card-title">Network Security</div>
+                <p className="service-card-desc">Secure your network infrastructure and prevent unauthorized access.</p>
               </div>
-              <div className="service-card-h-arrow" aria-hidden="true">&rarr;</div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </Link>
 
+            {/* Card 3: Cloud Security */}
             <Link to="/services#cloud-security" className="service-card-h">
-              <div className="service-card-h-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path></svg>
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
               </div>
-              <div className="service-card-h-body">
-                <h3>Cloud Security</h3>
-                <p>Safeguarding hybrid and multi-cloud architectures with posture management and IAM governance.</p>
+              <div className="service-card-text">
+                <div className="service-card-title">Cloud Security</div>
+                <p className="service-card-desc">Keep your cloud environment safe and compliant.</p>
               </div>
-              <div className="service-card-h-arrow" aria-hidden="true">&rarr;</div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </Link>
 
+            {/* Card 4: Data Protection */}
             <Link to="/services#data-protection" className="service-card-h">
-              <div className="service-card-h-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                </svg>
               </div>
-              <div className="service-card-h-body">
-                <h3>Data Protection</h3>
-                <p>End-to-end data encryption, loss prevention (DLP), and privacy management solutions.</p>
+              <div className="service-card-text">
+                <div className="service-card-title">Data Protection</div>
+                <p className="service-card-desc">Safeguard your data with advanced encryption and backup solutions.</p>
               </div>
-              <div className="service-card-h-arrow" aria-hidden="true">&rarr;</div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </Link>
 
+            {/* Card 5: User & Email Security */}
             <Link to="/services#user-email-security" className="service-card-h">
-              <div className="service-card-h-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
               </div>
-              <div className="service-card-h-body">
-                <h3>User &amp; Email Security</h3>
-                <p>Anti-phishing, credential protection, and security awareness training for workforce defense.</p>
+              <div className="service-card-text">
+                <div className="service-card-title">User &amp; Email Security</div>
+                <p className="service-card-desc">Defend against phishing, spam and email-borne threats.</p>
               </div>
-              <div className="service-card-h-arrow" aria-hidden="true">&rarr;</div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </Link>
 
+            {/* Card 6: Application Security */}
             <Link to="/services#application-security" className="service-card-h">
-              <div className="service-card-h-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
               </div>
-              <div className="service-card-h-body">
-                <h3>Application Security</h3>
-                <p>Securing source code, CI/CD pipelines, and web applications through dynamic &amp; static analysis.</p>
+              <div className="service-card-text">
+                <div className="service-card-title">Application Security</div>
+                <p className="service-card-desc">Secure your applications from vulnerabilities and attacks.</p>
               </div>
-              <div className="service-card-h-arrow" aria-hidden="true">&rarr;</div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </Link>
 
+            {/* Card 7: VAPT */}
             <Link to="/services#vapt" className="service-card-h">
-              <div className="service-card-h-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="22" x2="18" y1="12" y2="12"></line><line x1="6" x2="2" y1="12" y2="12"></line><line x1="12" x2="12" y1="6" y2="2"></line><line x1="12" x2="12" y1="22" y2="18"></line></svg>
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
               </div>
-              <div className="service-card-h-body">
-                <h3>VAPT Assessments</h3>
-                <p>Rigorous vulnerability scanning and simulated adversary attacks to expose critical gaps.</p>
+              <div className="service-card-text">
+                <div className="service-card-title">VAPT</div>
+                <p className="service-card-desc">Identify and fix security gaps before attackers find them.</p>
               </div>
-              <div className="service-card-h-arrow" aria-hidden="true">&rarr;</div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </Link>
 
+            {/* Card 8: Threat Detection & Incident Response */}
             <Link to="/services#threat-detection" className="service-card-h">
-              <div className="service-card-h-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="22" y1="12" x2="18" y2="12"></line>
+                  <line x1="6" y1="12" x2="2" y2="12"></line>
+                  <line x1="12" y1="6" x2="12" y2="2"></line>
+                  <line x1="12" y1="22" x2="12" y2="18"></line>
+                </svg>
               </div>
-              <div className="service-card-h-body">
-                <h3>Threat Detection &amp; IR</h3>
-                <p>Rapid containment, digital forensics, and proactive hunting to minimize impact of breaches.</p>
+              <div className="service-card-text">
+                <div className="service-card-title">Threat Detection &amp; Incident Response</div>
+                <p className="service-card-desc">Detect, respond and neutralize threats in real time.</p>
               </div>
-              <div className="service-card-h-arrow" aria-hidden="true">&rarr;</div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </Link>
+
+            {/* Card 9: Security Compliance Consulting */}
+            <Link to="/services#security-compliance" className="service-card-h">
+              <div className="service-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                </svg>
+              </div>
+              <div className="service-card-text">
+                <div className="service-card-title">Security Compliance Consulting</div>
+                <p className="service-card-desc">Meet industry standards and stay audit-ready.</p>
+              </div>
+              <div className="service-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+      {/* About Us Section ("Your Trusted Cybersecurity Partner") */}
+      <section className="section section-alt" aria-labelledby="partner-title">
+        <div className="container partner-grid">
+          
+          {/* Left: SOC Analyst Visual with Stencil Overlay */}
+          <div className="about-soc-card">
+            <img
+              src="/assets/images/about-soc-analyst.png"
+              alt="Cyber Security Operations Center Analyst monitoring global telemetry"
+              width="675"
+              height="300"
+              loading="lazy"
+            />
+            <div className="about-stencil-text" aria-hidden="true">
+              <span>SECURE</span>
+              <span>ANALYZE</span>
+              <span>DEFEND</span>
+            </div>
+          </div>
+
+          {/* Right: Text Content & Learn More CTA */}
+          <div className="partner-content">
+            <span className="section-eyebrow">ABOUT US</span>
+            <h2 id="partner-title">Your Trusted Cybersecurity Partner</h2>
+            <p>
+              At Infronixx Technologies, we are committed to delivering intelligent and reliable cybersecurity solutions. Our mission is to help businesses stay ahead of evolving threats with proactive protection, expert guidance and industry best practices.
+            </p>
+            <Link to="/about" className="btn-pill btn-pill-primary">
+              <span>Learn More</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </Link>
           </div>
 
         </div>
       </section>
 
-      {/* DPDP Compliance Banner Section */}
+      {/* DPDP Compliance Section (Full-Bleed Banner Matching Reference) */}
       <section className="dpdp-banner-section" aria-labelledby="dpdp-title">
         <div className="container dpdp-grid">
+          
+          {/* Left Content */}
           <div className="dpdp-content">
             <span className="dpdp-eyebrow">DPDP COMPLIANCE</span>
             <h2 id="dpdp-title">
@@ -218,116 +447,141 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* Right Visual: Glowing Shield + India Map + Trust Tags */}
           <div className="dpdp-visual-wrap">
-            <img 
-              src="/assets/images/dpdp-india-shield.png" 
-              alt="India DPDP Act Compliance Framework with Glowing Data Shield and India Map" 
-              className="dpdp-visual-img" 
-              width="954" 
-              height="256" 
-              loading="lazy" 
+            <img
+              src="/assets/images/dpdp-india-shield.png"
+              alt="India DPDP Act Compliance Framework with Glowing Data Shield and India Map"
+              className="dpdp-visual-img"
+              width="954"
+              height="256"
+              loading="lazy"
             />
           </div>
+
         </div>
       </section>
 
-      {/* Process Section */}
+      {/* Process Section: "A Strategic Approach to Stronger Security" */}
       <section className="section section-alt" aria-labelledby="process-title">
         <div className="container">
-          <div className="section-header-split" style={{ marginBottom: '28px' }}>
-            <div>
+          
+          <div className="section-heading-bar">
+            <div className="section-heading-left">
               <span className="section-eyebrow">OUR PROCESS</span>
-              <h2 id="process-title" style={{ fontSize: 'clamp(1.5rem, 2.3vw, 1.95rem)', marginBottom: '6px' }}>
-                A Strategic Approach to Stronger Security
-              </h2>
-              <p style={{ color: '#8E9EB5', fontSize: '0.9rem', margin: 0 }}>
+              <h2 id="process-title">A Strategic Approach to Stronger Security</h2>
+              <p>
                 We follow a proven, structured process to deliver effective and sustainable cybersecurity solutions.
               </p>
             </div>
-            <Link to="/about" className="section-view-all" style={{ alignSelf: 'flex-start' }}>
+            <Link to="/about#approach-title" className="section-view-all">
               <span>How We Work</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </Link>
           </div>
 
+          {/* 4 Process Cards Row */}
           <div className="process-horizontal-grid">
+            
+            {/* Step 01 */}
             <div className="process-card-h">
-              <div className="process-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              <div className="process-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
               </div>
-              <div className="process-card-icon-wrap">
-                <div className="process-step-badge">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                </div>
-              </div>
-              <div className="process-card-content">
-                <div className="process-card-title-row">
+              <div className="process-card-text">
+                <div className="process-card-header">
                   <span className="process-step-num">01</span>
                   <span className="process-step-name">Assess</span>
                 </div>
                 <p className="process-card-desc">Understand your environment, risks and requirements.</p>
               </div>
+              <div className="process-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </div>
 
+            {/* Step 02 */}
             <div className="process-card-h">
-              <div className="process-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              <div className="process-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
               </div>
-              <div className="process-card-icon-wrap">
-                <div className="process-step-badge">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
-                </div>
-              </div>
-              <div className="process-card-content">
-                <div className="process-card-title-row">
+              <div className="process-card-text">
+                <div className="process-card-header">
                   <span className="process-step-num">02</span>
                   <span className="process-step-name">Plan</span>
                 </div>
                 <p className="process-card-desc">Build a tailored security strategy for your business.</p>
               </div>
+              <div className="process-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </div>
 
+            {/* Step 03 */}
             <div className="process-card-h">
-              <div className="process-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              <div className="process-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
               </div>
-              <div className="process-card-icon-wrap">
-                <div className="process-step-badge">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                </div>
-              </div>
-              <div className="process-card-content">
-                <div className="process-card-title-row">
+              <div className="process-card-text">
+                <div className="process-card-header">
                   <span className="process-step-num">03</span>
                   <span className="process-step-name">Secure</span>
                 </div>
                 <p className="process-card-desc">Implement robust security controls and solutions.</p>
               </div>
+              <div className="process-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </div>
 
+            {/* Step 04 */}
             <div className="process-card-h">
-              <div className="process-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              <div className="process-card-icon-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </div>
-              <div className="process-card-icon-wrap">
-                <div className="process-step-badge">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                </div>
-              </div>
-              <div className="process-card-content">
-                <div className="process-card-title-row">
+              <div className="process-card-text">
+                <div className="process-card-header">
                   <span className="process-step-num">04</span>
                   <span className="process-step-name">Monitor</span>
                 </div>
                 <p className="process-card-desc">Detect, respond and ensure long-term protection.</p>
               </div>
+              <div className="process-card-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </section>
 
-      {/* Closing CTA Banner (Full-Width Cinematic Horizon) */}
+      {/* Closing CTA Banner: Full-Width Cinematic Horizon */}
       <section className="cta-cinematic-section" aria-labelledby="cta-title">
         <div className="container">
           <div className="cta-cinematic-content">
@@ -353,4 +607,3 @@ export default function HomePage() {
     </main>
   );
 }
-

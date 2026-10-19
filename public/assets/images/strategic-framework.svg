@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="stratBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071C33"/>
+      <stop offset="100%" stop-color="#020B19"/>
+    </linearGradient>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00BFFF"/>
+      <stop offset="50%" stop-color="#087DFF"/>
+      <stop offset="100%" stop-color="#00E5FF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="380" rx="14" fill="url(#stratBg)" stroke="rgba(0, 191, 255, 0.2)" stroke-width="1.5"/>
+
+  <!-- Section Title Inside SVG -->
+  <text x="300" y="45" font-family="'Inter', sans-serif" font-size="13" font-weight="700" fill="#00BFFF" text-anchor="middle" letter-spacing="1.5">CONTINUOUS CYBERSECURITY LIFECYCLE</text>
+
+  <!-- Connecting Highway Line -->
+  <path d="M 90 160 H 510" stroke="url(#flowGrad)" stroke-width="3" stroke-dasharray="6 4"/>
+
+  <!-- Step 1: Assess -->
+  <g transform="translate(45, 110)">
+    <circle cx="45" cy="50" r="34" fill="#06162B" stroke="#00BFFF" stroke-width="2"/>
+    <text x="45" y="44" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#00BFFF" text-anchor="middle">01</text>
+    <text x="45" y="60" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#A8B8CC" text-anchor="middle">ASSESS</text>
+    <text x="45" y="110" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#F5F8FC" text-anchor="middle">Environment Scan</text>
+    <text x="45" y="128" font-family="'Inter', sans-serif" font-size="9.5" fill="#A8B8CC" text-anchor="middle">Identify vulnerabilities</text>
+    <text x="45" y="142" font-family="'Inter', sans-serif" font-size="9.5" fill="#A8B8CC" text-anchor="middle">&amp; asset exposures</text>
+  </g>
+
+  <!-- Step 2: Plan -->
+  <g transform="translate(185, 110)">
+    <circle cx="45" cy="50" r="34" fill="#06162B" stroke="#087DFF" stroke-width="2"/>
+    <text x="45" y="44" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#087DFF" text-anchor="middle">02</text>
+    <text x="45" y="60" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#A8B8CC" text-anchor="middle">PLAN</text>
+    <text x="45" y="110" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#F5F8FC" text-anchor="middle">Security Strategy</text>
+    <text x="45" y="128" font-family="'Inter', sans-serif" font-size="9.5" fill="#A8B8CC" text-anchor="middle">Prioritize risk mitigation</text>
+    <text x="45" y="142" font-family="'Inter', sans-serif" font-size="9.5" fill="#A8B8CC" text-anchor="middle">&amp; governance roadmap</text>
+  </g>
+
+  <!-- Step 3: Secure -->
+  <g transform="translate(325, 110)">
+    <circle cx="45" cy="50" r="34" fill="#06162B" stroke="#00BFFF" stroke-width="2"/>
+    <text x="45" y="44" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#00BFFF" text-anchor="middle">03</text>
+    <text x="45" y="60" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#A8B8CC" text-anchor="middle">SECURE</text>
+    <text x="45" y="110" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#F5F8FC" text-anchor="middle">Control Deployment</text>
+    <text x="45" y="128" font-family="'Inter', sans-serif" font-size="9.5" fill="#A8B8CC" text-anchor="middle">Hardened perimeters,</text>
+    <text x="45" y="142" font-family="'Inter', sans-serif" font-size="9.5" fill="#A8B8CC" text-anchor="middle">endpoint &amp; cloud guards</text>
+  </g>
+
+  <!-- Step 4: Monitor -->
+  <g transform="translate(465, 110)">
+    <circle cx="45" cy="50" r="34" fill="#06162B" stroke="#087DFF" stroke-width="2"/>
+    <text x="45" y="44" font-family="'Inter', sans-serif" font-size="16" font-weight="800" fill="#087DFF" text-anchor="middle">04</text>
+    <text x="45" y="60" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#A8B8CC" text-anchor="middle">MONITOR</text>
+    <text x="45" y="110" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#F5F8FC" text-anchor="middle">Ongoing Review</text>
+    <text x="45" y="128" font-family="'Inter', sans-serif" font-size="9.5" fill="#A8B8CC" text-anchor="middle">Threat detection, audit</text>
+    <text x="45" y="142" font-family="'Inter', sans-serif" font-size="9.5" fill="#A8B8CC" text-anchor="middle">&amp; posture refinement</text>
+  </g>
+
+  <!-- Return Loop Line -->
+  <path d="M 510 195 C 540 280, 60 280, 90 195" stroke="rgba(0, 191, 255, 0.25)" stroke-width="1.5" stroke-dasharray="4 4" fill="none"/>
+  <text x="300" y="325" font-family="'Inter', sans-serif" font-size="10.5" fill="#00BFFF" font-weight="600" text-anchor="middle">ITERATIVE ADAPTIVE RESILIENCE CYCLE</text>
+</svg>
+

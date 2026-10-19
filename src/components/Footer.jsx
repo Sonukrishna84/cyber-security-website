@@ -11,15 +11,15 @@ export default function Footer() {
           
           {/* Column 1: Brand */}
           <div className="footer-col">
-            <Link to="/" className="brand-link" aria-label="INFRONIXX Technologies Home">
+            <Link to="/" className="brand-link" aria-label="Infronix Technologies & Solutions LLP Home">
               <img 
                 src="/assets/images/logo-horizontal.png" 
-                alt="INFRONIXX Technologies" 
+                alt="Infronix Technologies & Solutions LLP" 
                 style={{ height: '36px', width: 'auto', marginBottom: '12px' }} 
               />
             </Link>
             <p className="footer-desc">
-              We build intelligent cybersecurity solutions to protect what matters most — your business, your data and your future.
+              Infronix Technologies &amp; Solutions LLP delivers intelligent cybersecurity solutions to protect what matters most — your business, your data and your digital future.
             </p>
             <div className="social-links" aria-label="Official Social Media Profiles">
               <a href="https://linkedin.com" className="social-circle-btn" aria-label="LinkedIn profile" target="_blank" rel="noopener noreferrer">
@@ -34,8 +34,8 @@ export default function Footer() {
               <a href="https://youtube.com" className="social-circle-btn" aria-label="YouTube channel" target="_blank" rel="noopener noreferrer">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polygon points="10 8 16 12 10 16 10 8"></polygon><rect x="2" y="4" width="20" height="16" rx="4"></rect></svg>
               </a>
-              <a href="https://telegram.org" className="social-circle-btn" aria-label="Messaging channel" target="_blank" rel="noopener noreferrer">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              <a href="https://instagram.com" className="social-circle-btn" aria-label="Instagram profile" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
             </div>
           </div>
@@ -84,15 +84,15 @@ export default function Footer() {
             <ul className="footer-contact-list">
               <li className="footer-contact-item">
                 <svg className="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                <span>Cyber Security Division, Technology Park, India</span>
+                <span>Noida, Uttar Pradesh, India</span>
               </li>
               <li className="footer-contact-item">
                 <svg className="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                <a href="tel:+910000000000">+91 (0) 00000 00000</a>
+                <a href="tel:+919555373510">+91 95553 73510</a>
               </li>
               <li className="footer-contact-item">
                 <svg className="footer-contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
-                <a href="mailto:contact@infronixx.com">contact@infronixx.com</a>
+                <a href="mailto:info@infronixtech.in">info@infronixtech.in</a>
               </li>
             </ul>
           </div>
@@ -102,7 +102,7 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="footer-bottom">
           <div>
-            &copy; <span className="current-year">{currentYear}</span> Infronixx Technologies. All rights reserved.
+            &copy; <span className="current-year">{currentYear}</span> Infronix Technologies &amp; Solutions LLP. All rights reserved.
           </div>
           <div className="footer-bottom-links">
             <Link to="/about">Privacy Policy</Link>
@@ -114,4 +114,3 @@ export default function Footer() {
     </footer>
   );
 }
-

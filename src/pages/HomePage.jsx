@@ -27,7 +27,7 @@ export default function HomePage() {
                 </svg>
               </Link>
               <Link to="/about" className="btn-pill btn-pill-secondary">
-                <span>About Infronixx</span>
+                <span>About Infronix</span>
               </Link>
             </div>
 
@@ -406,7 +406,7 @@ export default function HomePage() {
             <span className="section-eyebrow">ABOUT US</span>
             <h2 id="partner-title">Your Trusted Cybersecurity Partner</h2>
             <p>
-              At Infronixx Technologies, we are committed to delivering intelligent and reliable cybersecurity solutions. Our mission is to help businesses stay ahead of evolving threats with proactive protection, expert guidance and industry best practices.
+              At Infronix Technologies &amp; Solutions LLP, we are committed to delivering intelligent and reliable cybersecurity solutions. Our mission is to help businesses stay ahead of evolving threats with proactive protection, expert guidance and industry best practices.
             </p>
             <Link to="/about" className="btn-pill btn-pill-primary">
               <span>Learn More</span>
@@ -589,7 +589,7 @@ export default function HomePage() {
               Build a Stronger <span className="cyan-text">Security Posture</span>
             </h2>
             <p>
-              Partner with Infronixx Technologies for intelligent, future-ready cybersecurity solutions.
+              Partner with Infronix Technologies &amp; Solutions LLP for intelligent, future-ready cybersecurity solutions.
             </p>
             <div className="cta-btn-wrap">
               <Link to="/services" className="btn-pill btn-pill-primary">

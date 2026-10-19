@@ -112,7 +112,7 @@ export default function DPDPPage() {
             </div>
             <h2 id="dpdp-support-title">Our DPDP Compliance Support</h2>
             <p>
-              INFRONIXX Technologies offers structured consulting and technical advisory services to help enterprises assess, implement, and validate data protection safeguards.
+              Infronix Technologies & Solutions LLP offers structured consulting and technical advisory services to help enterprises assess, implement, and validate data protection safeguards.
             </p>
           </div>
 
@@ -170,7 +170,7 @@ export default function DPDPPage() {
           <aside className="compliance-callout" role="note" aria-label="Legal Disclaimer">
             <div className="compliance-callout-title">Important Advisory Notice &amp; Scope Distinction</div>
             <p>
-              INFRONIXX Technologies provides technical, operational, and cybersecurity advisory services to assist organizations in strengthening their security safeguards and privacy readiness. Our services do not constitute formal legal advice, legal opinions, or statutory certifications. Regulatory obligations and legal responsibilities under the DPDP Act, 2023 should be reviewed in coordination with qualified legal counsel. INFRONIXX Technologies does not guarantee compliance or specific legal outcomes.
+              Infronix Technologies & Solutions LLP provides technical, operational, and cybersecurity advisory services to assist organizations in strengthening their security safeguards and privacy readiness. Our services do not constitute formal legal advice, legal opinions, or statutory certifications. Regulatory obligations and legal responsibilities under the DPDP Act, 2023 should be reviewed in coordination with qualified legal counsel. Infronix Technologies & Solutions LLP does not guarantee compliance or specific legal outcomes.
             </p>
           </aside>
         </div>
@@ -271,7 +271,7 @@ export default function DPDPPage() {
           <div className="cta-banner" style={{ marginTop: '64px' }}>
             <h2>Discuss Your DPDP Compliance Requirements</h2>
             <p>
-              Assess your organization's digital personal data footprint and implement practical security safeguards. Connect with INFRONIXX Technologies to begin your data protection assessment.
+              Assess your organization's digital personal data footprint and implement practical security safeguards. Connect with Infronix Technologies & Solutions LLP to begin your data protection assessment.
             </p>
             <div className="cta-buttons">
               <Link to="/contact" className="btn btn-primary">

@@ -19,10 +19,10 @@ export default function Navbar() {
     <>
       <header className={`site-header ${isScrolled ? 'is-scrolled' : ''}`} role="banner">
         <div className="container header-container">
-          <Link to="/" className="brand-link" aria-label="INFRONIXX Technologies Home" onClick={closeDrawer}>
+          <Link to="/" className="brand-link" aria-label="Infronix Technologies & Solutions LLP Home" onClick={closeDrawer}>
             <img 
               src="/assets/images/logo-horizontal.png" 
-              alt="INFRONIXX Technologies" 
+              alt="Infronix Technologies & Solutions LLP" 
               className="brand-logo-img" 
               width="180" 
               height="42" 
@@ -113,7 +113,7 @@ export default function Navbar() {
         aria-modal="true"
       >
         <div className="drawer-header">
-          <img src="/assets/images/logo-horizontal.png" alt="INFRONIXX Technologies" style={{ height: '34px', width: 'auto' }} />
+          <img src="/assets/images/logo-horizontal.png" alt="Infronix Technologies & Solutions LLP" style={{ height: '34px', width: 'auto' }} />
           <button 
             type="button" 
             className="drawer-close" 

@@ -17,11 +17,11 @@ export default function ContactPage() {
 
             <span className="hero-eyebrow">GET IN TOUCH</span>
             <h1 id="contact-hero-title">
-              Contact INFRONIXX<br />
-              <span className="cyan-text">Technologies</span>
+              Contact Infronix Technologies<br />
+              <span className="cyan-text">&amp; Solutions LLP</span>
             </h1>
             <p className="hero-paragraph">
-              Looking to strengthen your organization's cybersecurity? Contact INFRONIXX Technologies to discuss your security requirements and explore suitable cybersecurity and data protection services.
+              Looking to strengthen your organization's cybersecurity? Contact Infronix Technologies &amp; Solutions LLP to discuss your security requirements and explore suitable cybersecurity and data protection services.
             </p>
 
             {/* Micro Features Row */}
@@ -105,7 +105,7 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-info-content">
                   <strong>Business Email</strong>
-                  <a href="mailto:info@infronixx.com">info@infronixx.com</a>
+                  <a href="mailto:info@infronixtech.in">info@infronixtech.in</a>
                 </div>
               </div>
 
@@ -118,7 +118,7 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-info-content">
                   <strong>Phone Number</strong>
-                  <a href="tel:+919876543210">+91 98765 43210</a>
+                  <a href="tel:+919555373510">+91 95553 73510</a>
                 </div>
               </div>
 
@@ -148,7 +148,7 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-info-content">
                   <strong>Website</strong>
-                  <a href="https://www.infronixx.com" target="_blank" rel="noopener noreferrer">www.infronixx.com</a>
+                  <a href="https://www.infronixtech.in" target="_blank" rel="noopener noreferrer">www.infronixtech.in</a>
                 </div>
               </div>
             </div>

@@ -22,9 +22,9 @@ export default function AboutPage() {
             <span className="eyebrow-dot" aria-hidden="true"></span>
             <span>Corporate Security Profile</span>
           </div>
-          <h1>About <span className="text-gradient">INFRONIXX Technologies</span></h1>
+          <h1>About <span className="text-gradient">Infronix Technologies &amp; Solutions LLP</span></h1>
           <p style={{ fontSize: '1.2rem', color: 'var(--text-silver)', marginTop: '1.25rem' }}>
-            INFRONIXX Technologies focuses on helping businesses understand cybersecurity risks, strengthen digital infrastructure, and protect valuable information through practical security solutions.
+            Infronix Technologies &amp; Solutions LLP focuses on helping businesses understand cybersecurity risks, strengthen digital infrastructure, and protect valuable information through practical security solutions.
           </p>
         </div>
       </section>
@@ -39,7 +39,7 @@ export default function AboutPage() {
             </div>
             <h2 id="who-we-are-title">Who We Are</h2>
             <p>
-              INFRONIXX Technologies operates with a singular focus: assisting organizations in navigating the increasingly complex cyber threat landscape through rigorous technical analysis and principled defense practices.
+              Infronix Technologies &amp; Solutions LLP operates with a singular focus: assisting organizations in navigating the increasingly complex cyber threat landscape through rigorous technical analysis and principled defense practices.
             </p>
             <p>
               Our service philosophy is built on technical transparency, engineering rigor, and dependable operational execution. Rather than relying on generic software claims, we evaluate the distinct architectural realities of each client—examining network configurations, cloud environments, access policies, and data storage workflows to build realistic protection.
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <div className="split-visual">
             <img 
               src="/assets/images/hero-cyber-shield.svg" 
-              alt="INFRONIXX Defensive Engineering and Risk Philosophy" 
+              alt="Infronix Defensive Engineering and Risk Philosophy" 
               width="600" 
               height="450" 
               loading="lazy" 
@@ -184,7 +184,7 @@ export default function AboutPage() {
               <span className="eyebrow-dot" aria-hidden="true"></span>
               <span>Distinction</span>
             </div>
-            <h2 id="why-choose-title">Why Choose INFRONIXX Technologies?</h2>
+            <h2 id="why-choose-title">Why Choose Infronix Technologies &amp; Solutions LLP?</h2>
             <p>
               We focus on practical, defensible security outcomes that strengthen your operational resilience and safeguard client relationships.
             </p>

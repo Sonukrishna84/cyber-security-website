@@ -25,7 +25,7 @@ export default function ServicesPage() {
             </div>
             <h1>Comprehensive Cybersecurity Services for <span className="text-gradient">Your Business</span></h1>
             <p style={{ fontSize: '1.2rem', color: 'var(--text-silver)', marginTop: '1.25rem' }}>
-              Every organization faces different security challenges. INFRONIXX Technologies offers cybersecurity services designed to help businesses identify weaknesses, protect digital assets, strengthen infrastructure, and improve their security posture.
+              Every organization faces different security challenges. Infronix Technologies & Solutions LLP offers cybersecurity services designed to help businesses identify weaknesses, protect digital assets, strengthen infrastructure, and improve their security posture.
             </p>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function ServicesPage() {
                   Endpoints—including laptops, desktops, mobile devices, servers, and remote workstations—represent the most frequent entry point for modern cyber threats. As hybrid working models expand, endpoint environments require rigorous, layered security controls to prevent compromise.
                 </p>
                 <p>
-                  INFRONIXX Technologies helps organizations evaluate and deploy robust device protection strategies that reduce endpoint attack surfaces, enforce least-privilege configurations, and suppress unauthorized software execution.
+                  Infronix Technologies & Solutions LLP helps organizations evaluate and deploy robust device protection strategies that reduce endpoint attack surfaces, enforce least-privilege configurations, and suppress unauthorized software execution.
                 </p>
                 <div className="service-meta-box">
                   <div className="service-meta-title">Key Capabilities &amp; Use Cases</div>
@@ -121,7 +121,7 @@ export default function ServicesPage() {
                   As enterprises migrate workloads to cloud infrastructure (such as AWS, Azure, and Google Cloud), security responsibilities are shared between the provider and the client. The vast majority of cloud breaches stem from customer configuration errors and excessive IAM privileges.
                 </p>
                 <p>
-                  INFRONIXX Technologies provides rigorous cloud configuration assessments, access management reviews, and cloud data protection consulting to keep your multi-cloud environments resilient.
+                  Infronix Technologies & Solutions LLP provides rigorous cloud configuration assessments, access management reviews, and cloud data protection consulting to keep your multi-cloud environments resilient.
                 </p>
                 <div className="service-meta-box">
                   <div className="service-meta-title">Key Capabilities &amp; Use Cases</div>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                   Phishing emails, credential theft, and social engineering remain the primary catalysts for corporate security incidents. Protecting the human layer requires technical email safeguards combined with strict identity authentication.
                 </p>
                 <p>
-                  INFRONIXX Technologies helps businesses configure enterprise email authentication protocols, enforce phishing-resistant multi-factor authentication, and instill practical security awareness among staff.
+                  Infronix Technologies & Solutions LLP helps businesses configure enterprise email authentication protocols, enforce phishing-resistant multi-factor authentication, and instill practical security awareness among staff.
                 </p>
                 <div className="service-meta-box">
                   <div className="service-meta-title">Key Capabilities &amp; Use Cases</div>
@@ -273,7 +273,7 @@ export default function ServicesPage() {
                   VAPT provides an empirical, objective evaluation of your cybersecurity defenses. Rather than assuming controls are working, authorized simulated attacks reveal exactly where perimeter defenses can be breached and data extracted.
                 </p>
                 <p>
-                  INFRONIXX Technologies performs controlled, ethical penetration testing across external networks, internal infrastructure, web applications, and wireless environments, providing documented evidence and prioritized remediation roadmaps.
+                  Infronix Technologies & Solutions LLP performs controlled, ethical penetration testing across external networks, internal infrastructure, web applications, and wireless environments, providing documented evidence and prioritized remediation roadmaps.
                 </p>
                 <div className="service-meta-box">
                   <div className="service-meta-title">Key Capabilities &amp; Use Cases</div>
@@ -347,7 +347,7 @@ export default function ServicesPage() {
                   Enterprises are subject to expanding compliance frameworks, vendor risk assessments, and data protection legislation. Demonstrating verifiable security controls is increasingly required to secure enterprise contracts and satisfy regulatory bodies.
                 </p>
                 <p>
-                  INFRONIXX Technologies conducts compliance gap analyses, reviews information security policies, and provides documentation support to align your technical controls with required standards.
+                  Infronix Technologies & Solutions LLP conducts compliance gap analyses, reviews information security policies, and provides documentation support to align your technical controls with required standards.
                 </p>
                 <div className="service-meta-box">
                   <div className="service-meta-title">Key Capabilities &amp; Use Cases</div>

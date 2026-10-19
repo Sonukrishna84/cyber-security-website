@@ -102,7 +102,16 @@ export default function Footer() {
         {/* Footer Bottom Bar */}
         <div className="footer-bottom">
           <div>
-            &copy; <span className="current-year">{currentYear}</span> Infronix Technologies &amp; Solutions LLP. All rights reserved.
+            &copy; <span className="current-year">{currentYear}</span>{' '}
+            <a 
+              href="https://rudrensolutions.online/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="footer-copyright-link"
+            >
+              Rudren Solutions
+            </a>
+            . All rights reserved.
           </div>
           <div className="footer-bottom-links">
             <Link to="/about">Privacy Policy</Link>

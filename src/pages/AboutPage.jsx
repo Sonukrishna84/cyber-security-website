@@ -19,15 +19,6 @@ export default function AboutPage() {
         </div>
 
         <div className="container about-hero-container">
-          {/* Breadcrumbs Navigation */}
-          <nav className="breadcrumbs about-breadcrumbs" aria-label="Breadcrumb">
-            <ol className="breadcrumb-list">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-separator" aria-hidden="true">&rsaquo;</li>
-              <li className="breadcrumb-item active" aria-current="page">About Us</li>
-            </ol>
-          </nav>
-
           <div className="about-hero-row">
             {/* Left Column: Text Content */}
             <div className="about-hero-content">

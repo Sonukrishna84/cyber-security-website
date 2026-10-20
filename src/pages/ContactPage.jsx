@@ -5,24 +5,14 @@ export default function ContactPage() {
   return (
     <main id="main-content">
       {/* Contact Hero Section */}
-      <section className="hero-section contact-hero-section" aria-labelledby="contact-hero-title">
-        <div className="container contact-hero-container">
-          {/* Breadcrumbs in Hero - At Top Under Navbar */}
-          <nav className="breadcrumbs contact-breadcrumbs" aria-label="Breadcrumb">
-            <ol className="breadcrumb-list">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-separator" aria-hidden="true">&rsaquo;</li>
-              <li className="breadcrumb-item active" aria-current="page">Contact Us</li>
-            </ol>
-          </nav>
-
-          <div className="hero-grid">
-            <div className="hero-content">
-              <span className="hero-eyebrow">GET IN TOUCH</span>
-              <h1 id="contact-hero-title">
-                Contact Infronix Technologies<br />
-                <span className="cyan-text">&amp; Solutions LLP</span>
-              </h1>
+      <section className="hero-section" aria-labelledby="contact-hero-title">
+        <div className="container hero-grid">
+          <div className="hero-content">
+            <span className="hero-eyebrow">GET IN TOUCH</span>
+            <h1 id="contact-hero-title">
+              Contact Infronix Technologies<br />
+              <span className="cyan-text">&amp; Solutions LLP</span>
+            </h1>
             <p className="hero-paragraph">
               Looking to strengthen your organization's cybersecurity? Contact Infronix Technologies &amp; Solutions LLP to discuss your security requirements and explore suitable cybersecurity and data protection services.
             </p>
@@ -80,8 +70,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
       {/* Glowing Divider Line */}
       <div className="hero-stats-divider"></div>

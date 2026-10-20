@@ -19,15 +19,6 @@ export default function ServicesPage() {
         </div>
 
         <div className="container services-hero-container">
-          {/* Breadcrumbs Navigation */}
-          <nav className="breadcrumbs services-breadcrumbs" aria-label="Breadcrumb">
-            <ol className="breadcrumb-list">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-separator" aria-hidden="true">&rsaquo;</li>
-              <li className="breadcrumb-item active" aria-current="page">Services</li>
-            </ol>
-          </nav>
-
           <div className="services-hero-row">
             {/* Left Column: Text & Features */}
             <div className="services-hero-content">

@@ -19,15 +19,6 @@ export default function DPDPPage() {
         </div>
 
         <div className="container dpdp-hero-container">
-          {/* Breadcrumbs Navigation Inside Hero */}
-          <nav className="breadcrumbs dpdp-hero-breadcrumbs" aria-label="Breadcrumb">
-            <ol className="breadcrumb-list">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-separator" aria-hidden="true">&rsaquo;</li>
-              <li className="breadcrumb-item active" aria-current="page">DPDP Compliance</li>
-            </ol>
-          </nav>
-
           <div className="dpdp-hero-main-row">
             {/* Left Column: Text & Actions */}
           <div className="dpdp-hero-content">

@@ -3942,3 +3942,595 @@ nav.breadcrumbs {
     gap: 24px;
   }
 }
+
+/* ==========================================================================
+   ABOUT US PAGE (EXACT MATCH TO REFERENCE MOCKUP)
+   ========================================================================== */
+
+/* --- Page Wrapper --- */
+.about-page {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* --- Section 1: Hero --- */
+.about-hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+  background-color: var(--bg-secondary);
+  background-image: 
+    radial-gradient(circle at 75% 50%, rgba(0, 191, 255, 0.22) 0%, rgba(8, 125, 255, 0.10) 45%, transparent 75%),
+    radial-gradient(circle at 15% 30%, rgba(0, 191, 255, 0.12) 0%, transparent 45%),
+    linear-gradient(rgba(0, 191, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 191, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.about-hero-bg-img {
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: 98%;
+  min-width: 1050px;
+  display: block;
+  opacity: 1 !important;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 25%, black 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 25%, black 100%);
+}
+
+.about-hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(4, 16, 33, 0.95) 0%,
+    rgba(4, 16, 33, 0.84) 40%,
+    rgba(4, 16, 33, 0.18) 60%,
+    transparent 80%
+  );
+  pointer-events: none;
+}
+
+.about-hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1360px;
+  padding-top: 24px;
+  padding-bottom: 60px;
+  gap: 28px;
+}
+
+.about-breadcrumbs {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.about-hero-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.about-hero-content {
+  max-width: 620px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-hero-heading {
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 12px 0 18px;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+}
+
+.about-hero-paragraph {
+  font-size: 1rem;
+  color: #C0D3E8;
+  line-height: 1.7;
+  margin-bottom: 0;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
+  max-width: 540px;
+}
+
+/* --- Section 2: Who We Are --- */
+.about-whoweare-section {
+  padding: 85px 0;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.about-whoweare-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-whoweare-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-eyebrow {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #00BFFF;
+  margin-bottom: 10px;
+}
+
+.about-section-heading {
+  font-size: clamp(1.9rem, 2.7vw, 2.45rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0 0 20px;
+}
+
+.about-body-text {
+  font-size: 0.96rem;
+  line-height: 1.75;
+  color: #94A3B8;
+  margin: 0 0 16px;
+}
+
+.about-btn-wrap {
+  margin-top: 14px;
+}
+
+.about-outline-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: #00BFFF;
+  border: 1.5px solid rgba(0, 191, 255, 0.45);
+  border-radius: 9999px;
+  padding: 10px 24px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(0, 191, 255, 0.1);
+}
+
+.about-outline-btn svg {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.25s ease;
+}
+
+.about-outline-btn:hover {
+  background: rgba(0, 191, 255, 0.12);
+  border-color: #00E5FF;
+  color: #FFFFFF;
+  box-shadow: 0 0 22px rgba(0, 191, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+.about-outline-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.about-whoweare-visual {
+  width: 100%;
+}
+
+.about-whoweare-img-frame {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 191, 255, 0.22);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55), 0 0 28px rgba(0, 191, 255, 0.12);
+  background: #041021;
+}
+
+.about-whoweare-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-whoweare-img:hover {
+  transform: scale(1.02);
+}
+
+/* --- Section 3: Four Pillars (Mission, Vision, Values, Commitment) --- */
+.about-pillars-section {
+  padding: 65px 0 75px;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid rgba(0, 191, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 191, 255, 0.08);
+}
+
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.about-pillar-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(4, 18, 38, 0.5);
+  border: 1px solid rgba(0, 191, 255, 0.12);
+  border-radius: 14px;
+  padding: 28px 24px;
+  transition: all 0.3s ease;
+}
+
+.about-pillar-card:hover {
+  background: rgba(6, 24, 48, 0.75);
+  border-color: rgba(0, 191, 255, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 191, 255, 0.15);
+}
+
+.about-pillar-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(0, 191, 255, 0.1);
+  border: 1.5px solid rgba(0, 191, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00BFFF;
+  margin-bottom: 18px;
+  box-shadow: 0 0 16px rgba(0, 191, 255, 0.2);
+}
+
+.about-pillar-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.about-pillar-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 12px;
+}
+
+.about-pillar-desc {
+  font-size: 0.92rem;
+  color: #94A3B8;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.about-pillar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-pillar-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: #CBD5E1;
+  font-weight: 500;
+}
+
+.about-pillar-check {
+  width: 18px;
+  height: 18px;
+  color: #00BFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-pillar-check svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* --- Section 4: Key Stats & Interactive SOC Tablet --- */
+.about-stats-section {
+  padding: 85px 0;
+  background-color: var(--bg-primary);
+  position: relative;
+}
+
+.about-stats-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.about-stats-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.about-stat-card {
+  background: rgba(4, 18, 38, 0.7);
+  border: 1px solid rgba(0, 191, 255, 0.16);
+  border-radius: 12px;
+  padding: 22px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.about-stat-card:hover {
+  border-color: rgba(0, 191, 255, 0.45);
+  background: rgba(6, 26, 54, 0.9);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 191, 255, 0.16);
+}
+
+.about-stat-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(0, 191, 255, 0.1);
+  border: 1px solid rgba(0, 191, 255, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00BFFF;
+  flex-shrink: 0;
+  box-shadow: 0 0 14px rgba(0, 191, 255, 0.2);
+}
+
+.about-stat-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.about-stat-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-stat-number {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+}
+
+.about-stat-label {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #E2E8F0;
+  margin-top: 4px;
+}
+
+.about-stat-sub {
+  font-size: 0.78rem;
+  color: #94A3B8;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.about-stats-visual {
+  width: 100%;
+}
+
+.about-stats-tablet-frame {
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 191, 255, 0.22);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.55), 0 0 35px rgba(0, 191, 255, 0.16);
+  background: #041021;
+}
+
+.about-stats-tablet-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-stats-tablet-img:hover {
+  transform: scale(1.02);
+}
+
+/* --- Section 5: Why Choose INFRONIXX? --- */
+.about-whychoose-section {
+  padding: 85px 0;
+  background-color: var(--bg-secondary);
+  border-top: 1px solid rgba(0, 191, 255, 0.08);
+}
+
+.about-whychoose-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-whychoose-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-whychoose-heading {
+  font-size: clamp(2rem, 2.8vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  color: #FFFFFF;
+  margin: 0 0 16px;
+}
+
+.about-whychoose-subtext {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #94A3B8;
+  margin: 0 0 28px;
+}
+
+.about-whychoose-btn-wrap {
+  display: flex;
+}
+
+.about-primary-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #00BFFF;
+  color: #020B19;
+  border: none;
+  border-radius: 9999px;
+  padding: 12px 28px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 22px rgba(0, 191, 255, 0.45);
+}
+
+.about-primary-btn svg {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.25s ease;
+}
+
+.about-primary-btn:hover {
+  background: #38BDF8;
+  box-shadow: 0 0 32px rgba(0, 191, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.about-primary-btn:hover svg {
+  transform: translateX(4px);
+}
+
+.about-whychoose-right {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 28px;
+}
+
+.about-why-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.about-why-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(0, 191, 255, 0.1);
+  border: 1px solid rgba(0, 191, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00BFFF;
+  flex-shrink: 0;
+  box-shadow: 0 0 14px rgba(0, 191, 255, 0.2);
+}
+
+.about-why-icon-wrap svg {
+  width: 22px;
+  height: 22px;
+}
+
+.about-why-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-why-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin: 0 0 4px;
+}
+
+.about-why-desc {
+  font-size: 0.88rem;
+  color: #94A3B8;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* --- Responsive Breakpoints for About Us Page --- */
+@media (max-width: 1100px) {
+  .about-whoweare-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-whychoose-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-heading {
+    font-size: 2rem;
+  }
+  .about-whoweare-section,
+  .about-stats-section,
+  .about-whychoose-section {
+    padding: 60px 0;
+  }
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-stats-cards {
+    grid-template-columns: 1fr;
+  }
+  .about-whychoose-right {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

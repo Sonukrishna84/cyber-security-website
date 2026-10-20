@@ -135,9 +135,12 @@ export default function DPDPPage() {
           <div className="dpdp-und-center">
             <div className="dpdp-datacenter-card" style={{ opacity: 1 }}>
               <img 
-                src="/assets/images/dpdp-flag-lock.png" 
+                src="/assets/images/dpdp-flag-lock.jpg" 
                 alt="Cybersecurity Operations and India DPDP Framework" 
                 className="dpdp-datacenter-img"
+                fetchPriority="high"
+                decoding="sync"
+                loading="eager"
                 width="640"
                 height="360"
                 style={{ opacity: 1 }}
@@ -529,9 +532,14 @@ export default function DPDPPage() {
         {/* Full-width / full-height background image with opacity: 1 */}
         <div className="dpdp-cta-bg-layer" aria-hidden="true">
           <img 
-            src="/assets/images/dpdp-cta-network-globe.png" 
+            src="/assets/images/dpdp-cta-network-globe.jpg" 
             alt="" 
             className="dpdp-cta-bg-img"
+            fetchPriority="high"
+            decoding="sync"
+            loading="eager"
+            width="1024"
+            height="512"
             style={{ opacity: 1 }}
           />
         </div>

@@ -3,289 +3,561 @@ import { Link } from 'react-router-dom';
 
 export default function DPDPPage() {
   return (
-    <main id="main-content">
-      {/* Breadcrumbs */}
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <div className="container">
-          <ol className="breadcrumb-list">
-            <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-            <li className="breadcrumb-separator" aria-hidden="true">&rsaquo;</li>
-            <li className="breadcrumb-item active" aria-current="page">DPDP Compliance</li>
-          </ol>
-        </div>
-      </nav>
+    <main id="main-content" className="dpdp-page">
+      
+      {/* =========================================================================
+          SECTION 1: HERO SECTION
+          ========================================================================= */}
+      <section className="dpdp-hero-section" aria-labelledby="dpdp-hero-title">
+        <div className="container dpdp-hero-container">
+          
+          {/* Left Column: Text & Actions */}
+          <div className="dpdp-hero-content">
+            {/* Breadcrumbs */}
+            <div className="breadcrumbs-bar">
+              <Link to="/">Home</Link>
+              <span className="breadcrumb-sep" aria-hidden="true">&gt;</span>
+              <span className="breadcrumb-current">DPDP Compliance</span>
+            </div>
 
-      {/* Header */}
-      <section className="section" style={{ paddingBottom: '40px' }}>
-        <div className="container" style={{ maxWidth: '900px', textAlign: 'center' }}>
-          <div className="eyebrow" style={{ justifyContent: 'center' }}>
-            <span className="eyebrow-dot" aria-hidden="true"></span>
-            <span>Indian Privacy Framework</span>
+            <span className="hero-eyebrow">DATA PRIVACY &amp; PROTECTION</span>
+            
+            <h1 id="dpdp-hero-title" className="dpdp-hero-heading">
+              DPDP Compliance and<br />
+              <span className="cyan-text">Data Protection Services</span>
+            </h1>
+
+            <p className="dpdp-hero-paragraph">
+              India's Digital Personal Data Protection framework establishes requirements for the processing of digital personal data. We help organizations understand their obligations and build stronger data protection practices through expert guidance and practical compliance support.
+            </p>
+
+            <div className="hero-ctas">
+              <a href="#dpdp-support" className="btn-pill btn-pill-primary">
+                <span>Explore Our DPDP Services</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <Link to="/contact" className="btn-pill btn-pill-secondary">
+                <span>Contact Us</span>
+              </Link>
+            </div>
           </div>
-          <h1>DPDP Compliance and <span className="text-gradient">Data Protection Services</span></h1>
-          <p style={{ fontSize: '1.2rem', color: 'var(--text-silver)', marginTop: '1.25rem' }}>
-            India's Digital Personal Data Protection framework establishes requirements concerning the processing of digital personal data. Organizations should understand their applicable obligations and review how personal data is collected, used, stored, and protected.
-          </p>
+
+          {/* Right Column: Cyber Shield & India Map Visual + Floating Chips */}
+          <div className="dpdp-hero-visual-wrapper">
+            <div className="dpdp-visual-stage">
+              <img 
+                src="/assets/images/dpdp-india-shield.png" 
+                alt="DPDP India Framework - Cyber Shield and Digital Map of India" 
+                className="dpdp-stage-graphic"
+                width="840"
+                height="320"
+              />
+
+              {/* 4 Floating Badges on the Far Right */}
+              <div className="dpdp-floating-chips" aria-label="Key DPDP Focus Areas">
+                {/* Chip 1 */}
+                <div className="dpdp-chip-item">
+                  <div className="dpdp-chip-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                      <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                  </div>
+                  <span className="dpdp-chip-label">Privacy</span>
+                </div>
+
+                {/* Chip 2 */}
+                <div className="dpdp-chip-item">
+                  <div className="dpdp-chip-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                      <path d="M3 12A9 3 0 0 0 21 12"></path>
+                    </svg>
+                  </div>
+                  <span className="dpdp-chip-label">Data Protection</span>
+                </div>
+
+                {/* Chip 3 */}
+                <div className="dpdp-chip-item">
+                  <div className="dpdp-chip-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <path d="m9 15 2 2 4-4"></path>
+                    </svg>
+                  </div>
+                  <span className="dpdp-chip-label">Compliance</span>
+                </div>
+
+                {/* Chip 4 */}
+                <div className="dpdp-chip-item">
+                  <div className="dpdp-chip-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                  </div>
+                  <span className="dpdp-chip-label">Security</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Section 1: Understanding India's DPDP Framework */}
-      <section className="section section-alt" aria-labelledby="understanding-dpdp-title">
-        <div className="container split-layout">
-          <div className="split-content">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" aria-hidden="true"></span>
-              <span>Regulatory Context</span>
+      {/* =========================================================================
+          SECTION 2: UNDERSTANDING INDIA'S DPDP FRAMEWORK
+          ========================================================================= */}
+      <section className="dpdp-understanding-section section" aria-labelledby="understanding-title">
+        <div className="container dpdp-understanding-grid">
+          
+          {/* Left Column: Heading, Text & Button */}
+          <div className="dpdp-und-left">
+            <span className="section-eyebrow">THE DPDP ACT, 2023</span>
+            <h2 id="understanding-title">
+              Understanding India's<br />
+              DPDP Framework
+            </h2>
+            <p className="dpdp-und-text">
+              The Digital Personal Data Protection (DPDP) Act, 2023 sets out the rules for the collection, use, storage and transfer of digital personal data in India. It aims to protect individual privacy while enabling responsible innovation and data-driven growth.
+            </p>
+            <div className="dpdp-und-btn-wrap">
+              <Link to="/contact" className="btn-pill btn-pill-secondary">
+                <span>Learn More About DPDP</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </Link>
             </div>
-            <h2 id="understanding-dpdp-title">Understanding India's DPDP Framework</h2>
-            <p>
-              The Digital Personal Data Protection Act, 2023 (DPDP Act) represents India's dedicated legal regime governing the processing of digital personal data. The Act balances the fundamental right of individuals (Data Principals) to protect their personal information with the lawful processing needs of organizations (Data Fiduciaries).
-            </p>
-            <p>
-              The framework applies to any processing of digital personal data within India, as well as extraterritorially if personal data is processed in connection with offering goods or services to Data Principals in India. Responsible processing requires establishing clear lawful grounds, maintaining transparent privacy notices, obtaining verifiable consent, and enforcing reasonable security safeguards to prevent personal data breaches.
-            </p>
-            <p>
-              Organizations must proactively evaluate their data ecosystems to ensure that technical systems and administrative procedures reflect these statutory expectations.
-            </p>
           </div>
-          <div className="split-visual">
-            <img 
-              src="/assets/images/dpdp-framework.svg" 
-              alt="Diagram Illustrating India DPDP Act 2023 Architecture" 
-              width="600" 
-              height="420" 
-              loading="lazy" 
-            />
+
+          {/* Center Column: Cyber Datacenter & Indian Flag Visual */}
+          <div className="dpdp-und-center">
+            <div className="dpdp-datacenter-card">
+              <img 
+                src="/assets/images/dpdp-flag-lock.png" 
+                alt="Cybersecurity Operations and India DPDP Framework" 
+                className="dpdp-datacenter-img"
+                width="513"
+                height="318"
+              />
+            </div>
           </div>
+
+          {/* Right Column: 3 Pillar Items */}
+          <div className="dpdp-und-right">
+            {/* Item 1 */}
+            <div className="dpdp-pillar-item">
+              <div className="dpdp-pillar-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <div className="dpdp-pillar-content">
+                <h3>Protects Individual Privacy</h3>
+                <p>Ensures personal data is handled with care and transparency.</p>
+              </div>
+            </div>
+
+            {/* Item 2 */}
+            <div className="dpdp-pillar-item">
+              <div className="dpdp-pillar-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                  <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+              </div>
+              <div className="dpdp-pillar-content">
+                <h3>Sets Clear Obligations</h3>
+                <p>Guides how organizations collect, use and store data.</p>
+              </div>
+            </div>
+
+            {/* Item 3 */}
+            <div className="dpdp-pillar-item">
+              <div className="dpdp-pillar-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <circle cx="12" cy="11" r="3"></circle>
+                </svg>
+              </div>
+              <div className="dpdp-pillar-content">
+                <h3>Builds Trust in Digital Ecosystem</h3>
+                <p>Supports a safer and more responsible data environment.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Section 2: Why DPDP Compliance Matters */}
-      <section className="section" aria-labelledby="why-compliance-matters-title">
+      {/* =========================================================================
+          SECTION 3: WHY DPDP COMPLIANCE MATTERS (4 CARDS)
+          ========================================================================= */}
+      <section className="dpdp-matters-section section section-alt" aria-labelledby="why-matters-title">
         <div className="container">
-          <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" aria-hidden="true"></span>
-              <span>Core Pillars</span>
-            </div>
-            <h2 id="why-compliance-matters-title">Why DPDP Compliance Matters</h2>
-            <p>
-              Aligning with the DPDP framework is more than a statutory mandate—it establishes a trusted foundation for digital business relationships and institutional accountability.
+          
+          <div className="dpdp-centered-header">
+            <span className="section-eyebrow">WHY IT MATTERS</span>
+            <h2 id="why-matters-title">Why DPDP Compliance Matters</h2>
+            <p className="section-lead-paragraph">
+              Compliance is not just about meeting legal requirements &mdash; it's about building trust, reducing risk, and creating a strong foundation for long-term business growth.
             </p>
           </div>
 
-          <div className="cards-grid-4">
-            <div className="benefit-card">
-              <div className="benefit-num">PILLAR 01</div>
+          <div className="dpdp-matters-grid">
+            {/* Card 1 */}
+            <div className="dpdp-matter-card">
+              <div className="matter-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="3" y="4" width="18" height="16" rx="3"></rect>
+                  <circle cx="9" cy="10" r="2"></circle>
+                  <line x1="15" y1="8" x2="17" y2="8"></line>
+                  <line x1="15" y1="12" x2="17" y2="12"></line>
+                  <line x1="7" y1="16" x2="17" y2="16"></line>
+                </svg>
+              </div>
               <h3>Privacy Governance</h3>
-              <p>Establishing internal ownership, clear operational roles, and management oversight for how personal information flows through organizational infrastructure.</p>
+              <p>Establishes clear data management practices and accountability.</p>
             </div>
 
-            <div className="benefit-card">
-              <div className="benefit-num">PILLAR 02</div>
-              <h3>Transparent Data Practices</h3>
-              <p>Providing clear, accessible notices to Data Principals explaining what information is collected, the specific purpose of processing, and how consent may be withdrawn.</p>
+            {/* Card 2 */}
+            <div className="dpdp-matter-card">
+              <div className="matter-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <h3>Transparent Practices</h3>
+              <p>Builds customer trust through responsible data handling.</p>
             </div>
 
-            <div className="benefit-card">
-              <div className="benefit-num">PILLAR 03</div>
-              <h3>Appropriate Security Safeguards</h3>
-              <p>Deploying technical measures including encryption, access restrictions, network segmentation, and secure backups to prevent unauthorized data exposure.</p>
+            {/* Card 3 */}
+            <div className="dpdp-matter-card">
+              <div className="matter-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <h3>Security Safeguards</h3>
+              <p>Reduces the risk of data breaches and unauthorized access.</p>
             </div>
 
-            <div className="benefit-card">
-              <div className="benefit-num">PILLAR 04</div>
+            {/* Card 4 */}
+            <div className="dpdp-matter-card">
+              <div className="matter-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 15a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z"></path>
+                  <path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"></path>
+                </svg>
+              </div>
               <h3>Organizational Accountability</h3>
-              <p>Maintaining demonstrable records of processing activities, implementing prompt incident reporting mechanisms, and ensuring responsive grievance redressal.</p>
+              <p>Helps meet regulatory expectations and avoid potential penalties.</p>
             </div>
           </div>
+
         </div>
       </section>
 
-      {/* Section 3: Our DPDP Compliance Support */}
-      <section id="data-protection-services" className="section section-alt" aria-labelledby="dpdp-support-title">
+      {/* =========================================================================
+          SECTION 4: OUR DPDP COMPLIANCE SUPPORT (6 CARDS + DISCLAIMER BADGE)
+          ========================================================================= */}
+      <section id="dpdp-support" className="dpdp-services-section section" aria-labelledby="dpdp-support-title">
         <div className="container">
-          <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" aria-hidden="true"></span>
-              <span>Technical &amp; Consulting Support</span>
+          
+          <div className="dpdp-support-header-row">
+            <div className="dpdp-support-header-left">
+              <span className="section-eyebrow">OUR SERVICES</span>
+              <h2 id="dpdp-support-title">Our DPDP Compliance Support</h2>
+              <p className="dpdp-support-lead">
+                We provide end-to-end assistance to help organizations understand their data protection responsibilities and implement the right measures. Our services include technical support and consulting guidance &mdash; not legal advice.
+              </p>
             </div>
-            <h2 id="dpdp-support-title">Our DPDP Compliance Support</h2>
-            <p>
-              Infronix Technologies & Solutions LLP offers structured consulting and technical advisory services to help enterprises assess, implement, and validate data protection safeguards.
-            </p>
+
+            <div className="dpdp-disclaimer-pill" role="note">
+              <div className="disclaimer-icon-wrap" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                  <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                </svg>
+              </div>
+              <div className="disclaimer-text">
+                <strong>Technical &amp; Consulting Support</strong>
+                <span>(Not Legal Advice)</span>
+              </div>
+            </div>
           </div>
 
-          <div className="cards-grid-3">
-            <article className="cyber-card">
-              <div className="card-icon-wrap" aria-hidden="true">
-                <img src="/assets/icons/compliance.svg" alt="" width="28" height="28" />
+          <div className="dpdp-services-card-grid">
+            {/* Card 1 */}
+            <div className="dpdp-service-h-card">
+              <div className="service-h-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
               </div>
-              <h3>Data Protection Gap Assessment</h3>
-              <p>Systematic review of existing IT infrastructure, policies, and operational workflows against DPDP Act obligations to highlight compliance gaps and prioritize technical mitigations.</p>
-            </article>
+              <div className="service-h-body">
+                <h3>Data Protection Gap Assessment</h3>
+                <p>Evaluate your current data practices and identify compliance gaps.</p>
+              </div>
+              <div className="service-h-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
 
-            <article className="cyber-card">
-              <div className="card-icon-wrap" aria-hidden="true">
-                <img src="/assets/icons/data.svg" alt="" width="28" height="28" />
+            {/* Card 2 */}
+            <div className="dpdp-service-h-card">
+              <div className="service-h-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                  <path d="M3 12A9 3 0 0 0 21 12"></path>
+                </svg>
               </div>
-              <h3>Personal Data Mapping</h3>
-              <p>Comprehensive inventory of digital personal data across servers, cloud stores, databases, and third-party vendors, documenting data collection points, flow lineages, and retention periods.</p>
-            </article>
+              <div className="service-h-body">
+                <h3>Personal Data Mapping</h3>
+                <p>Identify and document the types of personal data you process.</p>
+              </div>
+              <div className="service-h-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
 
-            <article className="cyber-card">
-              <div className="card-icon-wrap" aria-hidden="true">
-                <img src="/assets/icons/shield.svg" alt="" width="28" height="28" />
+            {/* Card 3 */}
+            <div className="dpdp-service-h-card">
+              <div className="service-h-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
               </div>
-              <h3>Privacy Policy and Notice Review</h3>
-              <p>Consulting evaluation of existing privacy disclosures and user-facing notices to verify alignment with statutory clarity, language accessibility, and itemized consent guidelines.</p>
-            </article>
+              <div className="service-h-body">
+                <h3>Privacy Policy and Notice Review</h3>
+                <p>Review and help structure privacy policies and customer notices.</p>
+              </div>
+              <div className="service-h-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
 
-            <article className="cyber-card">
-              <div className="card-icon-wrap" aria-hidden="true">
-                <img src="/assets/icons/lock.svg" alt="" width="28" height="28" />
+            {/* Card 4 */}
+            <div className="dpdp-service-h-card">
+              <div className="service-h-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <circle cx="12" cy="11" r="3"></circle>
+                </svg>
               </div>
-              <h3>Data Handling Process Review</h3>
-              <p>Analysis of data collection methods, employee access privileges, cross-border transmission rules, and data disposal protocols to reduce unnecessary data proliferation.</p>
-            </article>
+              <div className="service-h-body">
+                <h3>Data Handling Process Review</h3>
+                <p>Assess data collection, storage, access and retention processes.</p>
+              </div>
+              <div className="service-h-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
 
-            <article className="cyber-card">
-              <div className="card-icon-wrap" aria-hidden="true">
-                <img src="/assets/icons/vapt.svg" alt="" width="28" height="28" />
+            {/* Card 5 */}
+            <div className="dpdp-service-h-card">
+              <div className="service-h-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
               </div>
-              <h3>Security Safeguards Assessment</h3>
-              <p>Technical validation of security measures including encryption in transit and at rest, access management controls, backup resilience, and system vulnerability posture.</p>
-            </article>
+              <div className="service-h-body">
+                <h3>Security Safeguards Assessment</h3>
+                <p>Check technical and organizational security measures for data protection.</p>
+              </div>
+              <div className="service-h-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
 
-            <article className="cyber-card">
-              <div className="card-icon-wrap" aria-hidden="true">
-                <img src="/assets/icons/endpoint.svg" alt="" width="28" height="28" />
+            {/* Card 6 */}
+            <div className="dpdp-service-h-card">
+              <div className="service-h-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <polyline points="16 11 18 13 22 9"></polyline>
+                </svg>
               </div>
-              <h3>Compliance Documentation Support</h3>
-              <p>Assisting teams in assembling structured security documentation, incident escalation playbooks, standard operating procedures, and technical evidence repositories.</p>
-            </article>
+              <div className="service-h-body">
+                <h3>Compliance Documentation Support</h3>
+                <p>Assist with required documentation and policy frameworks.</p>
+              </div>
+              <div className="service-h-arrow" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+            </div>
           </div>
 
-          {/* Legal Disclaimer */}
-          <aside className="compliance-callout" role="note" aria-label="Legal Disclaimer">
-            <div className="compliance-callout-title">Important Advisory Notice &amp; Scope Distinction</div>
-            <p>
-              Infronix Technologies & Solutions LLP provides technical, operational, and cybersecurity advisory services to assist organizations in strengthening their security safeguards and privacy readiness. Our services do not constitute formal legal advice, legal opinions, or statutory certifications. Regulatory obligations and legal responsibilities under the DPDP Act, 2023 should be reviewed in coordination with qualified legal counsel. Infronix Technologies & Solutions LLP does not guarantee compliance or specific legal outcomes.
-            </p>
-          </aside>
         </div>
       </section>
 
-      {/* Section 4: Better Data Protection Practices */}
-      <section className="section" aria-labelledby="better-practices-title">
-        <div className="container split-layout">
-          <div className="split-content">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" aria-hidden="true"></span>
-              <span>Lifecycle Discipline</span>
-            </div>
-            <h2 id="better-practices-title">Building Better Data Protection Practices</h2>
+      {/* =========================================================================
+          SECTION 5: OUR DPDP ASSESSMENT APPROACH (01, 02, 03, 04 STEPS)
+          ========================================================================= */}
+      <section className="dpdp-approach-section section section-alt" aria-labelledby="dpdp-approach-title">
+        <div className="container dpdp-approach-grid">
+          
+          <div className="dpdp-approach-intro">
+            <span className="section-eyebrow">OUR APPROACH</span>
+            <h2 id="dpdp-approach-title">Our DPDP Assessment Approach</h2>
             <p>
-              Sustainable data protection is an ongoing practice rather than a static document. Reviewing how your business collects, accesses, stores, retains, and disposes of personal data reduces the blast radius of any potential security incident.
+              A structured and practical approach to help you build stronger data protection practices and reduce compliance risks.
             </p>
-            <ul className="checklist">
-              <li>
-                <svg className="checklist-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Data Minimization:</strong> Collecting only what is strictly necessary for specified, declared business objectives.</span>
-              </li>
-              <li>
-                <svg className="checklist-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Access Restriction:</strong> Enforcing role-based access control (RBAC) and eliminating excessive shared administrative credentials.</span>
-              </li>
-              <li>
-                <svg className="checklist-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Storage &amp; Encryption:</strong> Verifying strong cryptographic standards for databases, archives, and cloud object stores.</span>
-              </li>
-              <li>
-                <svg className="checklist-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>Defined Retention:</strong> Establishing verifiable deletion and electronic shredding timelines once processing purposes conclude.</span>
-              </li>
-            </ul>
           </div>
-          <div className="split-visual" style={{ padding: '32px', background: 'var(--bg-surface)' }}>
-            <h3 style={{ color: 'var(--accent-cyan)', marginBottom: '12px' }}>Data Breach Readiness</h3>
-            <p style={{ fontSize: '0.95rem', marginBottom: '20px' }}>
-              Under the DPDP Act, organizations must notify the Data Protection Board of India and affected Data Principals in the event of a personal data breach. Preparedness requires pre-defined technical procedures:
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-              <div style={{ background: 'rgba(2, 11, 25, 0.6)', padding: '14px 18px', borderRadius: '8px', borderLeft: '3px solid var(--accent-cyan)' }}>
-                <strong style={{ color: '#F5F8FC', fontSize: '0.9rem' }}>1. Detection &amp; Triage:</strong>
-                <div style={{ fontSize: '0.85rem', color: '#A8B8CC' }}>Rapid identification of compromised systems and data categorization.</div>
+
+          <div className="dpdp-approach-steps-row">
+            {/* Step 1 */}
+            <div className="dpdp-step-card">
+              <div className="dpdp-step-top">
+                <div className="dpdp-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <div className="dpdp-step-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
               </div>
-              <div style={{ background: 'rgba(2, 11, 25, 0.6)', padding: '14px 18px', borderRadius: '8px', borderLeft: '3px solid var(--accent-blue)' }}>
-                <strong style={{ color: '#F5F8FC', fontSize: '0.9rem' }}>2. Containment &amp; Isolation:</strong>
-                <div style={{ fontSize: '0.85rem', color: '#A8B8CC' }}>Quarantining affected nodes and preventing secondary exposure.</div>
+              <div className="dpdp-step-number">01</div>
+              <h3 className="dpdp-step-title">Assess</h3>
+              <p className="dpdp-step-desc">Review current data practices and systems.</p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="dpdp-step-card">
+              <div className="dpdp-step-top">
+                <div className="dpdp-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="7" r="4"></circle>
+                    <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                </div>
+                <div className="dpdp-step-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
               </div>
-              <div style={{ background: 'rgba(2, 11, 25, 0.6)', padding: '14px 18px', borderRadius: '8px', borderLeft: '3px solid var(--accent-cyan)' }}>
-                <strong style={{ color: '#F5F8FC', fontSize: '0.9rem' }}>3. Reporting Telemetry:</strong>
-                <div style={{ fontSize: '0.85rem', color: '#A8B8CC' }}>Formulating factual incident narratives and impact metrics.</div>
+              <div className="dpdp-step-number">02</div>
+              <h3 className="dpdp-step-title">Identify</h3>
+              <p className="dpdp-step-desc">Find gaps, risks and compliance requirements.</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="dpdp-step-card">
+              <div className="dpdp-step-top">
+                <div className="dpdp-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <div className="dpdp-step-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                    <polyline points="7 7 17 7 17 17"></polyline>
+                  </svg>
+                </div>
               </div>
+              <div className="dpdp-step-number">03</div>
+              <h3 className="dpdp-step-title">Recommend</h3>
+              <p className="dpdp-step-desc">Suggest practical improvements.</p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="dpdp-step-card">
+              <div className="dpdp-step-top">
+                <div className="dpdp-step-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 12 11 14 15 10"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <div className="dpdp-step-number">04</div>
+              <h3 className="dpdp-step-title">Review</h3>
+              <p className="dpdp-step-desc">Support implementation and ongoing monitoring.</p>
             </div>
           </div>
+
         </div>
       </section>
 
-      {/* Section 5: Assessment Process */}
-      <section className="section section-alt" aria-labelledby="assessment-approach-title">
+      {/* =========================================================================
+          SECTION 6: CLOSING CTA BANNER
+          ========================================================================= */}
+      <section className="dpdp-cta-section" aria-labelledby="dpdp-cta-title">
         <div className="container">
-          <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" aria-hidden="true"></span>
-              <span>Structured Process</span>
+          <div className="dpdp-cta-strip">
+            <div className="dpdp-cta-left">
+              <div className="dpdp-cta-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <div className="dpdp-cta-text">
+                <h2 id="dpdp-cta-title">Discuss Your DPDP Compliance Requirements</h2>
+                <p>Get expert guidance on data protection, compliance readiness and secure data management practices.</p>
+              </div>
             </div>
-            <h2 id="assessment-approach-title">Our DPDP Assessment Approach</h2>
-            <p>
-              We follow an iterative four-step assessment approach to evaluate data safeguards and support continuous governance.
-            </p>
-          </div>
 
-          <div className="process-grid">
-            <div className="step-card">
-              <div className="step-number">01</div>
-              <h3>Assess Current Practices</h3>
-              <p>Conduct workshops with technical and operational leads, catalog existing digital personal data stores, and review access controls and data transfer paths.</p>
-            </div>
-            <div className="step-card">
-              <div className="step-number">02</div>
-              <h3>Identify Gaps &amp; Risks</h3>
-              <p>Compare current operational practices against DPDP Act expectations, highlighting vulnerabilities, unencrypted data flows, and procedural deficiencies.</p>
-            </div>
-            <div className="step-card">
-              <div className="step-number">03</div>
-              <h3>Recommend Improvements</h3>
-              <p>Deliver a prioritized, actionable remediation roadmap outlining recommended technical safeguards, configuration fixes, and documentation templates.</p>
-            </div>
-            <div className="step-card">
-              <div className="step-number">04</div>
-              <h3>Review Implementation</h3>
-              <p>Conduct follow-up evaluations to verify the efficacy of deployed technical safeguards and assist in embedding long-term data protection reviews.</p>
-            </div>
-          </div>
-
-          {/* Section 6: CTA */}
-          <div className="cta-banner" style={{ marginTop: '64px' }}>
-            <h2>Discuss Your DPDP Compliance Requirements</h2>
-            <p>
-              Assess your organization's digital personal data footprint and implement practical security safeguards. Connect with Infronix Technologies & Solutions LLP to begin your data protection assessment.
-            </p>
-            <div className="cta-buttons">
-              <Link to="/contact" className="btn btn-primary">
-                <span>Contact Us Today</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </Link>
-              <Link to="/services" className="btn btn-secondary">
-                <span>Explore Technical Services</span>
+            <div className="dpdp-cta-right">
+              <Link to="/contact" className="btn-pill btn-pill-primary">
+                <span>Contact Us</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
               </Link>
             </div>
           </div>
         </div>
       </section>
+
     </main>
   );
 }
-

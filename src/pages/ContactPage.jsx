@@ -10,7 +10,19 @@ export default function ContactPage() {
       <section className="hero-section" aria-labelledby="contact-hero-title">
         <div className="container hero-grid">
           <div className="hero-content">
-            <span className="hero-eyebrow">GET IN TOUCH</span>
+            <div className="hero-motto-pill">
+              <span className="motto-pill-shield" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </span>
+              <span className="motto-pill-text">
+                <span className="motto-white">STRONGER SECURITY</span>
+                <span className="motto-divider">/</span>
+                <span className="motto-cyan">FOR A SAFER TOMORROW</span>
+              </span>
+            </div>
+
             <h1 id="contact-hero-title">
               Contact Infronix Technologies<br />
               <span className="cyan-text">&amp; Solutions LLP</span>
@@ -57,18 +69,6 @@ export default function ContactPage() {
                   <strong>Trusted Partnership</strong>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Right Hero Visual: Typographic Quote Matching Reference Screenshot */}
-          <div className="contact-hero-tagline-col">
-            <div className="contact-hero-tagline" aria-label="Stronger Security For A Safer Tomorrow">
-              <span className="tagline-line">STRONGER</span>
-              <span className="tagline-line">SECURITY</span>
-              <span className="tagline-line">FOR A</span>
-              <span className="tagline-line tagline-cyan">SAFER</span>
-              <span className="tagline-line tagline-cyan">TOMORROW</span>
-              <div className="tagline-dash" aria-hidden="true"></div>
             </div>
           </div>
         </div>

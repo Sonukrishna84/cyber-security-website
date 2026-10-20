@@ -2053,47 +2053,72 @@ nav.breadcrumbs {
   font-weight: 600;
 }
 
-/* --- Contact Hero Tagline Quote (Matches Reference Template) --- */
-.contact-hero-tagline-col {
-  display: flex;
-  justify-content: flex-end;
+/* --- Contact Hero Tagline Motto Pill --- */
+.hero-motto-pill {
+  display: inline-flex;
   align-items: center;
-  position: relative;
-  z-index: 2;
-  padding-right: clamp(10px, 4vw, 48px);
-}
-
-.contact-hero-tagline {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 2px;
+  gap: 10px;
+  padding: 6px 18px 6px 12px;
+  background: rgba(4, 20, 44, 0.75);
+  border: 1px solid rgba(0, 191, 255, 0.35);
+  border-radius: 9999px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45), 0 0 20px rgba(0, 191, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-bottom: 16px;
+  width: fit-content;
+  transition: all 0.3s ease;
   user-select: none;
 }
 
-.contact-hero-tagline .tagline-line {
-  font-family: var(--font-main);
-  font-size: clamp(1.4rem, 2.2vw, 1.95rem);
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  line-height: 1.16;
-  color: #FFFFFF;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+.hero-motto-pill:hover {
+  border-color: #00E5FF;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.55), 0 0 28px rgba(0, 229, 255, 0.35);
+  transform: translateY(-1px);
 }
 
-.contact-hero-tagline .tagline-cyan {
+.motto-pill-shield {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0, 191, 255, 0.18);
   color: #00BFFF;
-  text-shadow: 0 0 18px rgba(0, 191, 255, 0.65);
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.4);
 }
 
-.contact-hero-tagline .tagline-dash {
-  width: 36px;
-  height: 3px;
-  background: #00BFFF;
-  border-radius: 2px;
-  margin-top: 12px;
-  box-shadow: 0 0 12px rgba(0, 191, 255, 0.8);
+.motto-pill-shield svg {
+  width: 14px;
+  height: 14px;
+}
+
+.motto-pill-text {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+.motto-white {
+  color: #FFFFFF;
+  font-weight: 800;
+}
+
+.motto-divider {
+  color: rgba(0, 191, 255, 0.6);
+  font-weight: 400;
+}
+
+.motto-cyan {
+  color: #00BFFF;
+  font-weight: 800;
+  text-shadow: 0 0 12px rgba(0, 191, 255, 0.6);
 }
 
 /* --- Split Layout System --- */

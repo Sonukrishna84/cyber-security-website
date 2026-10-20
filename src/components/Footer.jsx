@@ -13,9 +13,9 @@ export default function Footer() {
           <div className="footer-col">
             <Link to="/" className="brand-link" aria-label="Infronix Technologies & Solutions LLP Home">
               <img 
-                src="/assets/images/logo-horizontal.png" 
+                src="/assets/images/logo-stacked-clean.png" 
                 alt="Infronix Technologies & Solutions LLP" 
-                style={{ height: '36px', width: 'auto', marginBottom: '12px' }} 
+                style={{ height: '56px', width: 'auto', marginBottom: '14px' }} 
               />
             </Link>
             <p className="footer-desc">

@@ -21,11 +21,11 @@ export default function Navbar() {
         <div className="container header-container">
           <Link to="/" className="brand-link" aria-label="Infronix Technologies & Solutions LLP Home" onClick={closeDrawer}>
             <img 
-              src="/assets/images/logo-horizontal.png" 
+              src="/assets/images/logo-stacked-clean.png" 
               alt="Infronix Technologies & Solutions LLP" 
               className="brand-logo-img" 
-              width="180" 
-              height="42" 
+              width="95" 
+              height="60" 
             />
           </Link>
 
@@ -113,7 +113,7 @@ export default function Navbar() {
         aria-modal="true"
       >
         <div className="drawer-header">
-          <img src="/assets/images/logo-horizontal.png" alt="Infronix Technologies & Solutions LLP" style={{ height: '34px', width: 'auto' }} />
+          <img src="/assets/images/logo-stacked-clean.png" alt="Infronix Technologies & Solutions LLP" style={{ height: '52px', width: 'auto' }} />
           <button 
             type="button" 
             className="drawer-close" 

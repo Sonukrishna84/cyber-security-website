@@ -40,7 +40,7 @@
   --radius-full: 9999px;
 
   --container-max: 1220px;
-  --header-height: 62px;
+  --header-height: 80px;
 
   --shadow-card: 0 10px 30px -10px rgba(2, 11, 25, 0.7);
   --shadow-glow: 0 0 24px rgba(0, 191, 255, 0.22);
@@ -277,9 +277,9 @@ img, svg {
 }
 
 .brand-logo-img {
-  height: 32px;
+  height: 60px;
   width: auto;
-  max-width: 200px;
+  max-width: 160px;
   object-fit: contain;
   transition: transform var(--transition-fast);
 }

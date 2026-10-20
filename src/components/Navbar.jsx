@@ -24,8 +24,8 @@ export default function Navbar() {
               src="/assets/images/logo-stacked-clean.png" 
               alt="Infronix Technologies & Solutions LLP" 
               className="brand-logo-img" 
-              width="95" 
-              height="60" 
+              width="102" 
+              height="64" 
             />
           </Link>
 

@@ -5,19 +5,25 @@ export default function HomePage() {
   return (
     <main id="main-content">
       
-      {/* Hero Section (Full-Bleed Matching Template Screenshot) */}
+      {/* Hero Section (Fortifying Modern Business with Intelligent Cybersecurity) */}
       <section className="hero-section" aria-labelledby="hero-title">
-        <div className="container">
+        <div className="container hero-grid">
           <div className="hero-content">
-            <span className="hero-eyebrow">CYBERSECURITY FOR A SAFER TOMORROW</span>
+            
+            <div className="hero-badge">
+              <span className="hero-badge-dot" aria-hidden="true"></span>
+              <span className="hero-badge-text">CYBER SECURITY DIVISION</span>
+            </div>
+
             <h1 id="hero-title">
-              Secure Your Digital<br />
-              Future with Intelligent<br />
-              <span className="cyan-text">Cybersecurity</span>
+              Fortifying Modern Business with{' '}
+              <span className="cyan-text">Intelligent Cybersecurity</span>
             </h1>
+
             <p className="hero-paragraph">
-              We help businesses protect their digital assets, infrastructure and data from evolving cyber threats with advanced security solutions and expert guidance.
+              Comprehensive vulnerability assessment, threat intelligence, and tailored defense strategies to secure your digital infrastructure against advanced threats.
             </p>
+
             <div className="hero-ctas">
               <Link to="/services" className="btn-pill btn-pill-primary">
                 <span>Explore Services</span>
@@ -26,52 +32,24 @@ export default function HomePage() {
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </Link>
-              <Link to="/about" className="btn-pill btn-pill-secondary">
-                <span>About Infronix</span>
+              <Link to="/contact" className="btn-pill btn-pill-secondary">
+                <span>Contact Us</span>
               </Link>
             </div>
 
-            {/* Micro Features Row */}
-            <div className="hero-micro-features">
-              <div className="micro-feature-item">
-                <div className="micro-feature-icon-circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <div className="micro-feature-text">
-                  <strong>Proactive Protection</strong>
-                  <span>Stop threats before they strike.</span>
-                </div>
+            {/* Micro Highlights Row */}
+            <div className="hero-micro-features" aria-label="Key security highlights">
+              <div className="micro-feature-check-item">
+                <span className="micro-check-icon" aria-hidden="true">&#10003;</span>
+                <span className="micro-check-text">Proactive Defense</span>
               </div>
-
-              <div className="micro-feature-item">
-                <div className="micro-feature-icon-circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="m14 10-4 4"></path>
-                    <path d="M10 10l4 4"></path>
-                    <circle cx="12" cy="12" r="6"></circle>
-                  </svg>
-                </div>
-                <div className="micro-feature-text">
-                  <strong>Risk-Focused Security</strong>
-                  <span>Identify. Assess. Mitigate.</span>
-                </div>
+              <div className="micro-feature-check-item">
+                <span className="micro-check-icon" aria-hidden="true">&#10003;</span>
+                <span className="micro-check-text">Cloud &amp; Network Security</span>
               </div>
-
-              <div className="micro-feature-item">
-                <div className="micro-feature-icon-circle" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <rect x="9" y="11" width="6" height="5" rx="1"></rect>
-                    <path d="M10 11V9.5a2 2 0 0 1 4 0V11"></path>
-                  </svg>
-                </div>
-                <div className="micro-feature-text">
-                  <strong>Business-Ready Compliance</strong>
-                  <span>Stay secure. Stay compliant.</span>
-                </div>
+              <div className="micro-feature-check-item">
+                <span className="micro-check-icon" aria-hidden="true">&#10003;</span>
+                <span className="micro-check-text">Compliance Advisory</span>
               </div>
             </div>
 
@@ -92,72 +70,33 @@ export default function HomePage() {
       {/* Glowing Divider Line */}
       <div className="hero-stats-divider"></div>
 
-      {/* Stats Strip: "Trusted Security. Real Impact." */}
+      {/* Stats Strip: "Securing Enterprise Ecosystems Across India" */}
       <section className="stats-strip" aria-labelledby="stats-title">
-        <div className="container stats-grid">
-          <div className="stats-intro">
-            <div className="stats-intro-eyebrow">OUR STRENGTH IN NUMBERS</div>
+        <div className="container stats-flex-container">
+          <div className="stats-intro-col">
+            <span className="stats-intro-eyebrow">OUR STRENGTH IN NUMBERS</span>
             <h2 id="stats-title" className="stats-intro-title">
-              Trusted Security.<br />
-              Real Impact.
+              Securing Enterprise Ecosystems Across India
             </h2>
-            <p className="stats-intro-text">
-              Built on expertise, powered by technology,<br />
-              focused on your success.
-            </p>
           </div>
 
           <div className="stats-items-row">
-            {/* Stat 1 */}
-            <div className="stat-col">
-              <div className="stat-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
-              <div className="stat-number">360°</div>
-              <div className="stat-label">Threat Protection</div>
+            <div className="stat-card">
+              <div className="stat-value">99.8%</div>
+              <div className="stat-label">Threat Neutralization</div>
+              <div className="stat-sub">Enterprise protection rate across managed endpoints</div>
             </div>
 
-            {/* Stat 2 */}
-            <div className="stat-col">
-              <div className="stat-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <polyline points="9 12 11 14 15 10"></polyline>
-                </svg>
-              </div>
-              <div className="stat-number">24/7</div>
-              <div className="stat-label">Monitoring &amp; Response</div>
+            <div className="stat-card">
+              <div className="stat-value">24/7</div>
+              <div className="stat-label">Continuous Monitoring</div>
+              <div className="stat-sub">Real-time alerts, proactive scanning &amp; rapid response</div>
             </div>
 
-            {/* Stat 3 */}
-            <div className="stat-col">
-              <div className="stat-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="5" r="2.5"></circle>
-                  <circle cx="6" cy="18" r="2.5"></circle>
-                  <circle cx="18" cy="18" r="2.5"></circle>
-                  <line x1="12" y1="7.5" x2="6" y2="15.5"></line>
-                  <line x1="12" y1="7.5" x2="18" y2="15.5"></line>
-                  <line x1="8.5" y1="18" x2="15.5" y2="18"></line>
-                </svg>
-              </div>
-              <div className="stat-number">99.9%</div>
-              <div className="stat-label">System Uptime</div>
-            </div>
-
-            {/* Stat 4 */}
-            <div className="stat-col">
-              <div className="stat-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <rect x="9" y="11" width="6" height="5" rx="1"></rect>
-                  <path d="M10 11V9.5a2 2 0 0 1 4 0V11"></path>
-                </svg>
-              </div>
-              <div className="stat-number">100%</div>
-              <div className="stat-label">Data Protection Focus</div>
+            <div className="stat-card">
+              <div className="stat-value">100%</div>
+              <div className="stat-label">Compliance Focus</div>
+              <div className="stat-sub">DPDP, ISO 27001 &amp; CERT-In aligned security frameworks</div>
             </div>
           </div>
         </div>

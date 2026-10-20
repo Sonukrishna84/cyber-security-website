@@ -4,6 +4,16 @@ import { Link } from 'react-router-dom';
 export default function DPDPPage() {
   return (
     <main id="main-content" className="dpdp-page">
+      {/* Breadcrumbs Navigation */}
+      <nav className="breadcrumbs" aria-label="Breadcrumb">
+        <div className="container">
+          <ol className="breadcrumb-list">
+            <li className="breadcrumb-item"><Link to="/">Home</Link></li>
+            <li className="breadcrumb-separator" aria-hidden="true">&rsaquo;</li>
+            <li className="breadcrumb-item active" aria-current="page">DPDP Compliance</li>
+          </ol>
+        </div>
+      </nav>
       
       {/* =========================================================================
           SECTION 1: HERO SECTION
@@ -13,13 +23,6 @@ export default function DPDPPage() {
           
           {/* Left Column: Text & Actions */}
           <div className="dpdp-hero-content">
-            {/* Breadcrumbs */}
-            <div className="breadcrumbs-bar">
-              <Link to="/">Home</Link>
-              <span className="breadcrumb-sep" aria-hidden="true">&gt;</span>
-              <span className="breadcrumb-current">DPDP Compliance</span>
-            </div>
-
             <span className="hero-eyebrow">DATA PRIVACY &amp; PROTECTION</span>
             
             <h1 id="dpdp-hero-title" className="dpdp-hero-heading">

@@ -534,6 +534,16 @@ export default function DPDPPage() {
           SECTION 6: CLOSING CTA BANNER
           ========================================================================= */}
       <section className="dpdp-cta-section" aria-labelledby="dpdp-cta-title">
+        {/* Full-width / full-height background image with opacity: 1 */}
+        <div className="dpdp-cta-bg-layer" aria-hidden="true">
+          <img 
+            src="/assets/images/dpdp-cta-network-globe.png" 
+            alt="" 
+            className="dpdp-cta-bg-img"
+            style={{ opacity: 1 }}
+          />
+        </div>
+
         <div className="container">
           <div className="dpdp-cta-strip">
             <div className="dpdp-cta-left">

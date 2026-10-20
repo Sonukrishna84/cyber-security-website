@@ -3063,34 +3063,52 @@ nav.breadcrumbs {
   margin: 0;
 }
 
-/* --- Section 6: Closing CTA Strip --- */
+/* --- Section 6: Closing CTA Strip (Full-width & Full-height Banner) --- */
 .dpdp-cta-section {
-  padding: 44px 0 64px;
-  background: #020B19;
+  position: relative;
+  width: 100%;
+  padding: 56px 0;
+  background-color: #020B19;
+  border-top: 1px solid rgba(0, 191, 255, 0.25);
+  border-bottom: 1px solid rgba(0, 191, 255, 0.25);
+  overflow: hidden;
+}
+
+.dpdp-cta-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dpdp-cta-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1 !important;
+  display: block;
 }
 
 .dpdp-cta-strip {
-  background: linear-gradient(135deg, rgba(6, 22, 43, 0.95) 0%, rgba(4, 18, 38, 0.95) 50%, rgba(2, 11, 25, 0.98) 100%);
-  border: 1px solid rgba(0, 191, 255, 0.35);
-  border-radius: 16px;
-  padding: 32px 36px;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 28px;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 0 28px rgba(0, 191, 255, 0.16);
-  position: relative;
-  overflow: hidden;
-}
-
-.dpdp-cta-strip::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #00BFFF, transparent);
+  box-shadow: none;
+  width: 100%;
 }
 
 .dpdp-cta-left {
@@ -3100,17 +3118,17 @@ nav.breadcrumbs {
 }
 
 .dpdp-cta-icon-badge {
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
-  background: rgba(0, 191, 255, 0.12);
+  background: rgba(0, 191, 255, 0.15);
   border: 2px solid #00BFFF;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #00BFFF;
   flex-shrink: 0;
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+  box-shadow: 0 0 24px rgba(0, 191, 255, 0.45);
 }
 
 .dpdp-cta-icon-badge svg {
@@ -3119,17 +3137,19 @@ nav.breadcrumbs {
 }
 
 .dpdp-cta-text h2 {
-  font-size: clamp(1.25rem, 2vw, 1.55rem);
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
   font-weight: 800;
   color: #FFFFFF;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
 }
 
 .dpdp-cta-text p {
-  font-size: 0.88rem;
-  color: #9FB2C8;
+  font-size: 0.92rem;
+  color: #C0D3E8;
   margin: 0;
   line-height: 1.5;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
 .dpdp-cta-right {

@@ -141,13 +141,14 @@ export default function DPDPPage() {
 
           {/* Center Column: Cyber Datacenter & Indian Flag Visual */}
           <div className="dpdp-und-center">
-            <div className="dpdp-datacenter-card">
+            <div className="dpdp-datacenter-card" style={{ opacity: 1 }}>
               <img 
                 src="/assets/images/dpdp-flag-lock.png" 
                 alt="Cybersecurity Operations and India DPDP Framework" 
                 className="dpdp-datacenter-img"
-                width="513"
-                height="318"
+                width="640"
+                height="360"
+                style={{ opacity: 1 }}
               />
             </div>
           </div>

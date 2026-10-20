@@ -5,34 +5,21 @@ export default function AboutPage() {
   return (
     <main id="main-content" className="about-page">
       {/* =========================================================================
-          SECTION 1: HERO SECTION
+          SECTION 1: HERO SECTION (EXACT SIZE & POSITION MATCH WITH HOMEPAGE)
           ========================================================================= */}
-      <section className="about-hero-section" aria-labelledby="about-hero-title">
-        {/* Full-bleed Panoramic Cyber Shield Globe Background */}
-        <div className="about-hero-bg-layer" aria-hidden="true">
-          <img 
-            src="/assets/images/hero-cyber-shield-full.jpg" 
-            alt="" 
-            className="about-hero-bg-img"
-          />
-          <div className="about-hero-bg-overlay"></div>
-        </div>
+      <section className="hero-section" aria-labelledby="about-hero-title">
+        <div className="container hero-grid">
+          <div className="hero-content">
+            <span className="hero-eyebrow" style={{ display: 'inline-block', marginBottom: '12px' }}>ABOUT US</span>
+            
+            <h1 id="about-hero-title">
+              Securing Today,<br />
+              <span className="cyan-text">Building a Safer Tomorrow</span>
+            </h1>
 
-        <div className="container about-hero-container">
-          <div className="about-hero-row">
-            {/* Left Column: Text Content */}
-            <div className="about-hero-content">
-              <span className="hero-eyebrow">ABOUT US</span>
-              
-              <h1 id="about-hero-title" className="about-hero-heading">
-                Securing Today,<br />
-                <span className="cyan-text">Building a Safer Tomorrow</span>
-              </h1>
-
-              <p className="about-hero-paragraph">
-                INFRONIXX Technologies is a leading cybersecurity company dedicated to protecting businesses, data and digital assets with advanced security solutions and expert guidance.
-              </p>
-            </div>
+            <p className="hero-paragraph">
+              INFRONIXX Technologies is a leading cybersecurity company dedicated to protecting businesses, data and digital assets with advanced security solutions and expert guidance.
+            </p>
           </div>
         </div>
       </section>

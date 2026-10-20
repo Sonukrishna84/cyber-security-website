@@ -5,64 +5,51 @@ export default function ServicesPage() {
   return (
     <main id="main-content" className="services-page">
       {/* =========================================================================
-          SECTION 1: HERO SECTION
+          SECTION 1: HERO SECTION (EXACT SIZE & POSITION MATCH WITH HOMEPAGE)
           ========================================================================= */}
-      <section className="services-hero-section" aria-labelledby="services-hero-title">
-        {/* Full-bleed Panoramic Cyber Shield Globe Background */}
-        <div className="services-hero-bg-layer" aria-hidden="true">
-          <img 
-            src="/assets/images/hero-cyber-shield-full.jpg" 
-            alt="" 
-            className="services-hero-bg-img"
-          />
-          <div className="services-hero-bg-overlay"></div>
-        </div>
+      <section className="hero-section" aria-labelledby="services-hero-title">
+        <div className="container hero-grid">
+          <div className="hero-content">
+            <span className="hero-eyebrow" style={{ display: 'inline-block', marginBottom: '12px' }}>OUR SERVICES</span>
+            
+            <h1 id="services-hero-title">
+              Comprehensive Cybersecurity<br />
+              Solutions for a <span className="cyan-text">Safer Tomorrow</span>
+            </h1>
 
-        <div className="container services-hero-container">
-          <div className="services-hero-row">
-            {/* Left Column: Text & Features */}
-            <div className="services-hero-content">
-              <span className="hero-eyebrow">OUR SERVICES</span>
-              
-              <h1 id="services-hero-title" className="services-hero-heading">
-                Comprehensive Cybersecurity<br />
-                Solutions for a <span className="cyan-text">Safer Tomorrow</span>
-              </h1>
+            <p className="hero-paragraph">
+              We provide end-to-end cybersecurity services to help businesses stay protected, compliant and resilient in an ever-evolving digital world.
+            </p>
 
-              <p className="services-hero-paragraph">
-                We provide end-to-end cybersecurity services to help businesses stay protected, compliant and resilient in an ever-evolving digital world.
-              </p>
-
-              {/* 3 Key Feature Chips */}
-              <div className="services-hero-chips" aria-label="Key Service Benefits">
-                <div className="services-hero-chip">
-                  <div className="services-chip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>
-                  </div>
-                  <span>Proactive Protection</span>
+            {/* 3 Key Feature Chips */}
+            <div className="services-hero-chips" aria-label="Key Service Benefits">
+              <div className="services-hero-chip">
+                <div className="services-chip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
                 </div>
+                <span>Proactive Protection</span>
+              </div>
 
-                <div className="services-hero-chip">
-                  <div className="services-chip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                    </svg>
-                  </div>
-                  <span>Expert Guidance</span>
+              <div className="services-hero-chip">
+                <div className="services-chip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
                 </div>
+                <span>Expert Guidance</span>
+              </div>
 
-                <div className="services-hero-chip">
-                  <div className="services-chip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <circle cx="12" cy="12" r="6"></circle>
-                      <circle cx="12" cy="12" r="2"></circle>
-                    </svg>
-                  </div>
-                  <span>Business Focused</span>
+              <div className="services-hero-chip">
+                <div className="services-chip-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
                 </div>
+                <span>Business Focused</span>
               </div>
             </div>
           </div>

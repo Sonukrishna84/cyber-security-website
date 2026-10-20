@@ -2031,6 +2031,32 @@ nav.breadcrumbs {
   font-weight: 600;
 }
 
+/* --- Contact Hero Styles --- */
+.contact-hero-section {
+  min-height: 520px;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 1360px;
+  padding-top: 18px;
+  padding-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-breadcrumbs {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 /* --- Contact Hero Tagline Quote (Matches Reference Template) --- */
 .contact-hero-tagline-col {
   display: flex;
@@ -2401,7 +2427,7 @@ nav.breadcrumbs {
 .dpdp-hero-section {
   position: relative;
   width: 100%;
-  min-height: 590px;
+  min-height: 520px;
   background-color: var(--bg-secondary);
   background-image: 
     radial-gradient(circle at 65% 50%, rgba(0, 191, 255, 0.22) 0%, rgba(8, 125, 255, 0.10) 45%, transparent 75%),
@@ -2468,14 +2494,32 @@ nav.breadcrumbs {
   flex-direction: column;
   width: 100%;
   max-width: 1360px;
-  padding-top: 24px;
-  padding-bottom: 56px;
-  gap: 28px;
+  padding-top: 18px;
+  padding-bottom: 28px;
+  gap: 18px;
 }
 
 .dpdp-hero-breadcrumbs {
   padding: 0 !important;
   margin: 0 !important;
+}
+
+.dpdp-hero-heading {
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 6px 0 12px;
+  letter-spacing: -0.015em;
+  color: #FFFFFF;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
+}
+
+.dpdp-hero-paragraph {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #C0D3E8;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
 }
 
 .dpdp-hero-main-row {
@@ -3315,7 +3359,7 @@ nav.breadcrumbs {
 .services-hero-section {
   position: relative;
   width: 100%;
-  min-height: 560px;
+  min-height: 520px;
   background-color: #000B1D;
   background-image: 
     radial-gradient(circle at 75% 50%, rgba(0, 191, 255, 0.16) 0%, rgba(8, 125, 255, 0.08) 45%, transparent 75%),
@@ -3374,9 +3418,9 @@ nav.breadcrumbs {
   flex-direction: column;
   width: 100%;
   max-width: 1360px;
-  padding-top: 24px;
-  padding-bottom: 56px;
-  gap: 28px;
+  padding-top: 18px;
+  padding-bottom: 28px;
+  gap: 18px;
 }
 
 .services-breadcrumbs {
@@ -3399,20 +3443,20 @@ nav.breadcrumbs {
 }
 
 .services-hero-heading {
-  font-size: clamp(2.1rem, 3.4vw, 2.9rem);
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
   font-weight: 800;
   line-height: 1.15;
-  margin: 10px 0 16px;
+  margin: 6px 0 12px;
   letter-spacing: -0.015em;
   color: #FFFFFF;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
 }
 
 .services-hero-paragraph {
-  font-size: 0.96rem;
+  font-size: 0.94rem;
   color: #C0D3E8;
-  line-height: 1.65;
-  margin-bottom: 28px;
+  line-height: 1.6;
+  margin-bottom: 20px;
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -3956,7 +4000,7 @@ nav.breadcrumbs {
 .about-hero-section {
   position: relative;
   width: 100%;
-  min-height: 540px;
+  min-height: 520px;
   background-color: #000B1D;
   background-image: 
     radial-gradient(circle at 75% 50%, rgba(0, 191, 255, 0.16) 0%, rgba(8, 125, 255, 0.08) 45%, transparent 75%),
@@ -4015,9 +4059,9 @@ nav.breadcrumbs {
   flex-direction: column;
   width: 100%;
   max-width: 1360px;
-  padding-top: 24px;
-  padding-bottom: 60px;
-  gap: 28px;
+  padding-top: 18px;
+  padding-bottom: 28px;
+  gap: 18px;
 }
 
 .about-breadcrumbs {
@@ -4038,19 +4082,19 @@ nav.breadcrumbs {
 }
 
 .about-hero-heading {
-  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
   font-weight: 800;
   line-height: 1.15;
-  margin: 12px 0 18px;
+  margin: 6px 0 12px;
   letter-spacing: -0.015em;
   color: #FFFFFF;
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
 }
 
 .about-hero-paragraph {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #C0D3E8;
-  line-height: 1.7;
+  line-height: 1.6;
   margin-bottom: 0;
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.8);
   max-width: 540px;

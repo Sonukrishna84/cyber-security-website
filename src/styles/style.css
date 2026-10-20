@@ -3316,10 +3316,10 @@ nav.breadcrumbs {
   position: relative;
   width: 100%;
   min-height: 560px;
-  background-color: var(--bg-secondary);
+  background-color: #000B1D;
   background-image: 
-    radial-gradient(circle at 75% 50%, rgba(0, 191, 255, 0.22) 0%, rgba(8, 125, 255, 0.10) 45%, transparent 75%),
-    radial-gradient(circle at 15% 30%, rgba(0, 191, 255, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 75% 50%, rgba(0, 191, 255, 0.16) 0%, rgba(8, 125, 255, 0.08) 45%, transparent 75%),
+    radial-gradient(circle at 15% 30%, rgba(0, 191, 255, 0.10) 0%, transparent 45%),
     linear-gradient(rgba(0, 191, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 191, 255, 0.02) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
@@ -3346,12 +3346,12 @@ nav.breadcrumbs {
   top: 50%;
   transform: translateY(-50%);
   width: auto;
-  height: 98%;
+  height: 100%;
   min-width: 1050px;
   display: block;
   opacity: 1 !important;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 25%, black 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 25%, black 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);
 }
 
 .services-hero-bg-overlay {
@@ -3359,9 +3359,9 @@ nav.breadcrumbs {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(4, 16, 33, 0.95) 0%,
-    rgba(4, 16, 33, 0.84) 38%,
-    rgba(4, 16, 33, 0.15) 58%,
+    #000B1D 0%,
+    rgba(0, 11, 29, 0.95) 38%,
+    rgba(0, 11, 29, 0.18) 58%,
     transparent 78%
   );
   pointer-events: none;
@@ -3957,10 +3957,10 @@ nav.breadcrumbs {
   position: relative;
   width: 100%;
   min-height: 540px;
-  background-color: var(--bg-secondary);
+  background-color: #000B1D;
   background-image: 
-    radial-gradient(circle at 75% 50%, rgba(0, 191, 255, 0.22) 0%, rgba(8, 125, 255, 0.10) 45%, transparent 75%),
-    radial-gradient(circle at 15% 30%, rgba(0, 191, 255, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 75% 50%, rgba(0, 191, 255, 0.16) 0%, rgba(8, 125, 255, 0.08) 45%, transparent 75%),
+    radial-gradient(circle at 15% 30%, rgba(0, 191, 255, 0.10) 0%, transparent 45%),
     linear-gradient(rgba(0, 191, 255, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 191, 255, 0.02) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
@@ -3987,12 +3987,12 @@ nav.breadcrumbs {
   top: 50%;
   transform: translateY(-50%);
   width: auto;
-  height: 98%;
+  height: 100%;
   min-width: 1050px;
   display: block;
   opacity: 1 !important;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 25%, black 100%);
-  mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%), linear-gradient(to right, transparent 0%, black 25%, black 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 25%, black 100%);
 }
 
 .about-hero-bg-overlay {
@@ -4000,9 +4000,9 @@ nav.breadcrumbs {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(4, 16, 33, 0.95) 0%,
-    rgba(4, 16, 33, 0.84) 40%,
-    rgba(4, 16, 33, 0.18) 60%,
+    #000B1D 0%,
+    rgba(0, 11, 29, 0.95) 40%,
+    rgba(0, 11, 29, 0.18) 60%,
     transparent 80%
   );
   pointer-events: none;

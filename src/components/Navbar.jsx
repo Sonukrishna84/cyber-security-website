@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -12,6 +13,32 @@ export default function Navbar() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Automatically close mobile drawer when navigating to a new page
+  useEffect(() => {
+    setIsDrawerOpen(false);
+  }, [location.pathname]);
+
+  // Lock body scroll and listen for Escape key when mobile drawer is open
+  useEffect(() => {
+    if (isDrawerOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsDrawerOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isDrawerOpen]);
 
   const closeDrawer = () => setIsDrawerOpen(false);
 
@@ -78,7 +105,7 @@ export default function Navbar() {
 
           {/* Header CTAs & Mobile Toggle */}
           <div className="header-actions">
-            <Link to="/services" className="btn-pill btn-pill-primary">
+            <Link to="/services" className="btn-pill btn-pill-primary header-cta-btn">
               <span>Explore Services</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -88,17 +115,24 @@ export default function Navbar() {
 
             <button 
               type="button" 
-              className="menu-toggle" 
+              className={`menu-toggle ${isDrawerOpen ? 'is-active' : ''}`} 
               aria-expanded={isDrawerOpen} 
               aria-controls="mobile-drawer" 
-              aria-label="Toggle navigation menu"
+              aria-label={isDrawerOpen ? "Close navigation menu" : "Open navigation menu"}
               onClick={() => setIsDrawerOpen(prev => !prev)}
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
+              {isDrawerOpen ? (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              ) : (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="3" y1="12" x2="21" y2="12"></line>
+                  <line x1="3" y1="6" x2="21" y2="6"></line>
+                  <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+              )}
             </button>
           </div>
         </div>
@@ -107,7 +141,7 @@ export default function Navbar() {
       {/* Mobile Drawer */}
       <div 
         id="mobile-drawer" 
-        className={`mobile-drawer ${isDrawerOpen ? 'is-open' : ''}`} 
+        className={`mobile-drawer ${isDrawerOpen ? 'active is-open' : ''}`} 
         aria-label="Mobile Navigation" 
         role="dialog" 
         aria-modal="true"
@@ -161,7 +195,7 @@ export default function Navbar() {
       </div>
 
       <div 
-        className={`drawer-backdrop ${isDrawerOpen ? 'is-open' : ''}`} 
+        className={`drawer-backdrop ${isDrawerOpen ? 'active is-open' : ''}`} 
         aria-hidden="true"
         onClick={closeDrawer}
       ></div>

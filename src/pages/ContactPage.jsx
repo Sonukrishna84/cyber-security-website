@@ -394,30 +394,28 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Closing Banner CTA Strip */}
-      <section className="section" style={{ paddingTop: '36px', paddingBottom: '50px' }}>
-        <div className="container">
-          <div className="banner-cta-strip">
-            <div className="banner-cta-left">
-              <div className="banner-cta-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <polyline points="9 12 11 14 15 10"></polyline>
-                </svg>
-              </div>
-              <div className="banner-cta-text">
-                <h3>Let's Build a Safer Digital Future Together</h3>
-                <p>Get in touch today to discuss your cybersecurity and data protection needs.</p>
-              </div>
-            </div>
-            <a href="#contact-info-section" className="btn-pill btn-pill-primary">
-              <span>Contact Us</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
+      {/* Closing Banner CTA Strip (Full-Width to Match Outer Box) */}
+      <section className="contact-cta-fullwidth-section" aria-label="Closing Contact Call to Action">
+        <div className="container contact-cta-container">
+          <div className="banner-cta-left">
+            <div className="banner-cta-icon-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <polyline points="9 12 11 14 15 10"></polyline>
               </svg>
-            </a>
+            </div>
+            <div className="banner-cta-text">
+              <h3>Let's Build a Safer Digital Future Together</h3>
+              <p>Get in touch today to discuss your cybersecurity and data protection needs.</p>
+            </div>
           </div>
+          <a href="#contact-info-section" className="btn-pill btn-pill-primary">
+            <span>Contact Us</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
         </div>
       </section>
     </main>

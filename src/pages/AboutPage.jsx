@@ -24,6 +24,9 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Glowing Divider Line */}
+      <div className="hero-stats-divider"></div>
+
       {/* =========================================================================
           SECTION 2: WHO WE ARE (Your Trusted Cybersecurity Partner)
           ========================================================================= */}

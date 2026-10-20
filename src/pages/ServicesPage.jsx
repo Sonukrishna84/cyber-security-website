@@ -56,6 +56,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Glowing Divider Line */}
+      <div className="hero-stats-divider"></div>
+
       {/* =========================================================================
           SECTION 2: WHAT WE OFFER (6 SERVICE CARDS)
           ========================================================================= */}

@@ -16,9 +16,19 @@ export default function DPDPPage() {
       </nav>
       
       {/* =========================================================================
-          SECTION 1: HERO SECTION
+          SECTION 1: HERO SECTION (FULL PANORAMIC BACKGROUND)
           ========================================================================= */}
       <section className="dpdp-hero-section" aria-labelledby="dpdp-hero-title">
+        {/* Full-width Panoramic Cyber Shield & India Map Background */}
+        <div className="dpdp-hero-bg-layer" aria-hidden="true">
+          <img 
+            src="/assets/images/dpdp-india-shield-full.png" 
+            alt="" 
+            className="dpdp-hero-bg-img"
+          />
+          <div className="dpdp-hero-bg-overlay"></div>
+        </div>
+
         <div className="container dpdp-hero-container">
           
           {/* Left Column: Text & Actions */}
@@ -48,64 +58,51 @@ export default function DPDPPage() {
             </div>
           </div>
 
-          {/* Right Column: Cyber Shield & India Map Visual + Floating Chips */}
-          <div className="dpdp-hero-visual-wrapper">
-            <div className="dpdp-visual-stage">
-              <img 
-                src="/assets/images/dpdp-india-shield.png" 
-                alt="DPDP India Framework - Cyber Shield and Digital Map of India" 
-                className="dpdp-stage-graphic"
-                width="840"
-                height="320"
-              />
-
-              {/* 4 Floating Badges on the Far Right */}
-              <div className="dpdp-floating-chips" aria-label="Key DPDP Focus Areas">
-                {/* Chip 1 */}
-                <div className="dpdp-chip-item">
-                  <div className="dpdp-chip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
-                      <circle cx="12" cy="12" r="3"></circle>
-                    </svg>
-                  </div>
-                  <span className="dpdp-chip-label">Privacy</span>
-                </div>
-
-                {/* Chip 2 */}
-                <div className="dpdp-chip-item">
-                  <div className="dpdp-chip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                      <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
-                      <path d="M3 12A9 3 0 0 0 21 12"></path>
-                    </svg>
-                  </div>
-                  <span className="dpdp-chip-label">Data Protection</span>
-                </div>
-
-                {/* Chip 3 */}
-                <div className="dpdp-chip-item">
-                  <div className="dpdp-chip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                      <polyline points="14 2 14 8 20 8"></polyline>
-                      <path d="m9 15 2 2 4-4"></path>
-                    </svg>
-                  </div>
-                  <span className="dpdp-chip-label">Compliance</span>
-                </div>
-
-                {/* Chip 4 */}
-                <div className="dpdp-chip-item">
-                  <div className="dpdp-chip-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    </svg>
-                  </div>
-                  <span className="dpdp-chip-label">Security</span>
-                </div>
+          {/* Right Side: 4 Floating Focus Badges */}
+          <div className="dpdp-floating-chips" aria-label="Key DPDP Focus Areas">
+            {/* Chip 1 */}
+            <div className="dpdp-chip-item">
+              <div className="dpdp-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
               </div>
+              <span className="dpdp-chip-label">Privacy</span>
+            </div>
+
+            {/* Chip 2 */}
+            <div className="dpdp-chip-item">
+              <div className="dpdp-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                  <path d="M3 12A9 3 0 0 0 21 12"></path>
+                </svg>
+              </div>
+              <span className="dpdp-chip-label">Data Protection</span>
+            </div>
+
+            {/* Chip 3 */}
+            <div className="dpdp-chip-item">
+              <div className="dpdp-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <path d="m9 15 2 2 4-4"></path>
+                </svg>
+              </div>
+              <span className="dpdp-chip-label">Compliance</span>
+            </div>
+
+            {/* Chip 4 */}
+            <div className="dpdp-chip-item">
+              <div className="dpdp-chip-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <span className="dpdp-chip-label">Security</span>
             </div>
           </div>
 

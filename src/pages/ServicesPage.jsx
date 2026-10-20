@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ServicesPage() {
+  const [isLaptopZoomed, setIsLaptopZoomed] = React.useState(false);
   return (
     <main id="main-content" className="services-page">
       {/* =========================================================================
@@ -218,7 +219,14 @@ export default function ServicesPage() {
           <div className="services-partner-grid">
             {/* Left Column: 3D Isometric Laptop & Datacenter Visual */}
             <div className="services-partner-visual">
-              <div className="services-laptop-frame">
+              <div 
+                className={`services-laptop-frame ${isLaptopZoomed ? 'is-zoomed' : ''}`}
+                onClick={() => setIsLaptopZoomed(!isLaptopZoomed)}
+                role="button"
+                tabIndex={0}
+                aria-label="Toggle zoom 3D cybersecurity laptop visual"
+                title="Click to zoom image"
+              >
                 <img 
                   src="/assets/images/services-partner-laptop.jpg" 
                   alt="Futuristic cybersecurity laptop and server infrastructure" 

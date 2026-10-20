@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function DPDPPage() {
+  const [isImgZoomed, setIsImgZoomed] = React.useState(false);
+
   return (
     <main id="main-content" className="dpdp-page">
       {/* =========================================================================
@@ -133,7 +135,15 @@ export default function DPDPPage() {
 
           {/* Center Column: Cyber Datacenter & Indian Flag Visual */}
           <div className="dpdp-und-center">
-            <div className="dpdp-datacenter-card" style={{ opacity: 1 }}>
+            <div 
+              className={`dpdp-datacenter-card ${isImgZoomed ? 'is-zoomed' : ''}`}
+              onClick={() => setIsImgZoomed(!isImgZoomed)}
+              role="button"
+              tabIndex={0}
+              aria-label="Toggle zoom cybersecurity operations image"
+              title="Click to zoom image"
+              style={{ opacity: 1 }}
+            >
               <img 
                 src="/assets/images/dpdp-flag-lock.jpg" 
                 alt="Cybersecurity Operations and India DPDP Framework" 

@@ -2640,14 +2640,18 @@ nav.breadcrumbs {
   overflow: hidden;
   border: 1px solid rgba(0, 191, 255, 0.35);
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(0, 191, 255, 0.25);
-  transition: all var(--transition-base);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
   background: #041021;
   opacity: 1 !important;
+  cursor: pointer;
+  user-select: none;
 }
 
-.dpdp-datacenter-card:hover {
+.dpdp-datacenter-card:hover,
+.dpdp-datacenter-card:focus-visible,
+.dpdp-datacenter-card.is-zoomed {
   border-color: #00BFFF;
-  transform: translateY(-4px);
+  transform: none;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 32px rgba(0, 191, 255, 0.45);
 }
 
@@ -2658,6 +2662,14 @@ nav.breadcrumbs {
   object-fit: cover;
   opacity: 1 !important;
   filter: contrast(1.15) brightness(1.08) saturate(1.2);
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.dpdp-datacenter-card:hover .dpdp-datacenter-img,
+.dpdp-datacenter-card:active .dpdp-datacenter-img,
+.dpdp-datacenter-card.is-zoomed .dpdp-datacenter-img {
+  transform: scale(1.08);
 }
 
 .dpdp-und-right {
@@ -3647,12 +3659,17 @@ nav.breadcrumbs {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 40px rgba(0, 191, 255, 0.25);
   border: 1px solid rgba(0, 191, 255, 0.25);
   background: #020B19;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+  user-select: none;
 }
 
-.services-laptop-frame:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 50px rgba(0, 191, 255, 0.35);
+.services-laptop-frame:hover,
+.services-laptop-frame:focus-visible,
+.services-laptop-frame.is-zoomed {
+  border-color: #00BFFF;
+  transform: none;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 50px rgba(0, 191, 255, 0.45);
 }
 
 .services-laptop-img {
@@ -3661,6 +3678,14 @@ nav.breadcrumbs {
   display: block;
   opacity: 1 !important;
   object-fit: cover;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.services-laptop-frame:hover .services-laptop-img,
+.services-laptop-frame:active .services-laptop-img,
+.services-laptop-frame.is-zoomed .services-laptop-img {
+  transform: scale(1.08);
 }
 
 .services-partner-content {

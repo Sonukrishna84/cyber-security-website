@@ -2398,14 +2398,21 @@ nav.breadcrumbs {
   font-weight: 600;
 }
 
-/* --- Section 1: Hero (Full Panoramic Background) --- */
+/* --- Section 1: Hero (Full Panoramic Background - Theme Styled) --- */
 .dpdp-hero-section {
   position: relative;
   width: 100%;
-  min-height: 580px;
-  background-color: #020B19;
+  min-height: 590px;
+  background-color: var(--bg-secondary);
+  background-image: 
+    radial-gradient(circle at 65% 50%, rgba(0, 191, 255, 0.22) 0%, rgba(8, 125, 255, 0.10) 45%, transparent 75%),
+    radial-gradient(circle at 15% 30%, rgba(0, 191, 255, 0.14) 0%, transparent 45%),
+    linear-gradient(rgba(0, 191, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 191, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   overflow: hidden;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -2430,18 +2437,28 @@ nav.breadcrumbs {
   max-width: none;
   display: block;
   opacity: 1 !important;
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%);
 }
 
 .dpdp-hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(2, 11, 25, 0.94) 0%,
-    rgba(2, 11, 25, 0.84) 38%,
-    rgba(2, 11, 25, 0.25) 54%,
-    transparent 70%
-  );
+  background: 
+    linear-gradient(
+      90deg,
+      rgba(4, 16, 33, 0.94) 0%,
+      rgba(4, 16, 33, 0.82) 38%,
+      rgba(4, 16, 33, 0.20) 56%,
+      transparent 72%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(4, 16, 33, 0.45) 0%,
+      transparent 18%,
+      transparent 82%,
+      rgba(4, 16, 33, 0.65) 100%
+    );
   pointer-events: none;
 }
 
@@ -2449,12 +2466,24 @@ nav.breadcrumbs {
   position: relative;
   z-index: 2;
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1360px;
+  padding-top: 24px;
+  padding-bottom: 56px;
+  gap: 28px;
+}
+
+.dpdp-hero-breadcrumbs {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.dpdp-hero-main-row {
+  display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1360px;
-  padding-top: 48px;
-  padding-bottom: 56px;
   gap: 40px;
 }
 
@@ -2548,7 +2577,7 @@ nav.breadcrumbs {
 /* --- Section 2: Understanding India's DPDP Framework --- */
 .dpdp-understanding-section {
   padding: 64px 0;
-  background: #020B19;
+  background: transparent;
   border-bottom: 1px solid var(--border-subtle);
   position: relative;
 }
@@ -3163,7 +3192,7 @@ nav.breadcrumbs {
 
 /* --- Responsive Queries for DPDP Page --- */
 @media (max-width: 1100px) {
-  .dpdp-hero-container {
+  .dpdp-hero-main-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 36px;

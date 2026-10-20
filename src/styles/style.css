@@ -1443,20 +1443,29 @@ img, svg {
   }
   .hero-grid {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
   .hero-content {
-    margin: 0 auto;
+    margin: 0;
+    margin-right: auto;
+    text-align: left;
+    max-width: 540px;
   }
   .hero-paragraph {
-    margin-left: auto;
+    margin-left: 0;
     margin-right: auto;
+    text-align: left;
   }
   .hero-ctas {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .hero-micro-features {
     text-align: left;
+    justify-content: flex-start;
+  }
+  .hero-motto-pill {
+    margin-left: 0;
+    margin-right: auto;
   }
   .stats-grid {
     grid-template-columns: 1fr;
@@ -2071,12 +2080,13 @@ img, svg {
 
 @media (max-width: 900px) {
   .hero-section {
-    background-position: 72% center;
+    background-position: right center;
     padding: 48px 0 32px;
   }
   .hero-micro-features {
     flex-wrap: wrap;
     gap: 16px;
+    justify-content: flex-start;
   }
   .stats-flex-container {
     flex-direction: column;

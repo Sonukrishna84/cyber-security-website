@@ -11,9 +11,14 @@ export default function DPDPPage() {
         {/* Full-width Panoramic Cyber Shield & India Map Background */}
         <div className="dpdp-hero-bg-layer" aria-hidden="true">
           <img 
-            src="/assets/images/dpdp-india-shield-full.png" 
-            alt="" 
+            src="/assets/images/dpdp-india-shield-full.jpg" 
+            alt="DPDP Cyber Shield and India Data Security Map" 
             className="dpdp-hero-bg-img"
+            fetchPriority="high"
+            decoding="sync"
+            loading="eager"
+            width="2172"
+            height="724"
           />
           <div className="dpdp-hero-bg-overlay"></div>
         </div>

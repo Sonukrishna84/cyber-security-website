@@ -1756,6 +1756,17 @@ img, svg {
   background: #030e1e;
   box-shadow: var(--shadow-card);
   min-height: 220px;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.location-map-card:hover,
+.location-map-card:focus-visible,
+.location-map-card.is-zoomed {
+  border-color: #00BFFF;
+  transform: none;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 32px rgba(0, 191, 255, 0.4);
 }
 
 .location-map-card img {
@@ -1763,6 +1774,14 @@ img, svg {
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.location-map-card:hover img,
+.location-map-card:active img,
+.location-map-card.is-zoomed img {
+  transform: scale(1.08);
 }
 
 .location-office-card {

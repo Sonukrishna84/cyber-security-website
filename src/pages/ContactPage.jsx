@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ContactPage() {
+  const [isMapZoomed, setIsMapZoomed] = React.useState(false);
+
   return (
     <main id="main-content">
       {/* Contact Hero Section */}
@@ -349,13 +351,22 @@ export default function ContactPage() {
       <section className="section section-alt" aria-labelledby="location-title">
         <div className="container location-split-grid">
           {/* Left: Map Visual */}
-          <div className="location-map-card">
+          <div 
+            className={`location-map-card ${isMapZoomed ? 'is-zoomed' : ''}`}
+            onClick={() => setIsMapZoomed(!isMapZoomed)}
+            role="button"
+            tabIndex={0}
+            aria-label="Toggle zoom office location map"
+            title="Click to zoom map"
+          >
             <img 
-              src="/assets/images/contact-location-map.png" 
-              alt="Office Location Map in Noida, Uttar Pradesh, India" 
-              width="575" 
-              height="288" 
-              loading="lazy" 
+              src="/assets/images/contact-location-map.jpg" 
+              alt="Infronix Technologies Office Location Map in Noida, Uttar Pradesh, India" 
+              width="1024" 
+              height="389" 
+              loading="eager" 
+              decoding="sync"
+              fetchPriority="high"
             />
           </div>
 

@@ -5,70 +5,156 @@ export default function HomePage() {
   return (
     <main id="main-content">
       
-      {/* Hero Section (Fortifying Modern Business with Intelligent Cybersecurity) */}
-      <section className="hero-section" aria-labelledby="hero-title">
+      {/* Hero Section (Secure Today. Protect Tomorrow.) */}
+      <section className="hero-section hero-home-section" aria-labelledby="hero-title">
         <div className="container hero-grid">
           <div className="hero-content">
-            
-            <div className="hero-badge">
-              <span className="hero-badge-dot" aria-hidden="true"></span>
-              <span className="hero-badge-text">CYBER SECURITY DIVISION</span>
-            </div>
 
-            <h1 id="hero-title">
-              Fortifying Modern Business with{' '}
-              <span className="cyan-text">Intelligent Cybersecurity</span>
+            <h1 id="hero-title" className="hero-main-title">
+              Secure Today.<br />
+              <span className="cyan-text">Protect Tomorrow.</span>
             </h1>
 
-            <p className="hero-paragraph">
-              Comprehensive vulnerability assessment, threat intelligence, and tailored defense strategies to secure your digital infrastructure against advanced threats.
+            <p className="hero-paragraph hero-lead-text">
+              Cybersecurity, compliance, and IT solutions{' '}
+              <br className="hero-desc-br" />
+              built for a resilient digital future.
             </p>
 
-            <div className="hero-ctas">
-              <Link to="/services" className="btn-pill btn-pill-primary">
-                <span>Explore Services</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <div className="hero-ctas hero-home-ctas">
+              <Link to="/services" className="btn-pill btn-pill-primary hero-btn-main">
+                <span>Explore Our Solutions</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </Link>
-              <Link to="/contact" className="btn-pill btn-pill-secondary">
-                <span>Contact Us</span>
+              <Link to="/contact" className="btn-pill btn-pill-secondary hero-btn-secondary">
+                <span>Book a Consultation</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
               </Link>
-            </div>
-
-            {/* Micro Highlights Row */}
-            <div className="hero-micro-features" aria-label="Key security highlights">
-              <div className="micro-feature-check-item">
-                <span className="micro-check-icon" aria-hidden="true">&#10003;</span>
-                <span className="micro-check-text">Proactive Defense</span>
-              </div>
-              <div className="micro-feature-check-item">
-                <span className="micro-check-icon" aria-hidden="true">&#10003;</span>
-                <span className="micro-check-text">Cloud &amp; Network Security</span>
-              </div>
-              <div className="micro-feature-check-item">
-                <span className="micro-check-icon" aria-hidden="true">&#10003;</span>
-                <span className="micro-check-text">Compliance Advisory</span>
-              </div>
             </div>
 
             {/* Mobile-only visual fallback */}
             <div className="hero-visual-mobile">
               <img
-                src="/assets/images/hero-globe-shield.png"
-                alt="Intelligent Cybersecurity Defense Shield"
+                src="/assets/images/hero-shield-mobile-center.jpg"
+                alt="Cybersecurity Holographic Shield"
                 className="hero-visual-mobile-img"
-                width="500"
-                height="397"
+                width="600"
+                height="532"
+                loading="eager"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Glowing Divider Line */}
-      <div className="hero-stats-divider"></div>
+      {/* 5-Item Core Solutions Strip (Direct Match to Reference Mockup) */}
+      <section className="hero-solutions-bar-section" aria-label="Core Cybersecurity Solutions">
+        <div className="container">
+          <div className="hero-solutions-bar">
+            
+            {/* 1. DPDP Act Compliance */}
+            <Link to="/dpdp-compliance" className="solution-bar-item">
+              <div className="solution-bar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <line x1="8" y1="10" x2="16" y2="10"></line>
+                  <line x1="12" y1="7" x2="12" y2="15"></line>
+                  <path d="m6 13 2-3 2 3a2 2 0 0 1-4 0z"></path>
+                  <path d="m14 13 2-3 2 3a2 2 0 0 1-4 0z"></path>
+                  <line x1="10" y1="15" x2="14" y2="15"></line>
+                </svg>
+              </div>
+              <div className="solution-bar-label">
+                <span>DPDP Act</span>
+                <span>Compliance</span>
+              </div>
+            </Link>
+
+            {/* 2. Data Protection */}
+            <Link to="/services#data-protection" className="solution-bar-item">
+              <div className="solution-bar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <ellipse cx="9" cy="5" rx="6.5" ry="2.2"></ellipse>
+                  <path d="M2.5 5v5c0 1.2 2.9 2.2 6.5 2.2"></path>
+                  <path d="M2.5 10v5c0 1.2 2.9 2.2 6.5 2.2"></path>
+                  <path d="M16 20.5s5-2 5-6.5V9l-5-2-5 2v5c0 4.5 5 6.5 5 6.5z"></path>
+                </svg>
+              </div>
+              <div className="solution-bar-label">
+                <span>Data</span>
+                <span>Protection</span>
+              </div>
+            </Link>
+
+            {/* 3. Endpoint Security */}
+            <Link to="/services#endpoint-security" className="solution-bar-item">
+              <div className="solution-bar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="4" width="14" height="10" rx="1.5"></rect>
+                  <path d="M1 17h16"></path>
+                  <rect x="17" y="9" width="5" height="10" rx="1"></rect>
+                  <line x1="19.5" y1="16.5" x2="19.5" y2="16.51"></line>
+                </svg>
+              </div>
+              <div className="solution-bar-label">
+                <span>Endpoint</span>
+                <span>Security</span>
+              </div>
+            </Link>
+
+            {/* 4. Cloud & Email Security */}
+            <Link to="/services#cloud-security" className="solution-bar-item">
+              <div className="solution-bar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19.5 13.5a4.5 4.5 0 0 0-1.8-8.6A7 7 0 0 0 4.5 9a5 5 0 0 0 1.2 9.8"></path>
+                  <rect x="7" y="12" width="13" height="9" rx="1.5"></rect>
+                  <path d="m8 13.5 5 3.5 5-3.5"></path>
+                </svg>
+              </div>
+              <div className="solution-bar-label">
+                <span>Cloud &amp; Email</span>
+                <span>Security</span>
+              </div>
+            </Link>
+
+            {/* 5. Managed IT Services */}
+            <Link to="/services" className="solution-bar-item">
+              <div className="solution-bar-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <div className="solution-bar-label">
+                <span>Managed IT</span>
+                <span>Services</span>
+              </div>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+      {/* "Ready to strengthen your security posture?" Prompt Section */}
+      <section className="posture-prompt-section" aria-labelledby="posture-prompt-heading">
+        <div className="container">
+          <div className="posture-prompt-content">
+            <h2 id="posture-prompt-heading">
+              Ready to strengthen your<br />
+              <span className="cyan-text">security posture?</span>
+            </h2>
+            <div className="posture-accent-line" aria-hidden="true">
+              <span className="posture-accent-dot"></span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Stats Strip: "Securing Enterprise Ecosystems Across India" */}
       <section className="stats-strip" aria-labelledby="stats-title">

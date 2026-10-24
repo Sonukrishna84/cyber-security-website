@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ContactPage() {
-  const [isMapZoomed, setIsMapZoomed] = React.useState(false);
-
   return (
     <main id="main-content">
       {/* Contact Hero Section */}
@@ -127,8 +125,7 @@ export default function ContactPage() {
                 </div>
                 <div className="contact-info-content">
                   <strong>Business Address</strong>
-                  <span>Noida, Uttar Pradesh, India</span>
-                  <span className="contact-info-subnote">(Address details can be updated as per your business.)</span>
+                  <span>Unit no 604, 6th floor , Tower B , Bhutani Alphathum, Sector-90, Noida 201305</span>
                 </div>
               </div>
 
@@ -350,25 +347,33 @@ export default function ContactPage() {
       {/* Section: Location (Digital Map + Visit Our Office) */}
       <section className="section section-alt" aria-labelledby="location-title">
         <div className="container location-split-grid">
-          {/* Left: Map Visual */}
-          <div 
-            className={`location-map-card ${isMapZoomed ? 'is-zoomed' : ''}`}
-            onClick={() => setIsMapZoomed(!isMapZoomed)}
-            role="button"
-            tabIndex={0}
-            aria-label="Toggle zoom office location map"
-            title="Click to zoom map"
+          {/* Left: Map Visual (Click Anywhere to Open Google Maps) */}
+          <a 
+            href="https://maps.app.goo.gl/2Mmr19sojFunSmSD7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="location-map-card"
+            aria-label="Open Infronix Technologies office location on Google Maps (opens in new tab)"
+            title="Open Infronix Technologies on Google Maps"
           >
             <img 
-              src="/assets/images/contact-location-map.jpg" 
-              alt="Infronix Technologies Office Location Map in Noida, Uttar Pradesh, India" 
+              src="/assets/images/contact-location-map-light.png" 
+              alt="Infronix Technologies Office Location Map in Noida, Uttar Pradesh, India - View on Google Maps" 
               width="1024" 
               height="389" 
               loading="eager" 
               decoding="sync"
               fetchPriority="high"
             />
-          </div>
+            <div className="location-map-hover-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              <span>Open in Google Maps</span>
+            </div>
+          </a>
 
           {/* Right: Office Details Card */}
           <div className="location-office-card">
@@ -386,7 +391,7 @@ export default function ContactPage() {
                 </svg>
                 <div className="location-pin-text">
                   <strong>Noida, Uttar Pradesh, India</strong>
-                  <span>(Exact address can be updated as per your business.)</span>
+                  <span>Unit no 604, 6th floor , Tower B , Bhutani Alphathum, Sector-90, Noida 201305</span>
                 </div>
               </div>
             </div>

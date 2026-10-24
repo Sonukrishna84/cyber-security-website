@@ -12,16 +12,19 @@ export default function DPDPPage() {
       <section className="dpdp-hero-section" aria-labelledby="dpdp-hero-title">
         {/* Full-width Panoramic Cyber Shield & India Map Background */}
         <div className="dpdp-hero-bg-layer" aria-hidden="true">
-          <img 
-            src="/assets/images/dpdp-india-shield-full.jpg" 
-            alt="DPDP Cyber Shield and India Data Security Map" 
-            className="dpdp-hero-bg-img"
-            fetchPriority="high"
-            decoding="sync"
-            loading="eager"
-            width="2172"
-            height="724"
-          />
+          <picture>
+            <source srcSet="/assets/images/dpdp-india-shield-full.webp" type="image/webp" />
+            <img 
+              src="/assets/images/dpdp-india-shield-full.jpg" 
+              alt="DPDP Cyber Shield and India Data Security Map" 
+              className="dpdp-hero-bg-img"
+              fetchPriority="high"
+              decoding="async"
+              loading="eager"
+              width="1920"
+              height="640"
+            />
+          </picture>
           <div className="dpdp-hero-bg-overlay"></div>
         </div>
 

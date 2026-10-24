@@ -105,8 +105,8 @@ export default function Navbar() {
 
           {/* Header CTAs & Mobile Toggle */}
           <div className="header-actions">
-            <Link to="/services" className="btn-pill btn-pill-primary header-cta-btn">
-              <span>Explore Services</span>
+            <Link to="/contact" className="btn-pill btn-pill-primary header-cta-btn">
+              <span>Talk to an Expert</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -188,8 +188,8 @@ export default function Navbar() {
           </li>
         </ul>
         <div className="mobile-drawer-cta">
-          <Link to="/services" className="btn-pill btn-pill-primary" style={{ width: '100%' }} onClick={closeDrawer}>
-            Explore Services
+          <Link to="/contact" className="btn-pill btn-pill-primary" style={{ width: '100%' }} onClick={closeDrawer}>
+            Talk to an Expert
           </Link>
         </div>
       </div>

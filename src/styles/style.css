@@ -3073,7 +3073,6 @@ nav.breadcrumbs {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1360px;
   padding-top: 24px;
   padding-bottom: 24px;
 }
@@ -3991,7 +3990,6 @@ nav.breadcrumbs {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 1360px;
   padding-top: 24px;
   padding-bottom: 24px;
 }

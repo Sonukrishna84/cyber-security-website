@@ -37,13 +37,19 @@ async function deploy() {
   fs.copyFileSync(path.join(distDir, 'index.html'), path.join(distDir, '404.html'));
   fs.writeFileSync(path.join(distDir, '.nojekyll'), '');
 
-  console.log('3. Initializing git repo in dist...');
+  console.log('3. Initializing fresh git repo in dist...');
   const distGit = path.join(distDir, '.git');
   if (fs.existsSync(distGit)) {
     fs.rmSync(distGit, { recursive: true, force: true });
   }
 
   await git.init({ fs, dir: distDir, defaultBranch: 'gh-pages' });
+  await git.addRemote({
+    fs,
+    dir: distDir,
+    remote: 'origin',
+    url: repoUrl
+  });
   
   // Recursively add all files in dist
   function getAllFiles(dir, base = '') {
@@ -79,14 +85,6 @@ async function deploy() {
     }
   });
   console.log('Commit created on gh-pages:', sha);
-
-  console.log('5. Adding origin and pushing to GitHub (gh-pages branch)...');
-  await git.addRemote({
-    fs,
-    dir: distDir,
-    remote: 'origin',
-    url: repoUrl
-  });
 
   const pushResult = await git.push({
     fs,

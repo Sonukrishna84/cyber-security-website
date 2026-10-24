@@ -401,6 +401,14 @@ export default function ContactPage() {
 
       {/* Closing Banner CTA Strip (Full-Width to Match Outer Box) */}
       <section className="contact-cta-fullwidth-section" aria-label="Closing Contact Call to Action">
+        <div className="contact-cta-bg-layer" aria-hidden="true">
+          <img 
+            src="/assets/images/cta-landscape.png" 
+            alt="" 
+            className="contact-cta-bg-img"
+          />
+          <div className="contact-cta-bg-overlay"></div>
+        </div>
         <div className="container contact-cta-container">
           <div className="banner-cta-left">
             <div className="banner-cta-icon-circle" aria-hidden="true">

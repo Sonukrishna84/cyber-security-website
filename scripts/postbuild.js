@@ -8,3 +8,4 @@ if (fs.existsSync(distIndex)) {
   fs.copyFileSync(distIndex, dist404);
   console.log('Successfully created dist/404.html for GitHub Pages SPA routing');
 }
+

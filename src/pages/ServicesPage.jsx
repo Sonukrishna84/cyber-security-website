@@ -217,63 +217,8 @@ export default function ServicesPage() {
             </div>
           </div>
 
-          {/* 2-Column Layout: Left Sticky Sidebar + Right Detailed Content */}
+          {/* Detailed Service Content */}
           <div className="services-split-layout">
-            {/* Desktop Sticky Sidebar Navigation */}
-            <aside className="services-sticky-sidebar" aria-label="Services Navigation">
-              <div className="sidebar-sticky-inner">
-                <div className="sidebar-header">
-                  <span className="sidebar-badge">SERVICE DIRECTORY</span>
-                  <h3 className="sidebar-heading">All 9 Services</h3>
-                </div>
-
-                <nav className="sidebar-nav-list" aria-label="Service categories">
-                  {SERVICE_CATEGORIES.map((cat) => {
-                    const isActive = activeCategory === cat.id;
-                    return (
-                      <a
-                        key={cat.id}
-                        href={`#${cat.id}`}
-                        onClick={(e) => scrollToSection(e, cat.id)}
-                        className={`sidebar-nav-item ${isActive ? 'active' : ''}`}
-                        aria-current={isActive ? 'true' : undefined}
-                      >
-                        <div className="sidebar-nav-icon" aria-hidden="true">
-                          <ServiceIcon name={cat.iconName} size={18} />
-                        </div>
-                        <div className="sidebar-nav-text">
-                          <span className="sidebar-nav-num">{cat.number}</span>
-                          <span className="sidebar-nav-title">{cat.shortTitle}</span>
-                        </div>
-                        {isActive && <div className="sidebar-active-indicator" aria-hidden="true"></div>}
-                      </a>
-                    );
-                  })}
-                </nav>
-
-                {/* Sidebar Assistance Callout Box */}
-                <div className="sidebar-callout-card">
-                  <div className="sidebar-callout-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                      <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                    </svg>
-                  </div>
-                  <h4>Need Security Guidance?</h4>
-                  <p>Our specialists help map appropriate controls to your threat profile and operational scope.</p>
-                  <Link to="/contact" className="sidebar-callout-btn">
-                    <span>Talk to a Specialist</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <line x1="5" y1="12" x2="19" y2="12"></line>
-                      <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </aside>
-
-            {/* Right Column: 9 Detailed Sections */}
             <div className="services-details-content-column">
               {SERVICE_CATEGORIES.map((cat) => (
                 <section

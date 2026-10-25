@@ -6173,11 +6173,9 @@ nav.breadcrumbs {
 }
 
 .services-split-layout {
-  display: grid;
-  grid-template-columns: 290px 1fr;
-  gap: 40px;
-  align-items: flex-start;
-  margin-top: 40px;
+  display: block;
+  max-width: 1100px;
+  margin: 40px auto 0;
 }
 
 /* Sticky Sidebar */

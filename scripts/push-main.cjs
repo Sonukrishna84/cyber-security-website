@@ -49,23 +49,21 @@ async function main() {
     await git.add({ fs, dir, filepath: f });
   }
 
-  if (toAdd.length === 0 && toRemove.length === 0) {
-    console.log('No changes to commit.');
-    return;
+  if (toAdd.length > 0 || toRemove.length > 0) {
+    console.log('--- Committing changes ---');
+    const commitSha = await git.commit({
+      fs,
+      dir,
+      message: 'Redesign Services hero with dedicated 3D Cyber Hub visual, aligned typography, and bottom value bar',
+      author: {
+        name: 'Sonu Yadav',
+        email: 'grihy236@gmail.com'
+      }
+    });
+    console.log(`Commit created: ${commitSha}`);
+  } else {
+    console.log('No new files to stage; pushing existing unpushed commits...');
   }
-
-  console.log('--- Committing changes ---');
-  const commitSha = await git.commit({
-    fs,
-    dir,
-    message: 'Align DPDP hero accent text color with eyebrow and update DPDP theme to electric cyber blue',
-    author: {
-      name: 'Sonu Yadav',
-      email: 'grihy236@gmail.com'
-    }
-  });
-
-  console.log(`Commit created: ${commitSha}`);
 
   console.log('--- Pushing to GitHub (main) ---');
   const creds = getCredentials();

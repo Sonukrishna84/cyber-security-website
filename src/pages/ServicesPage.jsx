@@ -73,8 +73,20 @@ export default function ServicesPage() {
           SECTION 1: HERO SECTION
           ========================================================================= */}
       <section className="hero-section services-hero-section" aria-labelledby="services-hero-title">
-        <div className="container hero-grid">
-          <div className="hero-content">
+        {/* Full-width Panoramic Cyber Shield Background Layer */}
+        <div className="services-hero-bg-layer" aria-hidden="true">
+          <img 
+            src="/assets/images/hero-secure-protect-shield.jpg" 
+            alt="Cybersecurity Shield" 
+            className="services-hero-bg-img"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="services-hero-bg-overlay"></div>
+        </div>
+
+        <div className="container hero-grid services-hero-container">
+          <div className="hero-content services-hero-content">
             <span className="hero-eyebrow">ENTERPRISE CYBERSECURITY PRACTICES</span>
             
             <h1 id="services-hero-title">
@@ -86,7 +98,7 @@ export default function ServicesPage() {
               Explore cybersecurity solutions designed to help organizations identify security risks, protect digital assets, strengthen IT infrastructure, and improve their security posture.
             </p>
 
-            <div className="hero-actions">
+            <div className="hero-actions services-hero-actions">
               <a 
                 href="#services-overview" 
                 className="btn-pill btn-pill-primary"

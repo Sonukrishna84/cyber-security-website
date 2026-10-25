@@ -3009,10 +3009,10 @@ nav.breadcrumbs {
   min-height: 520px;
   background-color: var(--bg-secondary);
   background-image: 
-    radial-gradient(circle at 65% 50%, rgba(0, 191, 255, 0.22) 0%, rgba(8, 125, 255, 0.10) 45%, transparent 75%),
-    radial-gradient(circle at 15% 30%, rgba(0, 191, 255, 0.14) 0%, transparent 45%),
-    linear-gradient(rgba(0, 191, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 191, 255, 0.02) 1px, transparent 1px);
+    radial-gradient(circle at 65% 50%, rgba(0, 140, 255, 0.22) 0%, rgba(0, 102, 255, 0.12) 45%, transparent 75%),
+    radial-gradient(circle at 15% 30%, rgba(0, 140, 255, 0.14) 0%, transparent 45%),
+    linear-gradient(rgba(0, 140, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 140, 255, 0.03) 1px, transparent 1px);
   background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
   display: flex;
   flex-direction: column;
@@ -3107,6 +3107,14 @@ nav.breadcrumbs {
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.8);
 }
 
+.dpdp-hero-accent-text {
+  color: var(--accent-cyan) !important; /* EXACT match to .hero-eyebrow: #00A3FF */
+  -webkit-text-fill-color: var(--accent-cyan) !important;
+  background: none !important;
+  text-shadow: 0 0 26px rgba(0, 163, 255, 0.65), 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+  display: inline-block;
+}
+
 .dpdp-hero-paragraph {
   font-size: 1.125rem !important;
   color: #C6D8EB !important;
@@ -3130,7 +3138,7 @@ nav.breadcrumbs {
   align-items: center;
   gap: 12px;
   background: rgba(4, 18, 38, 0.88);
-  border: 1px solid rgba(0, 191, 255, 0.32);
+  border: 1px solid rgba(0, 140, 255, 0.35);
   border-radius: 9px;
   padding: 9px 15px;
   backdrop-filter: blur(12px);
@@ -3141,30 +3149,30 @@ nav.breadcrumbs {
 }
 
 .dpdp-chip-item:hover {
-  border-color: #00E5FF;
+  border-color: var(--accent-cyan);
   background: rgba(6, 26, 54, 0.96);
   transform: translateX(-4px);
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .dpdp-chip-icon {
   width: 30px;
   height: 30px;
   border-radius: 7px;
-  background: rgba(0, 191, 255, 0.14);
-  border: 1px solid rgba(0, 191, 255, 0.4);
+  background: rgba(0, 140, 255, 0.16);
+  border: 1px solid rgba(0, 140, 255, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   flex-shrink: 0;
   transition: all var(--transition-fast);
 }
 
 .dpdp-chip-item:hover .dpdp-chip-icon {
-  background: rgba(0, 191, 255, 0.3);
-  border-color: #00E5FF;
-  box-shadow: 0 0 12px var(--accent-cyan);
+  background: rgba(0, 140, 255, 0.35);
+  border-color: var(--accent-cyan-bright);
+  box-shadow: 0 0 14px var(--accent-cyan);
 }
 
 .dpdp-chip-icon svg {
@@ -3224,8 +3232,8 @@ nav.breadcrumbs {
   max-width: 380px;
   border-radius: 12px;
   overflow: hidden;
-  border: 1px solid rgba(0, 191, 255, 0.35);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(0, 191, 255, 0.25);
+  border: 1px solid rgba(0, 140, 255, 0.35);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), 0 0 24px rgba(0, 140, 255, 0.25);
   transition: border-color var(--transition-base), box-shadow var(--transition-base);
   background: #041021;
   opacity: 1 !important;
@@ -3236,9 +3244,9 @@ nav.breadcrumbs {
 .dpdp-datacenter-card:hover,
 .dpdp-datacenter-card:focus-visible,
 .dpdp-datacenter-card.is-zoomed {
-  border-color: #00BFFF;
+  border-color: var(--accent-cyan);
   transform: none;
-  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 32px rgba(0, 191, 255, 0.45);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 32px rgba(0, 140, 255, 0.45);
 }
 
 .dpdp-datacenter-img {
@@ -3279,21 +3287,21 @@ nav.breadcrumbs {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(0, 191, 255, 0.08);
-  border: 1.5px solid rgba(0, 191, 255, 0.35);
+  background: rgba(0, 140, 255, 0.10);
+  border: 1.5px solid rgba(0, 140, 255, 0.38);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   flex-shrink: 0;
-  box-shadow: 0 0 12px rgba(0, 191, 255, 0.2);
+  box-shadow: 0 0 12px rgba(0, 140, 255, 0.25);
   transition: all var(--transition-fast);
 }
 
 .dpdp-pillar-item:hover .dpdp-pillar-badge {
-  background: rgba(0, 191, 255, 0.2);
-  border-color: #00E5FF;
-  box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
+  background: rgba(0, 140, 255, 0.25);
+  border-color: var(--accent-cyan-bright);
+  box-shadow: 0 0 20px rgba(0, 140, 255, 0.55);
   transform: scale(1.06);
 }
 
@@ -3372,7 +3380,7 @@ nav.breadcrumbs {
 .dpdp-matter-card:hover {
   background: rgba(9, 32, 62, 0.95);
   border-color: var(--accent-cyan);
-  box-shadow: 0 8px 30px rgba(0, 191, 255, 0.22);
+  box-shadow: 0 8px 30px rgba(0, 140, 255, 0.28);
   transform: translateY(-4px);
 }
 
@@ -3380,20 +3388,20 @@ nav.breadcrumbs {
   width: 44px;
   height: 44px;
   border-radius: 10px;
-  background: rgba(0, 191, 255, 0.08);
-  border: 1px solid rgba(0, 191, 255, 0.3);
+  background: rgba(0, 140, 255, 0.10);
+  border: 1px solid rgba(0, 140, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   margin-bottom: 18px;
   transition: all var(--transition-fast);
 }
 
 .dpdp-matter-card:hover .matter-icon-wrap {
-  background: rgba(0, 191, 255, 0.2);
-  border-color: #00E5FF;
-  box-shadow: 0 0 16px rgba(0, 191, 255, 0.45);
+  background: rgba(0, 140, 255, 0.25);
+  border-color: var(--accent-cyan-bright);
+  box-shadow: 0 0 16px rgba(0, 140, 255, 0.5);
   transform: scale(1.06);
 }
 
@@ -3457,7 +3465,7 @@ nav.breadcrumbs {
   align-items: center;
   gap: 12px;
   background: rgba(6, 22, 43, 0.85);
-  border: 1px solid rgba(0, 191, 255, 0.28);
+  border: 1px solid rgba(0, 140, 255, 0.3);
   border-radius: 8px;
   padding: 10px 18px;
   flex-shrink: 0;
@@ -3468,12 +3476,12 @@ nav.breadcrumbs {
   width: 32px;
   height: 32px;
   border-radius: 6px;
-  background: rgba(0, 191, 255, 0.12);
-  border: 1px solid rgba(0, 191, 255, 0.35);
+  background: rgba(0, 140, 255, 0.14);
+  border: 1px solid rgba(0, 140, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   flex-shrink: 0;
 }
 
@@ -3520,7 +3528,7 @@ nav.breadcrumbs {
 .dpdp-service-h-card:hover {
   background: rgba(9, 32, 62, 0.95);
   border-color: var(--accent-cyan);
-  box-shadow: 0 8px 28px rgba(0, 191, 255, 0.22);
+  box-shadow: 0 8px 28px rgba(0, 140, 255, 0.28);
   transform: translateY(-3px);
 }
 
@@ -3528,20 +3536,20 @@ nav.breadcrumbs {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: rgba(0, 191, 255, 0.08);
-  border: 1px solid rgba(0, 191, 255, 0.3);
+  background: rgba(0, 140, 255, 0.10);
+  border: 1px solid rgba(0, 140, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   flex-shrink: 0;
   transition: all var(--transition-fast);
 }
 
 .dpdp-service-h-card:hover .service-h-icon {
-  background: rgba(0, 191, 255, 0.2);
-  border-color: #00E5FF;
-  box-shadow: 0 0 16px rgba(0, 191, 255, 0.45);
+  background: rgba(0, 140, 255, 0.25);
+  border-color: var(--accent-cyan-bright);
+  box-shadow: 0 0 16px rgba(0, 140, 255, 0.5);
   transform: scale(1.06);
 }
 
@@ -3576,7 +3584,7 @@ nav.breadcrumbs {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   flex-shrink: 0;
   transition: transform var(--transition-fast), color var(--transition-fast);
 }
@@ -3588,7 +3596,7 @@ nav.breadcrumbs {
 
 .dpdp-service-h-card:hover .service-h-arrow {
   transform: translateX(4px);
-  color: #00E5FF;
+  color: var(--accent-cyan-bright);
 }
 
 /* --- Section 5: Our DPDP Assessment Approach --- */
@@ -3642,7 +3650,7 @@ nav.breadcrumbs {
 .dpdp-step-card:hover {
   background: rgba(9, 32, 62, 0.95);
   border-color: var(--accent-cyan);
-  box-shadow: 0 8px 24px rgba(0, 191, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 140, 255, 0.25);
   transform: translateY(-3px);
 }
 
@@ -3657,18 +3665,18 @@ nav.breadcrumbs {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: rgba(0, 191, 255, 0.08);
-  border: 1px solid rgba(0, 191, 255, 0.3);
+  background: rgba(0, 140, 255, 0.10);
+  border: 1px solid rgba(0, 140, 255, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   transition: all var(--transition-fast);
 }
 
 .dpdp-step-card:hover .dpdp-step-icon {
-  background: rgba(0, 191, 255, 0.2);
-  border-color: #00E5FF;
+  background: rgba(0, 140, 255, 0.25);
+  border-color: var(--accent-cyan-bright);
   box-shadow: 0 0 14px var(--accent-cyan);
 }
 
@@ -3678,7 +3686,7 @@ nav.breadcrumbs {
 }
 
 .dpdp-step-arrow {
-  color: rgba(0, 191, 255, 0.4);
+  color: rgba(0, 140, 255, 0.45);
   width: 18px;
   height: 18px;
   display: flex;
@@ -3720,8 +3728,8 @@ nav.breadcrumbs {
   width: 100%;
   padding: 56px 0;
   background-color: #020B19;
-  border-top: 1px solid rgba(0, 191, 255, 0.25);
-  border-bottom: 1px solid rgba(0, 191, 255, 0.25);
+  border-top: 1px solid rgba(0, 140, 255, 0.25);
+  border-bottom: 1px solid rgba(0, 140, 255, 0.25);
   overflow: hidden;
 }
 
@@ -3772,14 +3780,14 @@ nav.breadcrumbs {
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: rgba(0, 191, 255, 0.15);
-  border: 2px solid #00BFFF;
+  background: rgba(0, 140, 255, 0.18);
+  border: 2px solid var(--accent-cyan);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   flex-shrink: 0;
-  box-shadow: 0 0 24px rgba(0, 191, 255, 0.45);
+  box-shadow: 0 0 24px rgba(0, 140, 255, 0.5);
 }
 
 .dpdp-cta-icon-badge svg {

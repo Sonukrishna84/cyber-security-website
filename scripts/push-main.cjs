@@ -58,7 +58,7 @@ async function main() {
   const commitSha = await git.commit({
     fs,
     dir,
-    message: 'Update home hero image and site accents to vibrant electric cyber blue theme',
+    message: 'Align DPDP hero accent text color with eyebrow and update DPDP theme to electric cyber blue',
     author: {
       name: 'Sonu Yadav',
       email: 'grihy236@gmail.com'

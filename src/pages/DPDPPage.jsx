@@ -36,7 +36,7 @@ export default function DPDPPage() {
             
             <h1 id="dpdp-hero-title" className="dpdp-hero-heading">
               DPDP Compliance and<br />
-              <span className="cyan-text">Data Protection Services</span>
+              <span className="dpdp-hero-accent-text">Data Protection Services</span>
             </h1>
 
             <p className="dpdp-hero-paragraph">

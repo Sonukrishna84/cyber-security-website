@@ -195,7 +195,7 @@ export default function Navbar() {
                   aria-labelledby="services-nav-item"
                 >
                   <div className="megamenu-inner">
-                    {/* 9 Services 3x3 Grid */}
+                    {/* 6 Core Services Grid */}
                     <div className="megamenu-grid">
                       {SERVICE_CATEGORIES.map((cat) => (
                         <Link

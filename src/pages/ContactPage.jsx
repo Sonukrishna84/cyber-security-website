@@ -203,7 +203,7 @@ export default function ContactPage() {
             <span className="section-eyebrow">HOW WE CAN HELP</span>
             <h2>Your Security, Our Priority</h2>
             <p className="contact-help-intro">
-              Our team is ready to assist you with cybersecurity assessments, VAPT, infrastructure protection, cloud security, application security, and DPDP compliance support. Get in touch with us to discuss your specific needs and explore the best solutions.
+              Our team is ready to assist you with endpoint defense, infrastructure protection, cloud security, data protection, application security, and DPDP compliance support. Get in touch with us to discuss your specific needs and explore the best solutions.
             </p>
 
             {/* 6 Capability Cards Grid */}
@@ -222,14 +222,12 @@ export default function ContactPage() {
               <div className="capability-card">
                 <div className="capability-icon-wrap" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="m14 10-4 4"></path>
-                    <path d="M10 10l4 4"></path>
-                    <circle cx="12" cy="12" r="6"></circle>
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
                   </svg>
                 </div>
-                <div className="capability-title">VAPT Services</div>
-                <p className="capability-desc">Find and fix vulnerabilities before attackers do.</p>
+                <div className="capability-title">Data Security</div>
+                <p className="capability-desc">Safeguard sensitive assets, records, and proprietary data.</p>
               </div>
 
               <div className="capability-card">
@@ -291,7 +289,7 @@ export default function ContactPage() {
             <span className="section-eyebrow">EXPLORE OUR SERVICES</span>
             <h2 id="explore-services-title">Our Cybersecurity &amp;<br />Compliance Services</h2>
             <p style={{ marginTop: '14px', maxWidth: '440px' }}>
-              From proactive threat detection to data protection and compliance, we offer a complete range of cybersecurity services to help your business stay secure and resilient.
+              From endpoint defense to data protection and DPDP compliance, we offer a complete range of cybersecurity services to help your business stay secure and resilient.
             </p>
           </div>
 

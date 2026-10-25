@@ -6189,14 +6189,11 @@ nav.breadcrumbs {
 #data-security,
 #user-email-security,
 #application-security,
-#vapt,
-#threat-detection-incident-response,
-#security-compliance-consulting,
 #services-overview {
   scroll-margin-top: 104px;
 }
 
-/* Services Overview 9-Card Grid */
+/* Services Overview 6-Card Grid */
 .services-overview-section {
   position: relative;
 }

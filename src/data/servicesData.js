@@ -1,6 +1,6 @@
 /**
  * INFRONIXX Technologies — Core Cybersecurity Services Data
- * 9 Standard Service Categories & Included Solutions
+ * 6 Standard Service Categories & Included Solutions
  */
 
 export const SERVICE_CATEGORIES = [
@@ -138,7 +138,7 @@ export const SERVICE_CATEGORIES = [
       'Prevent accidental or deliberate exfiltration of customer database exports.',
       'Maintain document protection even when sensitive files are shared with external contractors.'
     ],
-    related: ['security-compliance-consulting', 'user-email-security']
+    related: ['cloud-security', 'user-email-security']
   },
   {
     id: 'user-email-security',
@@ -171,7 +171,7 @@ export const SERVICE_CATEGORIES = [
       'Eliminate static shared administrator passwords across enterprise servers.',
       'Trigger automated MFA challenges upon anomalous geolocation or device indicators.'
     ],
-    related: ['endpoint-security', 'threat-detection-incident-response']
+    related: ['endpoint-security', 'data-security']
   },
   {
     id: 'application-security',
@@ -204,118 +204,7 @@ export const SERVICE_CATEGORIES = [
       'Maintain uptime during volumetric and layer-7 application DDoS floods.',
       'Secure legacy web applications where source code modifications are difficult.'
     ],
-    related: ['vapt', 'cloud-security']
-  },
-  {
-    id: 'vapt',
-    number: '07',
-    title: 'Vulnerability Assessment & Penetration Testing (VAPT)',
-    shortTitle: 'VAPT',
-    tagline: 'Proactively Discover, Exploit & Remediate Security Weaknesses',
-    shortDesc: 'Identify and fix exploitable vulnerabilities across networks, web applications, mobile apps, and cloud environments before malicious actors find them.',
-    iconName: 'bug-scan',
-    solutions: [
-      {
-        title: 'Vulnerability Assessment',
-        desc: 'Automated and authenticated scanning of IP ranges, servers, databases, and application stacks to catalog unpatched software, weak ciphers, and misconfigured services.'
-      },
-      {
-        title: 'Authorized Penetration Testing',
-        desc: 'Rigorous manual ethical hacking mimicking real-world adversary tactics across network perimeters, web applications, mobile platforms, and APIs to demonstrate practical business risk.'
-      },
-      {
-        title: 'Security Weakness Identification',
-        desc: 'Detailed analysis of architectural flaws, logic bugs, insecure direct object references, privilege escalations, and unauthenticated endpoints across enterprise infrastructure.'
-      },
-      {
-        title: 'Risk Prioritization',
-        desc: 'Contextual risk rating based on CVSS scoring, asset criticality, exploitability, and potential business disruption, helping engineering teams focus on high-impact vulnerabilities first.'
-      },
-      {
-        title: 'Remediation Recommendations',
-        desc: 'Clear, actionable developer-ready guidance, configuration instructions, code patches, and post-remediation validation testing to verify complete flaw elimination.'
-      }
-    ],
-    useCases: [
-      'Fulfill periodic audit and compliance mandates for RBI, CERT-In, ISO 27001, and SOC 2.',
-      'Uncover critical zero-day and business-logic flaws prior to major software releases.',
-      'Equip internal IT teams with pragmatic, step-by-step remediation roadmaps.'
-    ],
-    related: ['application-security', 'network-security']
-  },
-  {
-    id: 'threat-detection-incident-response',
-    number: '08',
-    title: 'Threat Detection & Incident Response',
-    shortTitle: 'Threat Detection & Response',
-    tagline: 'Investigate Anomalies, Contain Cyber Attacks & Recover Resiliently',
-    shortDesc: 'Detect active threats, investigate suspicious activity, execute structured incident response, and minimize operational downtime.',
-    iconName: 'radar-alert',
-    solutions: [
-      {
-        title: 'Threat Detection',
-        desc: 'Rule-based and behavioral telemetry correlation scanning log feeds, endpoints, and networks for indicators of compromise (IOCs) and indicators of attack (IOAs).'
-      },
-      {
-        title: 'Suspicious Activity Investigation',
-        desc: 'Deep-dive security triage and digital forensics analyzing suspicious network traffic, unauthorized lateral movements, abnormal account elevations, and rogue processes.'
-      },
-      {
-        title: 'Security Incident Response',
-        desc: 'Rapid containment measures to isolate compromised endpoints, revoke active adversary sessions, neutralize active malware, and prevent data exfiltration.'
-      },
-      {
-        title: 'Incident Response Planning',
-        desc: 'Developing structured organizational playbooks, escalation workflows, communication matrices, and crisis tabletop exercises to ensure predictable operational resilience.'
-      },
-      {
-        title: 'Security Monitoring (Where Offered)',
-        desc: 'Centralized aggregation of security events across enterprise infrastructure, establishing baseline visibility and prioritized alert routing for operational teams.'
-      }
-    ],
-    useCases: [
-      'Rapidly contain ransomware propagation before enterprise-wide encryption.',
-      'Conduct digital forensics to establish the root cause and scope of unauthorized access.',
-      'Establish clear regulatory breach reporting timelines aligned with statutory standards.'
-    ],
-    related: ['endpoint-security', 'user-email-security']
-  },
-  {
-    id: 'security-compliance-consulting',
-    number: '09',
-    title: 'Security Compliance Consulting',
-    shortTitle: 'Compliance Consulting',
-    tagline: 'Align Enterprise Policies, Governance & Regulatory Obligations',
-    shortDesc: 'Navigate complex regulatory mandates, conduct thorough gap analyses, and build robust security documentation and data governance frameworks.',
-    iconName: 'file-check',
-    solutions: [
-      {
-        title: 'Security Compliance Assessments',
-        desc: 'Structured evaluation of current organizational security controls against recognized standards such as DPDP Act 2023, ISO/IEC 27001, SOC 2, HIPAA, and PCI-DSS.'
-      },
-      {
-        title: 'Compliance Gap Analysis',
-        desc: 'Comprehensive diagnostic audits comparing existing technical and operational safeguards against compliance requirements, detailing specific remediation steps.'
-      },
-      {
-        title: 'Security Policy and Documentation Support',
-        desc: 'Authoring and formalizing enterprise Information Security Policies (ISPs), Incident Response Procedures, Acceptable Use Policies, and vendor risk management documentation.'
-      },
-      {
-        title: 'Risk Assessment',
-        desc: 'Systematic identification and evaluation of organizational cybersecurity risks, business impact analyses (BIA), and creation of enterprise risk registers.'
-      },
-      {
-        title: 'Data Protection and Privacy Consulting',
-        desc: 'Specialized advisory covering data lifecycle classification, consent management frameworks, Data Protection Impact Assessments (DPIA), and India DPDP compliance support.'
-      }
-    ],
-    useCases: [
-      'Prepare enterprise environments for formal ISO 27001 certification or SOC 2 Type II audits.',
-      'Achieve verifiable compliance with India Digital Personal Data Protection (DPDP) regulations.',
-      'Satisfy mandatory enterprise client vendor security assessment questionnaires.'
-    ],
-    related: ['data-security', 'vapt']
+    related: ['network-security', 'cloud-security']
   }
 ];
 

@@ -125,19 +125,19 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* 5. Security Compliance Consulting */}
-            <Link to="/services#security-compliance-consulting" className="solution-bar-item">
+            {/* 5. Network Security */}
+            <Link to="/services#network-security" className="solution-bar-item">
               <div className="solution-bar-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
                 </svg>
               </div>
               <div className="solution-bar-label">
-                <span>Compliance</span>
-                <span>Consulting</span>
+                <span>Network</span>
+                <span>Security</span>
               </div>
             </Link>
 
@@ -192,7 +192,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section: 9 Horizontal Cards in 3x3 Grid */}
+      {/* Services Section: 6 Core Services Grid */}
       <section id="services" className="section" aria-labelledby="services-title">
         <div className="container">
           
@@ -214,7 +214,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* 3x3 Grid of Horizontal Cards for All 9 Categories */}
+          {/* Grid of Horizontal Cards for All 6 Categories */}
           <div className="services-horizontal-grid">
             {SERVICE_CATEGORIES.map((cat) => (
               <Link 

@@ -62,9 +62,6 @@ export default function Footer() {
               <li><Link to="/services#data-security">Data Security</Link></li>
               <li><Link to="/services#user-email-security">User &amp; Email Security</Link></li>
               <li><Link to="/services#application-security">Application Security</Link></li>
-              <li><Link to="/services#vapt">VAPT</Link></li>
-              <li><Link to="/services#threat-detection-incident-response">Threat Detection &amp; Incident Response</Link></li>
-              <li><Link to="/services#security-compliance-consulting">Security Compliance Consulting</Link></li>
             </ul>
           </div>
 

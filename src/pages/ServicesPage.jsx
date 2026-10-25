@@ -28,7 +28,7 @@ export default function ServicesPage() {
       metaDesc.name = 'description';
       document.head.appendChild(metaDesc);
     }
-    metaDesc.content = "Explore comprehensive cybersecurity solutions from INFRONIXX Technologies, covering endpoint protection, cloud security, network defense, VAPT, data privacy, and compliance consulting.";
+    metaDesc.content = "Explore comprehensive cybersecurity solutions from INFRONIXX Technologies, covering endpoint protection, network defense, cloud security, data protection, user & email security, and application security.";
   }, []);
 
   // Set active category based on URL hash if present
@@ -277,7 +277,7 @@ export default function ServicesPage() {
       <div className="hero-stats-divider"></div>
 
       {/* =========================================================================
-          SECTION 2: SERVICES OVERVIEW (9 CARDS LINKING TO DETAILED SECTIONS)
+          SECTION 2: SERVICES OVERVIEW (6 CARDS LINKING TO DETAILED SECTIONS)
           ========================================================================= */}
       <section id="services-overview" className="services-overview-section section" aria-labelledby="services-overview-title">
         <div className="container">
@@ -285,7 +285,7 @@ export default function ServicesPage() {
             <span className="hero-eyebrow">OUR SERVICES</span>
             <h2 id="services-overview-title" className="section-title">Our Cybersecurity Services</h2>
             <p className="section-subtitle">
-              We provide structured cybersecurity solutions spanning nine critical domains, designed to identify threats, harden perimeters, protect sensitive data, and ensure regulatory compliance.
+              We provide structured cybersecurity solutions spanning six critical domains, designed to harden perimeters, protect endpoints, secure cloud workloads, and safeguard sensitive data.
             </p>
           </div>
 
@@ -626,7 +626,7 @@ export default function ServicesPage() {
               <div className="process-step-item">
                 <div className="process-badge">04</div>
                 <h4 className="process-step-title">Monitor</h4>
-                <p className="process-step-desc">Ongoing support and threat detection.</p>
+                <p className="process-step-desc">Ongoing support and continuous security monitoring.</p>
               </div>
             </div>
           </div>

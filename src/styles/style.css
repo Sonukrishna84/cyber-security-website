@@ -170,7 +170,8 @@ img, svg {
   display: block;
 }
 
-.cyan-text {
+.cyan-text,
+.text-gradient {
   color: var(--accent-cyan);
   background: linear-gradient(135deg, #0084FF 0%, #00B4FF 48%, #38BDF8 100%);
   -webkit-background-clip: text;
@@ -3149,11 +3150,12 @@ nav.breadcrumbs {
 }
 
 .dpdp-hero-accent-text {
-  color: var(--accent-cyan) !important; /* EXACT match to .hero-eyebrow: #00A3FF */
-  -webkit-text-fill-color: var(--accent-cyan) !important;
-  background: none !important;
-  text-shadow: 0 0 26px rgba(0, 163, 255, 0.65), 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+  color: var(--accent-cyan) !important;
+  background: linear-gradient(135deg, #0084FF 0%, #00B4FF 48%, #38BDF8 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
   display: inline-block;
+  filter: drop-shadow(0 0 22px rgba(0, 140, 255, 0.5)) !important;
 }
 
 .dpdp-hero-paragraph {
@@ -4782,11 +4784,12 @@ nav.breadcrumbs {
 }
 
 .about-hero-title-cyan {
-  color: #00d2ff;
-  background: linear-gradient(90deg, #00f0ff 0%, #00d2ff 60%, #38bdf8 100%);
+  color: var(--accent-cyan);
+  background: linear-gradient(135deg, #0084FF 0%, #00B4FF 48%, #38BDF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 24px rgba(0, 210, 255, 0.45));
+  display: inline-block;
+  filter: drop-shadow(0 0 22px rgba(0, 140, 255, 0.5));
 }
 
 .about-hero-paragraph {

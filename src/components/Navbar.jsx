@@ -26,15 +26,19 @@ export default function Navbar() {
 
           if (isDrawerOpen) {
             setIsHeaderHidden(false);
+            document.body.classList.remove('header-is-hidden');
           } else if (currentY <= 60) {
             setIsHeaderHidden(false);
+            document.body.classList.remove('header-is-hidden');
           } else if (currentY > lastScrollYRef.current + 8) {
             // Scrolling down -> hide navbar
             setIsHeaderHidden(true);
+            document.body.classList.add('header-is-hidden');
             setIsServicesOpen(false);
           } else if (currentY < lastScrollYRef.current - 8) {
             // Scrolling up -> show navbar
             setIsHeaderHidden(false);
+            document.body.classList.remove('header-is-hidden');
           }
 
           lastScrollYRef.current = currentY;
@@ -45,7 +49,10 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.body.classList.remove('header-is-hidden');
+    };
   }, [isDrawerOpen]);
 
   // Close menus on route or hash changes
@@ -313,23 +320,19 @@ export default function Navbar() {
           {/* Mobile Services Accordion */}
           <li className="mobile-accordion-item">
             <div className="mobile-accordion-trigger-row">
-              <NavLink 
-                to="/services" 
-                className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`}
-                onClick={closeDrawer}
-              >
-                Services
-              </NavLink>
-              <button
+              <button 
                 type="button"
-                className={`mobile-accordion-toggle ${isMobileServicesOpen ? 'is-expanded' : ''}`}
+                className={`mobile-nav-link mobile-nav-accordion-btn ${isMobileServicesOpen || location.pathname === '/services' ? 'active' : ''}`}
                 onClick={() => setIsMobileServicesOpen(prev => !prev)}
                 aria-expanded={isMobileServicesOpen}
-                aria-label="Expand Services Categories"
+                aria-label="Toggle Services Categories"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <polyline points="6 9 12 15 18 9"></polyline>
-                </svg>
+                <span>Services</span>
+                <span className={`mobile-accordion-arrow ${isMobileServicesOpen ? 'is-expanded' : ''}`} aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </span>
               </button>
             </div>
 

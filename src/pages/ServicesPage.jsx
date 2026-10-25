@@ -107,7 +107,7 @@ export default function ServicesPage() {
             </div>
             
             <h1 id="services-hero-title" className="services-hero-heading">
-              Comprehensive Cybersecurity Services<br />
+              Comprehensive Cybersecurity Services <br className="desktop-break" />
               for <span className="cyan-text">Your Business</span>
             </h1>
 

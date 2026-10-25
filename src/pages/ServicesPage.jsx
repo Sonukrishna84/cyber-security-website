@@ -1,26 +1,112 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { SERVICE_CATEGORIES } from '../data/servicesData';
+import ServiceIcon from '../components/ServiceIcon';
 
 export default function ServicesPage() {
-  const [isLaptopZoomed, setIsLaptopZoomed] = React.useState(false);
+  const [activeCategory, setActiveCategory] = useState(SERVICE_CATEGORIES[0].id);
+  const [isLaptopZoomed, setIsLaptopZoomed] = useState(false);
+  const location = useLocation();
+
+  // SEO Document Title and Meta Description
+  useEffect(() => {
+    document.title = "Cybersecurity Services | INFRONIXX Technologies";
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement('meta');
+      metaDesc.name = 'description';
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = "Explore comprehensive cybersecurity solutions from INFRONIXX Technologies, covering endpoint protection, cloud security, network defense, VAPT, data privacy, and compliance consulting.";
+  }, []);
+
+  // Set active category based on URL hash if present
+  useEffect(() => {
+    if (location.hash) {
+      const hashId = location.hash.replace('#', '');
+      const matched = SERVICE_CATEGORIES.find(c => c.id === hashId);
+      if (matched) {
+        setActiveCategory(matched.id);
+      }
+    }
+  }, [location.hash]);
+
+  // ScrollSpy using IntersectionObserver for the 9 detailed sections
+  useEffect(() => {
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveCategory(entry.target.id);
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-110px 0px -55% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    SERVICE_CATEGORIES.forEach((cat) => {
+      const el = document.getElementById(cat.id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToSection = (e, id) => {
+    e.preventDefault();
+    setActiveCategory(id);
+    window.history.pushState(null, '', `#${id}`);
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <main id="main-content" className="services-page">
       {/* =========================================================================
-          SECTION 1: HERO SECTION (EXACT SIZE & POSITION MATCH WITH HOMEPAGE)
+          SECTION 1: HERO SECTION
           ========================================================================= */}
-      <section className="hero-section" aria-labelledby="services-hero-title">
+      <section className="hero-section services-hero-section" aria-labelledby="services-hero-title">
         <div className="container hero-grid">
           <div className="hero-content">
-            <span className="hero-eyebrow" style={{ display: 'inline-block', marginBottom: '12px' }}>OUR SERVICES</span>
+            <span className="hero-eyebrow">ENTERPRISE CYBERSECURITY PRACTICES</span>
             
             <h1 id="services-hero-title">
               Comprehensive Cybersecurity<br />
-              Solutions for a <span className="cyan-text">Safer Tomorrow</span>
+              Services for <span className="cyan-text">Your Business</span>
             </h1>
 
             <p className="hero-paragraph">
-              We provide end-to-end cybersecurity services to help businesses stay protected, compliant and resilient in an ever-evolving digital world.
+              Explore cybersecurity solutions designed to help organizations identify security risks, protect digital assets, strengthen IT infrastructure, and improve their security posture.
             </p>
+
+            <div className="hero-actions">
+              <a 
+                href="#services-overview" 
+                className="btn-pill btn-pill-primary"
+                onClick={(e) => scrollToSection(e, 'services-overview')}
+              >
+                <span>Explore Our Services</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <Link to="/contact" className="btn-pill btn-pill-ghost">
+                <span>Contact Us</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </Link>
+            </div>
 
             {/* 3 Key Feature Chips */}
             <div className="services-hero-chips" aria-label="Key Service Benefits">
@@ -61,158 +147,251 @@ export default function ServicesPage() {
       <div className="hero-stats-divider"></div>
 
       {/* =========================================================================
-          SECTION 2: WHAT WE OFFER (6 SERVICE CARDS)
+          SECTION 2: SERVICES OVERVIEW (9 CARDS LINKING TO DETAILED SECTIONS)
           ========================================================================= */}
-      <section className="services-offer-section section" aria-labelledby="offer-title">
+      <section id="services-overview" className="services-overview-section section" aria-labelledby="services-overview-title">
         <div className="container">
           <div className="services-section-header">
             <span className="hero-eyebrow">OUR SERVICES</span>
-            <h2 id="offer-title" className="section-title">What We Offer</h2>
+            <h2 id="services-overview-title" className="section-title">Our Cybersecurity Services</h2>
             <p className="section-subtitle">
-              From risk assessment to ongoing monitoring, our cybersecurity services are designed to address your unique challenges and keep your data, systems and users safe.
+              We provide structured cybersecurity solutions spanning nine critical domains, designed to identify threats, harden perimeters, protect sensitive data, and ensure regulatory compliance.
             </p>
           </div>
 
-          <div className="services-offer-grid">
-            {/* Card 1: Penetration Testing */}
-            <div className="service-offer-card">
-              <div className="service-card-top">
-                <div className="service-card-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <polyline points="9 12 11 14 15 10"></polyline>
+          <div className="services-overview-grid">
+            {SERVICE_CATEGORIES.map((cat) => (
+              <a
+                key={cat.id}
+                href={`#${cat.id}`}
+                onClick={(e) => scrollToSection(e, cat.id)}
+                className="services-overview-card"
+                aria-label={`Jump to detailed section: ${cat.title}`}
+              >
+                <div className="overview-card-header">
+                  <div className="overview-card-icon" aria-hidden="true">
+                    <ServiceIcon name={cat.iconName} size={24} />
+                  </div>
+                  <span className="overview-card-num">{cat.number}</span>
+                </div>
+                <h3 className="overview-card-title">{cat.title}</h3>
+                <p className="overview-card-desc">{cat.shortDesc}</p>
+                <div className="overview-card-footer">
+                  <span className="overview-card-link-text">Explore Solutions</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
                   </svg>
                 </div>
-              </div>
-              <h3 className="service-card-title">Penetration Testing</h3>
-              <p className="service-card-desc">
-                Identify and fix vulnerabilities before attackers find them.
-              </p>
-              <Link to="/contact" className="service-card-action" aria-label="Inquire about Penetration Testing">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
-            </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            {/* Card 2: Security Assessment & Audits */}
-            <div className="service-offer-card">
-              <div className="service-card-top">
-                <div className="service-card-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                  </svg>
-                </div>
-              </div>
-              <h3 className="service-card-title">Security Assessment &amp; Audits</h3>
-              <p className="service-card-desc">
-                Get a clear view of your security posture with expert analysis.
-              </p>
-              <Link to="/contact" className="service-card-action" aria-label="Inquire about Security Assessment & Audits">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
-            </div>
+      {/* Glowing Divider Line */}
+      <div className="hero-stats-divider"></div>
 
-            {/* Card 3: 24/7 Security Monitoring */}
-            <div className="service-offer-card">
-              <div className="service-card-top">
-                <div className="service-card-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <path d="M12 8v4l3 3"></path>
-                  </svg>
-                </div>
-              </div>
-              <h3 className="service-card-title">24/7 Security Monitoring</h3>
-              <p className="service-card-desc">
-                Detect and respond to threats in real-time with our SOC services.
-              </p>
-              <Link to="/contact" className="service-card-action" aria-label="Inquire about 24/7 Security Monitoring">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
+      {/* =========================================================================
+          SECTION 3: DETAILED SERVICE SECTIONS WITH STICKY CATEGORY SIDEBAR
+          ========================================================================= */}
+      <section className="services-details-container-section section" aria-label="Detailed Cybersecurity Services">
+        <div className="container">
+          {/* Mobile Category Quick Selector */}
+          <div className="services-mobile-selector-wrap" aria-label="Quick Category Jump">
+            <div className="mobile-selector-header">
+              <span className="mobile-selector-label">Jump to Service:</span>
             </div>
-
-            {/* Card 4: Cloud Security */}
-            <div className="service-offer-card">
-              <div className="service-card-top">
-                <div className="service-card-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
-                  </svg>
-                </div>
-              </div>
-              <h3 className="service-card-title">Cloud Security</h3>
-              <p className="service-card-desc">
-                Secure your cloud infrastructure and applications with advanced protection.
-              </p>
-              <Link to="/contact" className="service-card-action" aria-label="Inquire about Cloud Security">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
+            <div className="services-mobile-chips-scroll">
+              {SERVICE_CATEGORIES.map((cat) => (
+                <a
+                  key={cat.id}
+                  href={`#${cat.id}`}
+                  onClick={(e) => scrollToSection(e, cat.id)}
+                  className={`mobile-category-chip ${activeCategory === cat.id ? 'active' : ''}`}
+                >
+                  <ServiceIcon name={cat.iconName} size={15} />
+                  <span>{cat.shortTitle}</span>
+                </a>
+              ))}
             </div>
+          </div>
 
-            {/* Card 5: Data Protection & Compliance */}
-            <div className="service-offer-card">
-              <div className="service-card-top">
-                <div className="service-card-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                    <line x1="12" y1="8" x2="12" y2="12"></line>
-                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                  </svg>
+          {/* 2-Column Layout: Left Sticky Sidebar + Right Detailed Content */}
+          <div className="services-split-layout">
+            {/* Desktop Sticky Sidebar Navigation */}
+            <aside className="services-sticky-sidebar" aria-label="Services Navigation">
+              <div className="sidebar-sticky-inner">
+                <div className="sidebar-header">
+                  <span className="sidebar-badge">SERVICE DIRECTORY</span>
+                  <h3 className="sidebar-heading">All 9 Services</h3>
+                </div>
+
+                <nav className="sidebar-nav-list" aria-label="Service categories">
+                  {SERVICE_CATEGORIES.map((cat) => {
+                    const isActive = activeCategory === cat.id;
+                    return (
+                      <a
+                        key={cat.id}
+                        href={`#${cat.id}`}
+                        onClick={(e) => scrollToSection(e, cat.id)}
+                        className={`sidebar-nav-item ${isActive ? 'active' : ''}`}
+                        aria-current={isActive ? 'true' : undefined}
+                      >
+                        <div className="sidebar-nav-icon" aria-hidden="true">
+                          <ServiceIcon name={cat.iconName} size={18} />
+                        </div>
+                        <div className="sidebar-nav-text">
+                          <span className="sidebar-nav-num">{cat.number}</span>
+                          <span className="sidebar-nav-title">{cat.shortTitle}</span>
+                        </div>
+                        {isActive && <div className="sidebar-active-indicator" aria-hidden="true"></div>}
+                      </a>
+                    );
+                  })}
+                </nav>
+
+                {/* Sidebar Assistance Callout Box */}
+                <div className="sidebar-callout-card">
+                  <div className="sidebar-callout-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                      <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                  </div>
+                  <h4>Need Security Guidance?</h4>
+                  <p>Our specialists help map appropriate controls to your threat profile and operational scope.</p>
+                  <Link to="/contact" className="sidebar-callout-btn">
+                    <span>Talk to a Specialist</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </Link>
                 </div>
               </div>
-              <h3 className="service-card-title">Data Protection &amp; Compliance</h3>
-              <p className="service-card-desc">
-                Meet regulatory requirements and protect sensitive data.
-              </p>
-              <Link to="/dpdp-compliance" className="service-card-action" aria-label="Explore DPDP Compliance and Data Protection">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
-            </div>
+            </aside>
 
-            {/* Card 6: Security Consulting */}
-            <div className="service-offer-card">
-              <div className="service-card-top">
-                <div className="service-card-icon-wrap" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="9" cy="7" r="4"></circle>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                  </svg>
-                </div>
-              </div>
-              <h3 className="service-card-title">Security Consulting</h3>
-              <p className="service-card-desc">
-                Strategic guidance to build a stronger security ecosystem.
-              </p>
-              <Link to="/contact" className="service-card-action" aria-label="Inquire about Security Consulting">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </Link>
+            {/* Right Column: 9 Detailed Sections */}
+            <div className="services-details-content-column">
+              {SERVICE_CATEGORIES.map((cat) => (
+                <section
+                  key={cat.id}
+                  id={cat.id}
+                  className="service-detail-block"
+                  aria-labelledby={`heading-${cat.id}`}
+                >
+                  <div className="service-detail-block-header">
+                    <div className="service-detail-badge-row">
+                      <span className="service-detail-num-badge">Category {cat.number}</span>
+                      <span className="service-detail-tagline">{cat.tagline}</span>
+                    </div>
+
+                    <div className="service-detail-title-wrap">
+                      <div className="service-detail-main-icon" aria-hidden="true">
+                        <ServiceIcon name={cat.iconName} size={30} />
+                      </div>
+                      <h2 id={`heading-${cat.id}`} className="service-detail-title">
+                        {cat.title}
+                      </h2>
+                    </div>
+
+                    <p className="service-detail-intro">
+                      {cat.shortDesc} Our engineering team assists businesses in evaluating vulnerabilities across this domain, recommending purpose-built safeguards, and establishing continuous visibility.
+                    </p>
+                  </div>
+
+                  {/* Included Solutions Grid */}
+                  <div className="service-solutions-section">
+                    <h3 className="solutions-section-heading">Key Capabilities &amp; Included Solutions</h3>
+                    <div className="service-solutions-grid">
+                      {cat.solutions.map((sol, sIdx) => (
+                        <div key={sIdx} className="solution-item-card">
+                          <div className="solution-item-header">
+                            <div className="solution-bullet-dot" aria-hidden="true"></div>
+                            <h3 className="solution-item-title">{sol.title}</h3>
+                          </div>
+                          <p className="solution-item-desc">{sol.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Business Use Cases & Value */}
+                  {cat.useCases && cat.useCases.length > 0 && (
+                    <div className="service-usecases-section">
+                      <h4 className="usecases-heading">Business Value &amp; Practical Use Cases</h4>
+                      <ul className="service-usecases-list">
+                        {cat.useCases.map((uc, uIdx) => (
+                          <li key={uIdx} className="usecase-item">
+                            <span className="usecase-check-icon" aria-hidden="true">
+                              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                              </svg>
+                            </span>
+                            <span>{uc}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {/* Related Services & Contextual CTA Bar */}
+                  <div className="service-detail-footer-bar">
+                    {cat.related && cat.related.length > 0 && (
+                      <div className="related-services-wrap">
+                        <span className="related-services-label">Related Services:</span>
+                        <div className="related-services-pills">
+                          {cat.related.map((relId) => {
+                            const relCat = SERVICE_CATEGORIES.find(c => c.id === relId);
+                            if (!relCat) return null;
+                            return (
+                              <a
+                                key={relId}
+                                href={`#${relId}`}
+                                onClick={(e) => scrollToSection(e, relId)}
+                                className="related-service-pill"
+                              >
+                                <ServiceIcon name={relCat.iconName} size={14} />
+                                <span>{relCat.shortTitle}</span>
+                              </a>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="contextual-cta-box">
+                      <div className="contextual-cta-text">
+                        <h5>Ready to Strengthen Your {cat.shortTitle}?</h5>
+                        <p>Discuss your operational requirements and architecture with our technical advisors.</p>
+                      </div>
+                      <Link 
+                        to="/contact" 
+                        className="btn-pill btn-pill-primary contextual-cta-btn"
+                        aria-label={`Contact us regarding ${cat.title}`}
+                      >
+                        <span>Inquire About {cat.shortTitle}</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                          <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                      </Link>
+                    </div>
+                  </div>
+                </section>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
+      {/* Glowing Divider Line */}
+      <div className="hero-stats-divider"></div>
+
       {/* =========================================================================
-          SECTION 3: WHY CHOOSE US (TRUSTED CYBERSECURITY PARTNER)
+          SECTION 4: WHY CHOOSE US (TRUSTED CYBERSECURITY PARTNER)
           ========================================================================= */}
       <section className="services-partner-section section section-alt" aria-labelledby="partner-title">
         <div className="container">
@@ -316,12 +495,11 @@ export default function ServicesPage() {
       </section>
 
       {/* =========================================================================
-          SECTION 4: OUR PROCESS (HOW WE WORK)
+          SECTION 5: OUR PROCESS (HOW WE WORK)
           ========================================================================= */}
       <section className="services-process-section section" aria-labelledby="process-title">
         <div className="container">
           <div className="services-process-layout">
-            {/* Left Header */}
             <div className="services-process-header">
               <span className="hero-eyebrow">OUR PROCESS</span>
               <h2 id="process-title" className="section-title">How We Work</h2>
@@ -330,9 +508,7 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            {/* Right Process Steps Flow */}
             <div className="services-steps-flow">
-              {/* Step 01 */}
               <div className="process-step-item">
                 <div className="process-badge">01</div>
                 <h4 className="process-step-title">Assess</h4>
@@ -345,7 +521,6 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              {/* Step 02 */}
               <div className="process-step-item">
                 <div className="process-badge">02</div>
                 <h4 className="process-step-title">Plan</h4>
@@ -358,7 +533,6 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              {/* Step 03 */}
               <div className="process-step-item">
                 <div className="process-badge">03</div>
                 <h4 className="process-step-title">Implement</h4>
@@ -371,7 +545,6 @@ export default function ServicesPage() {
                 </div>
               </div>
 
-              {/* Step 04 */}
               <div className="process-step-item">
                 <div className="process-badge">04</div>
                 <h4 className="process-step-title">Monitor</h4>
@@ -383,7 +556,7 @@ export default function ServicesPage() {
       </section>
 
       {/* =========================================================================
-          SECTION 5: PRE-FOOTER CTA BANNER (READY TO STRENGTHEN YOUR SECURITY?)
+          SECTION 6: PRE-FOOTER CTA BANNER
           ========================================================================= */}
       <section className="services-cta-banner-section" aria-labelledby="services-cta-title">
         <div className="services-cta-bg-layer" aria-hidden="true">

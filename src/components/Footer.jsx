@@ -59,12 +59,12 @@ export default function Footer() {
               <li><Link to="/services#endpoint-security">Endpoint Security</Link></li>
               <li><Link to="/services#network-security">Network Security</Link></li>
               <li><Link to="/services#cloud-security">Cloud Security</Link></li>
-              <li><Link to="/services#data-protection">Data Protection</Link></li>
+              <li><Link to="/services#data-security">Data Security</Link></li>
               <li><Link to="/services#user-email-security">User &amp; Email Security</Link></li>
               <li><Link to="/services#application-security">Application Security</Link></li>
               <li><Link to="/services#vapt">VAPT</Link></li>
-              <li><Link to="/services#threat-detection">Threat Detection &amp; Incident Response</Link></li>
-              <li><Link to="/services#security-compliance">Security Compliance Consulting</Link></li>
+              <li><Link to="/services#threat-detection-incident-response">Threat Detection &amp; Incident Response</Link></li>
+              <li><Link to="/services#security-compliance-consulting">Security Compliance Consulting</Link></li>
             </ul>
           </div>
 

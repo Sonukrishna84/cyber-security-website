@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SERVICE_CATEGORIES } from '../data/servicesData';
+import ServiceIcon from '../components/ServiceIcon';
 
 export default function HomePage() {
   return (
@@ -76,8 +78,8 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* 2. Data Protection */}
-            <Link to="/services#data-protection" className="solution-bar-item">
+            {/* 2. Data Security */}
+            <Link to="/services#data-security" className="solution-bar-item">
               <div className="solution-bar-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                   <ellipse cx="9" cy="5" rx="6.5" ry="2.2"></ellipse>
@@ -88,7 +90,7 @@ export default function HomePage() {
               </div>
               <div className="solution-bar-label">
                 <span>Data</span>
-                <span>Protection</span>
+                <span>Security</span>
               </div>
             </Link>
 
@@ -123,17 +125,19 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* 5. Managed IT Services */}
-            <Link to="/services" className="solution-bar-item">
+            {/* 5. Security Compliance Consulting */}
+            <Link to="/services#security-compliance-consulting" className="solution-bar-item">
               <div className="solution-bar-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
                 </svg>
               </div>
               <div className="solution-bar-label">
-                <span>Managed IT</span>
-                <span>Services</span>
+                <span>Compliance</span>
+                <span>Consulting</span>
               </div>
             </Link>
 
@@ -189,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Section: 9 Horizontal Cards in 3x3 Grid */}
-      <section className="section" aria-labelledby="services-title">
+      <section id="services" className="section" aria-labelledby="services-title">
         <div className="container">
           
           {/* Section Header with View All Link */}
@@ -210,198 +214,37 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* 3x3 Grid of Horizontal Cards */}
+          {/* 3x3 Grid of Horizontal Cards for All 9 Categories */}
           <div className="services-horizontal-grid">
-            
-            {/* Card 1: Endpoint Security */}
-            <Link to="/services#endpoint-security" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                  <line x1="8" y1="21" x2="16" y2="21"></line>
-                  <line x1="12" y1="17" x2="12" y2="21"></line>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">Endpoint Security</div>
-                <p className="service-card-desc">Protect your devices and endpoints from modern threats.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
-            {/* Card 2: Network Security */}
-            <Link to="/services#network-security" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="16" y="16" width="6" height="6" rx="1"></rect>
-                  <rect x="2" y="16" width="6" height="6" rx="1"></rect>
-                  <rect x="9" y="2" width="6" height="6" rx="1"></rect>
-                  <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path>
-                  <path d="M12 12V8"></path>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">Network Security</div>
-                <p className="service-card-desc">Secure your network infrastructure and prevent unauthorized access.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
-            {/* Card 3: Cloud Security */}
-            <Link to="/services#cloud-security" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">Cloud Security</div>
-                <p className="service-card-desc">Keep your cloud environment safe and compliant.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
-            {/* Card 4: Data Protection */}
-            <Link to="/services#data-protection" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">Data Protection</div>
-                <p className="service-card-desc">Safeguard your data with advanced encryption and backup solutions.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
-            {/* Card 5: User & Email Security */}
-            <Link to="/services#user-email-security" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">User &amp; Email Security</div>
-                <p className="service-card-desc">Defend against phishing, spam and email-borne threats.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
-            {/* Card 6: Application Security */}
-            <Link to="/services#application-security" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">Application Security</div>
-                <p className="service-card-desc">Secure your applications from vulnerabilities and attacks.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
-            {/* Card 7: VAPT */}
-            <Link to="/services#vapt" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  <path d="m9 12 2 2 4-4"></path>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">VAPT</div>
-                <p className="service-card-desc">Identify and fix security gaps before attackers find them.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
-            {/* Card 8: Threat Detection & Incident Response */}
-            <Link to="/services#threat-detection" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="22" y1="12" x2="18" y2="12"></line>
-                  <line x1="6" y1="12" x2="2" y2="12"></line>
-                  <line x1="12" y1="6" x2="12" y2="2"></line>
-                  <line x1="12" y1="22" x2="12" y2="18"></line>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">Threat Detection &amp; Incident Response</div>
-                <p className="service-card-desc">Detect, respond and neutralize threats in real time.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
-            {/* Card 9: Security Compliance Consulting */}
-            <Link to="/services#security-compliance" className="service-card-h">
-              <div className="service-card-icon-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                </svg>
-              </div>
-              <div className="service-card-text">
-                <div className="service-card-title">Security Compliance Consulting</div>
-                <p className="service-card-desc">Meet industry standards and stay audit-ready.</p>
-              </div>
-              <div className="service-card-arrow" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
-              </div>
-            </Link>
-
+            {SERVICE_CATEGORIES.map((cat) => (
+              <Link 
+                key={cat.id} 
+                to={`/services#${cat.id}`} 
+                className="service-card-h"
+                aria-label={`Learn more about ${cat.title}`}
+              >
+                <div className="service-card-icon-circle" aria-hidden="true">
+                  <ServiceIcon name={cat.iconName} size={22} />
+                </div>
+                <div className="service-card-text">
+                  <div className="service-card-title">{cat.title}</div>
+                  <p className="service-card-desc">{cat.shortDesc}</p>
+                  <span className="service-card-learn-more">
+                    <span>Learn More</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </span>
+                </div>
+                <div className="service-card-arrow" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

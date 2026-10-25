@@ -2,7 +2,19 @@ const fs = require('fs');
 const path = require('path');
 const cp = require('child_process');
 const git = require('isomorphic-git');
-const http = require('isomorphic-git/http/node');
+const nodeHttp = require('isomorphic-git/http/node');
+
+const customHttp = {
+  request: (args) => {
+    return nodeHttp.request({
+      ...args,
+      fetchOptions: {
+        ...args.fetchOptions,
+        timeout: 180000
+      }
+    });
+  }
+};
 
 const rootDir = path.resolve(__dirname, '..');
 const distDir = path.resolve(rootDir, 'dist');
@@ -88,7 +100,7 @@ async function deploy() {
 
   const pushResult = await git.push({
     fs,
-    http,
+    http: customHttp,
     dir: distDir,
     remote: 'origin',
     ref: 'gh-pages',

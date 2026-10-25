@@ -24,12 +24,14 @@ export default function App() {
           <Route path="/dpdp-compliance" element={<DPDPPage />} />
           <Route path="/contact" element={<ContactPage />} />
 
+          {/* Direct Support & Legacy URLs for Cyber Security Services */}
+          <Route path="/cyber-security-services.html" element={<ServicesPage />} />
+          <Route path="/cyber-security-services" element={<ServicesPage />} />
+          <Route path="/services.html" element={<ServicesPage />} />
+
           {/* Legacy & .html Redirects */}
           <Route path="/about-us" element={<Navigate to="/about" replace />} />
           <Route path="/about-us.html" element={<Navigate to="/about" replace />} />
-          <Route path="/services.html" element={<Navigate to="/services" replace />} />
-          <Route path="/cyber-security-services" element={<Navigate to="/services" replace />} />
-          <Route path="/cyber-security-services.html" element={<Navigate to="/services" replace />} />
           <Route path="/dpdp-compliance.html" element={<Navigate to="/dpdp-compliance" replace />} />
           <Route path="/contact-us" element={<Navigate to="/contact" replace />} />
           <Route path="/contact-us.html" element={<Navigate to="/contact" replace />} />
@@ -43,4 +45,3 @@ export default function App() {
     </BrowserRouter>
   );
 }
-

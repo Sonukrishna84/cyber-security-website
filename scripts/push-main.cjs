@@ -29,7 +29,7 @@ async function main() {
   const toRemove = [];
 
   for (const [filepath, head, workdir, stage] of matrix) {
-    if (filepath.startsWith('node_modules/') || filepath.startsWith('dist/')) continue;
+    if (filepath.startsWith('node_modules/') || filepath.startsWith('dist/') || filepath.startsWith('scratch/')) continue;
     if (head === 1 && workdir === 0) {
       toRemove.push(filepath);
     } else if (workdir === 2) {

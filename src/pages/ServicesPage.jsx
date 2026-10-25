@@ -331,9 +331,6 @@ export default function ServicesPage() {
           <div className="services-mobile-selector-wrap services-category-selector-box" aria-label="Jump to Service Category">
             <div className="mobile-selector-header category-selector-header">
               <span className="mobile-selector-label category-selector-label">JUMP TO SERVICE:</span>
-              <span className="category-selector-hint">
-                Scroll to view all 9 categories &rarr;
-              </span>
             </div>
             <div 
               className="services-mobile-chips-scroll services-category-chips-scroll"

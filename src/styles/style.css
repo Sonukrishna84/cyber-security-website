@@ -60,7 +60,6 @@ html {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  scroll-behavior: smooth;
 }
 
 /* Custom Cyber Scrollbar */
@@ -260,7 +259,13 @@ img, svg {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-subtle);
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), background-color var(--transition-base), box-shadow var(--transition-base);
+  will-change: transform;
+}
+
+.site-header.header-hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
 }
 
 .site-header.scrolled {
@@ -3980,6 +3985,12 @@ nav.breadcrumbs {
   width: 100%;
   min-height: 600px;
   background-color: #020B19;
+  background-image: 
+    radial-gradient(ellipse 65% 55% at 75% 50%, rgba(0, 102, 255, 0.30) 0%, rgba(0, 30, 90, 0.12) 55%, transparent 75%),
+    radial-gradient(circle at 18% 30%, rgba(0, 119, 255, 0.12) 0%, transparent 45%),
+    linear-gradient(rgba(0, 140, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 140, 255, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4007,6 +4018,15 @@ nav.breadcrumbs {
   object-fit: cover;
   object-position: center center;
   display: block;
+  filter: hue-rotate(38deg) saturate(1.4) contrast(1.08);
+}
+
+.services-hero-blue-tint {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 75% 50%, rgba(0, 110, 255, 0.35) 0%, rgba(0, 70, 220, 0.15) 50%, transparent 75%);
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
 .services-hero-bg-overlay {
@@ -4015,10 +4035,10 @@ nav.breadcrumbs {
   background: linear-gradient(
     90deg,
     #020B19 0%,
-    #020B19 38%,
-    rgba(2, 11, 25, 0.94) 50%,
-    rgba(2, 11, 25, 0.58) 66%,
-    rgba(2, 11, 25, 0.12) 82%,
+    #020B19 36%,
+    rgba(2, 11, 25, 0.94) 48%,
+    rgba(2, 11, 25, 0.58) 64%,
+    rgba(2, 11, 25, 0.12) 80%,
     transparent 100%
   );
   pointer-events: none;
@@ -6481,15 +6501,16 @@ nav.breadcrumbs {
 }
 
 .service-detail-block {
-  background: rgba(3, 15, 34, 0.75);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: #030f24;
   border: 1px solid rgba(0, 191, 255, 0.2);
   border-radius: 22px;
   padding: 38px 36px;
-  box-shadow: 0 14px 44px rgba(0, 0, 0, 0.55);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
   position: relative;
   overflow: hidden;
+  contain: content;
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 750px;
 }
 
 .service-detail-block::before {
@@ -6903,15 +6924,37 @@ nav.breadcrumbs {
   .services-hero-features-bar {
     display: flex;
     flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
     gap: 14px;
     width: 100%;
     margin-top: 16px;
     padding: 16px;
-    border-radius: 12px;
+    border-radius: 14px;
+    background: rgba(3, 16, 36, 0.92);
+  }
+  .services-hero-feature-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    gap: 14px;
+    width: 100%;
+  }
+  .services-hero-feature-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    text-align: left !important;
   }
   .services-hero-feature-divider {
     display: none;
   }
+}
+
+html, body, #root, #main-content, .services-page {
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 .mobile-sublink-all svg {

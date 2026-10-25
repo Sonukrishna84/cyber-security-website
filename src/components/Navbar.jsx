@@ -6,6 +6,7 @@ import ServiceIcon from './ServiceIcon';
 export default function Navbar() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeaderHidden, setIsHeaderHidden] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   
@@ -13,14 +14,39 @@ export default function Navbar() {
   const megaMenuRef = useRef(null);
   const servicesBtnRef = useRef(null);
   const closeTimerRef = useRef(null);
+  const lastScrollYRef = useRef(0);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentY = window.scrollY;
+          setIsScrolled(currentY > 20);
+
+          if (isDrawerOpen) {
+            setIsHeaderHidden(false);
+          } else if (currentY <= 60) {
+            setIsHeaderHidden(false);
+          } else if (currentY > lastScrollYRef.current + 8) {
+            // Scrolling down -> hide navbar
+            setIsHeaderHidden(true);
+            setIsServicesOpen(false);
+          } else if (currentY < lastScrollYRef.current - 8) {
+            // Scrolling up -> show navbar
+            setIsHeaderHidden(false);
+          }
+
+          lastScrollYRef.current = currentY;
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isDrawerOpen]);
 
   // Close menus on route or hash changes
   useEffect(() => {
@@ -101,7 +127,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`site-header ${isScrolled ? 'is-scrolled scrolled' : ''}`} role="banner">
+      <header className={`site-header ${isScrolled ? 'is-scrolled scrolled' : ''} ${isHeaderHidden ? 'header-hidden' : ''}`} role="banner">
         <div className="container header-container">
           <Link to="/" className="brand-link" aria-label="Infronix Technologies & Solutions LLP Home" onClick={closeDrawer}>
             <img 

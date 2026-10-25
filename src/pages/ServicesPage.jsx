@@ -31,20 +31,29 @@ export default function ServicesPage() {
     }
   }, [location.hash]);
 
-  // ScrollSpy using IntersectionObserver for the 9 detailed sections
+  const activeCategoryRef = React.useRef(activeCategory);
+  activeCategoryRef.current = activeCategory;
+
+  // ScrollSpy using throttled IntersectionObserver to keep scrolling 120 FPS buttery smooth
   useEffect(() => {
+    let rafId = null;
     const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveCategory(entry.target.id);
+      const intersecting = entries.filter((e) => e.isIntersecting);
+      if (intersecting.length > 0) {
+        const topSection = intersecting[0];
+        if (topSection.target.id && topSection.target.id !== activeCategoryRef.current) {
+          if (rafId) cancelAnimationFrame(rafId);
+          rafId = requestAnimationFrame(() => {
+            setActiveCategory(topSection.target.id);
+          });
         }
-      });
+      }
     };
 
     const observerOptions = {
       root: null,
-      rootMargin: '-110px 0px -55% 0px',
-      threshold: 0
+      rootMargin: '-100px 0px -50% 0px',
+      threshold: 0.1
     };
 
     const observer = new IntersectionObserver(observerCallback, observerOptions);
@@ -54,7 +63,10 @@ export default function ServicesPage() {
       if (el) observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   const scrollToSection = (e, id) => {
@@ -83,6 +95,7 @@ export default function ServicesPage() {
             fetchPriority="high"
           />
           <div className="services-hero-bg-overlay"></div>
+          <div className="services-hero-blue-tint"></div>
         </div>
 
         <div className="container services-hero-container">

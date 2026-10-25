@@ -79,7 +79,7 @@ html {
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
   -webkit-text-size-adjust: 100%;
@@ -90,7 +90,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
   position: relative;
@@ -259,8 +259,8 @@ img, svg {
 
 /* --- Header & Navigation --- */
 .site-header {
-  position: sticky;
-  top: 0;
+  position: sticky !important;
+  top: 0 !important;
   width: 100%;
   height: var(--header-height);
   z-index: 1000;
@@ -268,13 +268,8 @@ img, svg {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-subtle);
-  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), background-color var(--transition-base), box-shadow var(--transition-base);
-  will-change: transform;
-}
-
-.site-header.header-hidden {
-  transform: translateY(-100%);
-  pointer-events: none;
+  transition: background-color var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  transform: none !important;
 }
 
 .site-header.scrolled {
@@ -7181,8 +7176,19 @@ nav.breadcrumbs {
   }
 }
 
-html, body, #root, #main-content, .services-page {
-  overflow-x: hidden !important;
+html, body {
+  overflow-x: clip !important;
+  max-width: 100%;
+}
+
+#root, .site-wrapper {
+  overflow: visible !important;
+  max-width: 100%;
+  width: 100%;
+}
+
+#main-content, .services-page {
+  overflow-x: clip !important;
   max-width: 100%;
 }
 

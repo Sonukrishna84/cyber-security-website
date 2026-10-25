@@ -366,11 +366,6 @@ export default function ServicesPage() {
                   aria-labelledby={`heading-${cat.id}`}
                 >
                   <div className="service-detail-block-header">
-                    <div className="service-detail-badge-row">
-                      <span className="service-detail-num-badge">Category {cat.number}</span>
-                      <span className="service-detail-tagline">{cat.tagline}</span>
-                    </div>
-
                     <div className="service-detail-title-wrap">
                       <div className="service-detail-main-icon" aria-hidden="true">
                         <ServiceIcon name={cat.iconName} size={30} />

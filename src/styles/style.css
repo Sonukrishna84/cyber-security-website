@@ -3977,56 +3977,21 @@ nav.breadcrumbs {
 /* --- Section 1: Services Hero --- */
 .services-hero-section {
   position: relative;
-  width: 100%;
-  min-height: 520px;
-  background-color: #000B1D;
+  background-color: #020B19;
   background-image: 
-    radial-gradient(circle at 75% 50%, rgba(0, 191, 255, 0.16) 0%, rgba(8, 125, 255, 0.08) 45%, transparent 75%),
-    radial-gradient(circle at 15% 30%, rgba(0, 191, 255, 0.10) 0%, transparent 45%),
-    linear-gradient(rgba(0, 191, 255, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 191, 255, 0.02) 1px, transparent 1px);
-  background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    radial-gradient(ellipse 65% 55% at 75% 50%, rgba(0, 102, 255, 0.22) 0%, rgba(2, 11, 25, 0) 70%),
+    linear-gradient(90deg, #020B19 0%, #020B19 32%, rgba(2, 11, 25, 0.95) 45%, rgba(2, 11, 25, 0.45) 58%, rgba(2, 11, 25, 0.05) 72%, transparent 100%),
+    url('/assets/images/hero-secure-protect-shield.jpg');
+  background-size: 100% 100%, 100% 100%, auto 85%;
+  background-position: 0 0, 0 0, calc(100% + 25px) center;
+  background-repeat: no-repeat;
+  padding: 80px 0 72px;
+  min-height: 560px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.services-hero-bg-layer {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.services-hero-bg-img {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: right center;
-  display: block;
-  opacity: 1 !important;
-}
-
-.services-hero-bg-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    #020B19 0%,
-    rgba(2, 11, 25, 0.95) 35%,
-    rgba(2, 11, 25, 0.55) 52%,
-    rgba(2, 11, 25, 0.1) 70%,
-    transparent 100%
-  );
-  pointer-events: none;
+  border-bottom: 1px solid rgba(0, 140, 255, 0.18);
 }
 
 .services-hero-container {
@@ -4035,20 +4000,10 @@ nav.breadcrumbs {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 36px;
-  padding-bottom: 36px;
-}
-
-.services-hero-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  gap: 40px;
 }
 
 .services-hero-content {
-  max-width: 660px;
+  max-width: 620px;
   width: 100%;
   min-width: 0;
   position: relative;
@@ -4077,8 +4032,8 @@ nav.breadcrumbs {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 24px;
-  margin-bottom: 28px;
+  margin-top: 28px;
+  margin-bottom: 34px;
 }
 
 .services-hero-chips {
@@ -4091,11 +4046,11 @@ nav.breadcrumbs {
 .services-hero-chip {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   background: rgba(4, 18, 38, 0.85);
   border: 1px solid rgba(0, 191, 255, 0.32);
   border-radius: 9999px;
-  padding: 8px 14px;
+  padding: 8px 16px;
   font-size: 0.82rem;
   font-weight: 600;
   color: #FFFFFF;
@@ -4111,6 +4066,7 @@ nav.breadcrumbs {
   border-color: #00E5FF;
   background: rgba(6, 26, 54, 0.94);
   transform: translateY(-2px);
+  box-shadow: 0 0 16px rgba(0, 229, 255, 0.25);
 }
 
 .services-chip-icon {
@@ -6801,12 +6757,14 @@ nav.breadcrumbs {
 
 @media (max-width: 768px) {
   .services-hero-section {
+    padding: 38px 0 28px;
     min-height: auto;
-    padding: 38px 0 32px;
+    background-image: none !important;
+    background-color: #020B19 !important;
   }
   .services-hero-container {
-    padding-top: 14px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 16px;
   }
   .services-hero-content {
     max-width: 100%;
@@ -6842,23 +6800,31 @@ nav.breadcrumbs {
     flex-wrap: wrap !important;
     gap: 8px;
     width: 100%;
+    margin-top: 0;
   }
   .services-hero-chip {
     padding: 6px 12px;
     font-size: 0.77rem;
     gap: 7px;
   }
-  .services-hero-bg-img {
-    opacity: 0.22 !important;
-    object-position: 80% center;
+  .services-hero-visual-mobile {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 24px !important;
+    margin-bottom: 6px !important;
+    text-align: center !important;
   }
-  .services-hero-bg-overlay {
-    background: linear-gradient(
-      180deg,
-      rgba(2, 11, 25, 0.94) 0%,
-      rgba(2, 11, 25, 0.84) 50%,
-      rgba(2, 11, 25, 0.96) 100%
-    );
+  .services-hero-visual-mobile img {
+    width: 100% !important;
+    max-width: 320px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    filter: none !important;
   }
 }
 

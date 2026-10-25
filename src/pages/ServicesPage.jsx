@@ -73,18 +73,6 @@ export default function ServicesPage() {
           SECTION 1: HERO SECTION
           ========================================================================= */}
       <section className="hero-section services-hero-section" aria-labelledby="services-hero-title">
-        {/* Full-width Panoramic Cyber Shield Background Layer */}
-        <div className="services-hero-bg-layer" aria-hidden="true">
-          <img 
-            src="/assets/images/hero-secure-protect-shield.jpg" 
-            alt="Cybersecurity Shield" 
-            className="services-hero-bg-img"
-            loading="eager"
-            fetchPriority="high"
-          />
-          <div className="services-hero-bg-overlay"></div>
-        </div>
-
         <div className="container hero-grid services-hero-container">
           <div className="hero-content services-hero-content">
             <span className="hero-eyebrow">ENTERPRISE CYBERSECURITY PRACTICES</span>
@@ -105,15 +93,15 @@ export default function ServicesPage() {
                 onClick={(e) => scrollToSection(e, 'services-overview')}
               >
                 <span>Explore Our Services</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </a>
 
-              <Link to="/contact" className="btn-pill btn-pill-ghost">
+              <Link to="/contact" className="btn-pill btn-pill-secondary">
                 <span>Contact Us</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
@@ -150,6 +138,18 @@ export default function ServicesPage() {
                 </div>
                 <span>Business Focused</span>
               </div>
+            </div>
+
+            {/* Mobile-only visual fallback */}
+            <div className="hero-visual-mobile services-hero-visual-mobile">
+              <img
+                src="/assets/images/hero-shield-mobile-center.jpg"
+                alt="Cybersecurity Holographic Shield"
+                className="hero-visual-mobile-img"
+                width="600"
+                height="532"
+                loading="eager"
+              />
             </div>
           </div>
         </div>

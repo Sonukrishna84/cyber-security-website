@@ -7,6 +7,7 @@ export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState(SERVICE_CATEGORIES[0].id);
   const [isLaptopZoomed, setIsLaptopZoomed] = useState(false);
   const location = useLocation();
+  const chipsScrollRef = React.useRef(null);
 
   // SEO Document Title and Meta Description
   useEffect(() => {
@@ -76,6 +77,26 @@ export default function ServicesPage() {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  // Auto-scroll active chip into view inside the horizontal category selector
+  useEffect(() => {
+    if (activeCategory && chipsScrollRef.current) {
+      const activeChip = chipsScrollRef.current.querySelector(`[href="#${activeCategory}"]`);
+      if (activeChip) {
+        const chipLeft = activeChip.offsetLeft;
+        const chipWidth = activeChip.offsetWidth;
+        const containerWidth = chipsScrollRef.current.offsetWidth;
+        const targetScroll = chipLeft - (containerWidth / 2) + (chipWidth / 2);
+        chipsScrollRef.current.scrollTo({ left: targetScroll, behavior: 'smooth' });
+      }
+    }
+  }, [activeCategory]);
+
+  const handleChipsWheel = (e) => {
+    if (chipsScrollRef.current && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      chipsScrollRef.current.scrollLeft += e.deltaY;
     }
   };
 
@@ -240,18 +261,25 @@ export default function ServicesPage() {
           ========================================================================= */}
       <section className="services-details-container-section section" aria-label="Detailed Cybersecurity Services">
         <div className="container">
-          {/* Mobile Category Quick Selector */}
-          <div className="services-mobile-selector-wrap" aria-label="Quick Category Jump">
-            <div className="mobile-selector-header">
-              <span className="mobile-selector-label">Jump to Service:</span>
+          {/* Category Quick Selector (Available on ALL devices, Non-Sticky, Horizontal Scrollable) */}
+          <div className="services-mobile-selector-wrap services-category-selector-box" aria-label="Jump to Service Category">
+            <div className="mobile-selector-header category-selector-header">
+              <span className="mobile-selector-label category-selector-label">JUMP TO SERVICE:</span>
+              <span className="category-selector-hint">
+                Scroll to view all 9 categories &rarr;
+              </span>
             </div>
-            <div className="services-mobile-chips-scroll">
+            <div 
+              className="services-mobile-chips-scroll services-category-chips-scroll"
+              ref={chipsScrollRef}
+              onWheel={handleChipsWheel}
+            >
               {SERVICE_CATEGORIES.map((cat) => (
                 <a
                   key={cat.id}
                   href={`#${cat.id}`}
                   onClick={(e) => scrollToSection(e, cat.id)}
-                  className={`mobile-category-chip ${activeCategory === cat.id ? 'active' : ''}`}
+                  className={`mobile-category-chip category-chip-btn ${activeCategory === cat.id ? 'active' : ''}`}
                 >
                   <ServiceIcon name={cat.iconName} size={15} />
                   <span>{cat.shortTitle}</span>

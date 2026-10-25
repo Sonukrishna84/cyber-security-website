@@ -94,3 +94,4 @@ export default function ServiceIcon({ name, className = '', size = 24 }) {
       );
   }
 }
+

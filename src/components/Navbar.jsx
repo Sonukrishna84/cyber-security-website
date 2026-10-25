@@ -201,11 +201,10 @@ export default function Navbar() {
                           onClick={() => setIsServicesOpen(false)}
                         >
                           <div className="megamenu-item-icon">
-                            <ServiceIcon name={cat.iconName} size={20} />
+                            <ServiceIcon name={cat.iconName} size={18} />
                           </div>
                           <div className="megamenu-item-text">
                             <span className="megamenu-item-title">{cat.title}</span>
-                            <span className="megamenu-item-desc">{cat.shortDesc}</span>
                           </div>
                         </Link>
                       ))}

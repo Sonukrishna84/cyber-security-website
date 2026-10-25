@@ -72,21 +72,37 @@ export default function ServicesPage() {
       {/* =========================================================================
           SECTION 1: HERO SECTION
           ========================================================================= */}
-      <section className="hero-section services-hero-section" aria-labelledby="services-hero-title">
-        <div className="container hero-grid services-hero-container">
-          <div className="hero-content services-hero-content">
-            <span className="hero-eyebrow">ENTERPRISE CYBERSECURITY PRACTICES</span>
+      <section className="services-hero-section" aria-labelledby="services-hero-title">
+        {/* Full-width Panoramic Cyber Services Hub Background Layer */}
+        <div className="services-hero-bg-layer" aria-hidden="true">
+          <img 
+            src="/assets/images/services-hero-cyber-hub.jpg" 
+            alt="INFRONIXX Cybersecurity Services Defense Hub" 
+            className="services-hero-bg-img"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="services-hero-bg-overlay"></div>
+        </div>
+
+        <div className="container services-hero-container">
+          <div className="services-hero-content">
+            {/* Eyebrow */}
+            <div className="services-hero-eyebrow">
+              <span className="services-eyebrow-line"></span>
+              <span>ENTERPRISE CYBERSECURITY PRACTICES</span>
+            </div>
             
-            <h1 id="services-hero-title">
-              Comprehensive Cybersecurity<br />
-              Services for <span className="cyan-text">Your Business</span>
+            <h1 id="services-hero-title" className="services-hero-heading">
+              Comprehensive Cybersecurity Services<br />
+              for <span className="cyan-text">Your Business</span>
             </h1>
 
-            <p className="hero-paragraph">
+            <p className="services-hero-paragraph">
               Explore cybersecurity solutions designed to help organizations identify security risks, protect digital assets, strengthen IT infrastructure, and improve their security posture.
             </p>
 
-            <div className="hero-actions services-hero-actions">
+            <div className="services-hero-actions">
               <a 
                 href="#services-overview" 
                 className="btn-pill btn-pill-primary"
@@ -107,49 +123,51 @@ export default function ServicesPage() {
                 </svg>
               </Link>
             </div>
+          </div>
 
-            {/* 3 Key Feature Chips */}
-            <div className="services-hero-chips" aria-label="Key Service Benefits">
-              <div className="services-hero-chip">
-                <div className="services-chip-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <span>Proactive Protection</span>
+          {/* Bottom 3-Column Service Value Bar */}
+          <div className="services-hero-features-bar" aria-label="Key Service Benefits">
+            <div className="services-hero-feature-item">
+              <div className="services-hero-feature-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
               </div>
-
-              <div className="services-hero-chip">
-                <div className="services-chip-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                  </svg>
-                </div>
-                <span>Expert Guidance</span>
-              </div>
-
-              <div className="services-hero-chip">
-                <div className="services-chip-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <circle cx="12" cy="12" r="6"></circle>
-                    <circle cx="12" cy="12" r="2"></circle>
-                  </svg>
-                </div>
-                <span>Business Focused</span>
+              <div className="services-hero-feature-text">
+                <span className="services-feature-title">Proactive Protection</span>
+                <span className="services-feature-sub">Continuous threat defense &amp; hardening</span>
               </div>
             </div>
 
-            {/* Mobile-only visual fallback */}
-            <div className="hero-visual-mobile services-hero-visual-mobile">
-              <img
-                src="/assets/images/hero-shield-mobile-center.jpg"
-                alt="Cybersecurity Holographic Shield"
-                className="hero-visual-mobile-img"
-                width="600"
-                height="532"
-                loading="eager"
-              />
+            <div className="services-hero-feature-divider" aria-hidden="true"></div>
+
+            <div className="services-hero-feature-item">
+              <div className="services-hero-feature-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div className="services-hero-feature-text">
+                <span className="services-feature-title">Expert Guidance</span>
+                <span className="services-feature-sub">Certified security advisory</span>
+              </div>
+            </div>
+
+            <div className="services-hero-feature-divider" aria-hidden="true"></div>
+
+            <div className="services-hero-feature-item">
+              <div className="services-hero-feature-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </div>
+              <div className="services-hero-feature-text">
+                <span className="services-feature-title">Business Focused</span>
+                <span className="services-feature-sub">Risk-prioritized enterprise ROI</span>
+              </div>
             </div>
           </div>
         </div>

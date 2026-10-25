@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ContactPage() {
+  // If user is on phone, automatically scroll to Get in Touch box
+  useEffect(() => {
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      const timer = setTimeout(() => {
+        const contactBox = document.getElementById('contact-info-section');
+        if (contactBox) {
+          const navOffset = 70;
+          const targetY = contactBox.getBoundingClientRect().top + window.pageYOffset - navOffset;
+          window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+        }
+      }, 80);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
   return (
     <main id="main-content">
       {/* Contact Hero Section */}

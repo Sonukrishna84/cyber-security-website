@@ -1997,6 +1997,10 @@ img, svg {
 }
 
 /* Contact Main Section (Left Info + Right Help Box) */
+#contact-info-section {
+  scroll-margin-top: 76px;
+}
+
 .contact-main-grid {
   display: grid;
   grid-template-columns: 0.85fr 1.15fr;

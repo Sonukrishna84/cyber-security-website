@@ -89,6 +89,19 @@ export default function Navbar() {
     setIsMobileServicesOpen(false);
   };
 
+  const handleExpertClick = (e) => {
+    closeDrawer();
+    if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+      const box = document.getElementById('contact-info-section');
+      if (box) {
+        e.preventDefault();
+        const navOffset = 70;
+        const targetY = box.getBoundingClientRect().top + window.pageYOffset - navOffset;
+        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+      }
+    }
+  };
+
   // Hover handlers with debounce for smooth mouse movement
   const handleMouseEnter = () => {
     if (closeTimerRef.current) {
@@ -226,7 +239,7 @@ export default function Navbar() {
 
           {/* Header CTAs & Mobile Toggle */}
           <div className="header-actions">
-            <Link to="/contact" className="btn-pill btn-pill-primary header-cta-btn">
+            <Link to="/contact" className="btn-pill btn-pill-primary header-cta-btn" onClick={handleExpertClick}>
               <span>Talk to an Expert</span>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -351,14 +364,14 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/contact" className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`} onClick={closeDrawer}>
+            <NavLink to="/contact" className={({ isActive }) => `mobile-nav-link ${isActive ? 'active' : ''}`} onClick={handleExpertClick}>
               Contact Us
             </NavLink>
           </li>
         </ul>
 
         <div className="mobile-drawer-cta">
-          <Link to="/contact" className="btn-pill btn-pill-primary" style={{ width: '100%' }} onClick={closeDrawer}>
+          <Link to="/contact" className="btn-pill btn-pill-primary" style={{ width: '100%' }} onClick={handleExpertClick}>
             Talk to an Expert
           </Link>
         </div>

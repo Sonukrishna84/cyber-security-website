@@ -5,19 +5,29 @@ export default function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    if (hash) {
-      const targetId = hash.replace(/^#/, '');
+    const isMobile = typeof window !== 'undefined' && window.innerWidth <= 768;
+
+    // If navigating to contact on mobile without a hash, auto-target the Get In Touch box
+    const effectiveHash = (pathname === '/contact' && isMobile && !hash)
+      ? '#contact-info-section'
+      : hash;
+
+    if (effectiveHash) {
+      const targetId = effectiveHash.replace(/^#/, '');
       const scrollToHashElement = (attempts = 0) => {
-        const element = document.getElementById(targetId) || document.querySelector(hash);
+        const element = document.getElementById(targetId) || document.querySelector(effectiveHash);
         if (element) {
-          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        } else if (attempts < 10) {
-          // Retry after brief tick to accommodate React rendering
-          setTimeout(() => scrollToHashElement(attempts + 1), 60);
+          const navOffset = isMobile ? 70 : 84;
+          const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: Math.max(0, elementPosition - navOffset),
+            behavior: 'smooth'
+          });
+        } else if (attempts < 15) {
+          setTimeout(() => scrollToHashElement(attempts + 1), 50);
         }
       };
-      // Allow slight tick for route transition to finish
-      setTimeout(() => scrollToHashElement(0), 40);
+      setTimeout(() => scrollToHashElement(0), 50);
       return;
     }
 

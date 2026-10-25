@@ -3,11 +3,21 @@ import { Link, useLocation } from 'react-router-dom';
 import { SERVICE_CATEGORIES } from '../data/servicesData';
 import ServiceIcon from '../components/ServiceIcon';
 
+// Triplicate categories so that infinite loop never has a blank edge on any display
+const MARQUEE_CATEGORIES = [
+  ...SERVICE_CATEGORIES.map(c => ({ ...c, _marqueeKey: `set1-${c.id}` })),
+  ...SERVICE_CATEGORIES.map(c => ({ ...c, _marqueeKey: `set2-${c.id}` })),
+  ...SERVICE_CATEGORIES.map(c => ({ ...c, _marqueeKey: `set3-${c.id}` })),
+];
+
 export default function ServicesPage() {
   const [activeCategory, setActiveCategory] = useState(SERVICE_CATEGORIES[0].id);
   const [isLaptopZoomed, setIsLaptopZoomed] = useState(false);
   const location = useLocation();
   const chipsScrollRef = React.useRef(null);
+  const isPausedRef = React.useRef(false);
+  const pauseTimeoutRef = React.useRef(null);
+  const scrollPosRef = React.useRef(0);
 
   // SEO Document Title and Meta Description
   useEffect(() => {
@@ -74,30 +84,86 @@ export default function ServicesPage() {
     e.preventDefault();
     setActiveCategory(id);
     window.history.pushState(null, '', `#${id}`);
+
+    // Pause continuous scroll briefly on click
+    isPausedRef.current = true;
+    if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    pauseTimeoutRef.current = setTimeout(() => {
+      isPausedRef.current = false;
+    }, 3000);
+
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
-  // Auto-scroll active chip into view inside the horizontal category selector
+  // Smooth continuous auto-scroll to the left
   useEffect(() => {
-    if (activeCategory && chipsScrollRef.current) {
-      const activeChip = chipsScrollRef.current.querySelector(`[href="#${activeCategory}"]`);
-      if (activeChip) {
-        const chipLeft = activeChip.offsetLeft;
-        const chipWidth = activeChip.offsetWidth;
-        const containerWidth = chipsScrollRef.current.offsetWidth;
-        const targetScroll = chipLeft - (containerWidth / 2) + (chipWidth / 2);
-        chipsScrollRef.current.scrollTo({ left: targetScroll, behavior: 'smooth' });
+    const scroller = chipsScrollRef.current;
+    if (!scroller) return;
+
+    let animId;
+    let lastTime = performance.now();
+    const speed = 36; // 36px/sec smooth and readable
+
+    const step = (now) => {
+      const dt = Math.min((now - lastTime) / 1000, 0.1);
+      lastTime = now;
+
+      if (!isPausedRef.current && scroller) {
+        const setWidth = scroller.scrollWidth / 3;
+        if (setWidth > 0) {
+          scrollPosRef.current += speed * dt;
+          if (scrollPosRef.current >= setWidth) {
+            scrollPosRef.current -= setWidth;
+          }
+          scroller.scrollLeft = scrollPosRef.current;
+        }
+      } else if (scroller) {
+        scrollPosRef.current = scroller.scrollLeft;
       }
-    }
-  }, [activeCategory]);
+
+      animId = requestAnimationFrame(step);
+    };
+
+    animId = requestAnimationFrame(step);
+
+    return () => {
+      cancelAnimationFrame(animId);
+      if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    };
+  }, []);
 
   const handleChipsWheel = (e) => {
     if (chipsScrollRef.current && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
       chipsScrollRef.current.scrollLeft += e.deltaY;
+      scrollPosRef.current = chipsScrollRef.current.scrollLeft;
+      isPausedRef.current = true;
+      if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+      pauseTimeoutRef.current = setTimeout(() => {
+        isPausedRef.current = false;
+      }, 1800);
     }
+  };
+
+  const handleMouseEnter = () => {
+    isPausedRef.current = true;
+  };
+
+  const handleMouseLeave = () => {
+    isPausedRef.current = false;
+  };
+
+  const handleTouchStart = () => {
+    isPausedRef.current = true;
+  };
+
+  const handleTouchEnd = () => {
+    if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    pauseTimeoutRef.current = setTimeout(() => {
+      isPausedRef.current = false;
+    }, 2000);
   };
 
   return (
@@ -273,10 +339,14 @@ export default function ServicesPage() {
               className="services-mobile-chips-scroll services-category-chips-scroll"
               ref={chipsScrollRef}
               onWheel={handleChipsWheel}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onTouchStart={handleTouchStart}
+              onTouchEnd={handleTouchEnd}
             >
-              {SERVICE_CATEGORIES.map((cat) => (
+              {MARQUEE_CATEGORIES.map((cat) => (
                 <a
-                  key={cat.id}
+                  key={cat._marqueeKey}
                   href={`#${cat.id}`}
                   onClick={(e) => scrollToSection(e, cat.id)}
                   className={`mobile-category-chip category-chip-btn ${activeCategory === cat.id ? 'active' : ''}`}

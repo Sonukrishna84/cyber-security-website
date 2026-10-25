@@ -58,7 +58,7 @@ async function main() {
   const commitSha = await git.commit({
     fs,
     dir,
-    message: 'Remove dark background from official logo to make it transparent PNG',
+    message: 'Update home hero image and site accents to vibrant electric cyber blue theme',
     author: {
       name: 'Sonu Yadav',
       email: 'grihy236@gmail.com'
@@ -86,3 +86,4 @@ main().catch(err => {
   console.error('Error pushing to main:', err);
   process.exit(1);
 });
+

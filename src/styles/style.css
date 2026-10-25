@@ -11,20 +11,20 @@
   --bg-card: rgba(6, 22, 43, 0.75);
   --bg-card-hover: rgba(8, 30, 58, 0.9);
 
-  --accent-cyan: #00BFFF;
-  --accent-cyan-bright: #00E5FF;
-  --accent-blue: #087DFF;
-  --accent-glow: rgba(0, 191, 255, 0.3);
-  --accent-glow-soft: rgba(0, 191, 255, 0.15);
+  --accent-cyan: #00A3FF;
+  --accent-cyan-bright: #38BDF8;
+  --accent-blue: #0077FF;
+  --accent-glow: rgba(0, 140, 255, 0.35);
+  --accent-glow-soft: rgba(0, 140, 255, 0.18);
 
   --text-main: #FFFFFF;
   --text-muted: #8E9EB5;
   --text-silver: #D1DCEB;
   --text-dim: #607289;
 
-  --border-subtle: rgba(0, 191, 255, 0.15);
-  --border-card: rgba(8, 125, 255, 0.22);
-  --border-hover: rgba(0, 191, 255, 0.55);
+  --border-subtle: rgba(0, 140, 255, 0.18);
+  --border-card: rgba(0, 119, 255, 0.22);
+  --border-hover: rgba(0, 163, 255, 0.55);
 
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
@@ -72,11 +72,11 @@ html {
   background: #020B19;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 191, 255, 0.35);
+  background: rgba(0, 140, 255, 0.35);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #00BFFF;
+  background: var(--accent-cyan);
 }
 
 body {
@@ -167,11 +167,11 @@ img, svg {
 
 .cyan-text {
   color: var(--accent-cyan);
-  background: linear-gradient(135deg, #00BFFF 0%, #00E5FF 55%, #38bdf8 100%);
+  background: linear-gradient(135deg, #0084FF 0%, #00B4FF 48%, #38BDF8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
-  filter: drop-shadow(0 0 20px rgba(0, 191, 255, 0.45));
+  filter: drop-shadow(0 0 22px rgba(0, 140, 255, 0.5));
 }
 
 /* --- Container & Sections --- */
@@ -316,7 +316,7 @@ img, svg {
 }
 
 .nav-link.active {
-  color: #00BFFF;
+  color: var(--accent-cyan);
   font-weight: 600;
 }
 
@@ -328,9 +328,9 @@ img, svg {
   transform: translateX(-50%);
   width: 20px;
   height: 2.5px;
-  background: #00BFFF;
+  background: var(--accent-cyan);
   border-radius: 2px;
-  box-shadow: 0 0 10px #00BFFF;
+  box-shadow: 0 0 12px var(--accent-cyan);
 }
 
 /* Header CTAs & Hamburger */
@@ -387,16 +387,16 @@ img, svg {
 }
 
 .btn-pill-primary {
-  background: linear-gradient(135deg, #00BFFF 0%, #087DFF 100%);
+  background: linear-gradient(135deg, #0099FF 0%, #0066FF 100%);
   color: #FFFFFF !important;
   font-weight: 600;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 16px rgba(0, 191, 255, 0.4);
+  box-shadow: 0 4px 18px rgba(0, 119, 255, 0.45);
 }
 
 .btn-pill-primary:hover {
-  background: linear-gradient(135deg, #00D5FF 0%, #0088FF 100%);
-  box-shadow: 0 6px 24px rgba(0, 191, 255, 0.65);
+  background: linear-gradient(135deg, #00B4FF 0%, #0077FF 100%);
+  box-shadow: 0 6px 26px rgba(0, 140, 255, 0.65);
   transform: translateY(-2px);
   color: #FFFFFF !important;
 }
@@ -410,11 +410,11 @@ img, svg {
 }
 
 .btn-pill-secondary:hover {
-  background: rgba(0, 191, 255, 0.15);
-  border-color: #00BFFF;
-  color: #00BFFF;
+  background: var(--accent-glow-soft);
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
   transform: translateY(-2px);
-  box-shadow: 0 0 16px rgba(0, 191, 255, 0.35);
+  box-shadow: 0 0 16px var(--accent-glow);
 }
 
 /* --- Hero Section (Exact Match to Reference Template) --- */
@@ -454,8 +454,8 @@ img, svg {
   align-items: center;
   gap: 8px;
   padding: 6px 14px;
-  background: rgba(0, 191, 255, 0.08);
-  border: 1px solid rgba(0, 191, 255, 0.28);
+  background: rgba(0, 140, 255, 0.08);
+  border: 1px solid rgba(0, 140, 255, 0.28);
   border-radius: var(--radius-full);
   margin-bottom: 16px;
   backdrop-filter: blur(8px);
@@ -484,7 +484,7 @@ img, svg {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #00BFFF;
+  color: var(--accent-cyan);
   margin-bottom: 8px;
 }
 
@@ -611,10 +611,11 @@ img, svg {
   position: relative;
   background-color: #020B19;
   background-image: 
+    radial-gradient(ellipse 65% 55% at 75% 50%, rgba(0, 102, 255, 0.22) 0%, rgba(2, 11, 25, 0) 70%),
     linear-gradient(90deg, #020B19 0%, rgba(2, 11, 25, 0.95) 34%, rgba(2, 11, 25, 0.55) 48%, rgba(2, 11, 25, 0.05) 66%, transparent 100%),
     url('/assets/images/hero-secure-protect-shield.jpg');
-  background-size: 100% 100%, auto 85%;
-  background-position: 0 0, calc(100% + 25px) center;
+  background-size: 100% 100%, 100% 100%, auto 85%;
+  background-position: 0 0, 0 0, calc(100% + 25px) center;
   background-repeat: no-repeat;
   padding: 80px 0 72px;
   min-height: 560px;
@@ -651,26 +652,26 @@ img, svg {
 }
 
 .hero-btn-main {
-  background: linear-gradient(135deg, #00BFFF 0%, #0088FF 100%) !important;
+  background: linear-gradient(135deg, #0099FF 0%, #0066FF 100%) !important;
   color: #FFFFFF !important;
   font-weight: 600 !important;
   padding: 12px 26px !important;
   font-size: 0.92rem !important;
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
-  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.45) !important;
+  box-shadow: 0 4px 20px rgba(0, 119, 255, 0.45) !important;
   border-radius: var(--radius-full) !important;
 }
 
 .hero-btn-main:hover {
-  background: linear-gradient(135deg, #00D5FF 0%, #0099FF 100%) !important;
-  box-shadow: 0 6px 28px rgba(0, 191, 255, 0.7) !important;
+  background: linear-gradient(135deg, #00B4FF 0%, #0077FF 100%) !important;
+  box-shadow: 0 6px 28px rgba(0, 140, 255, 0.7) !important;
   transform: translateY(-2px);
 }
 
 .hero-btn-secondary {
   background: rgba(3, 16, 36, 0.75) !important;
   color: #FFFFFF !important;
-  border: 1.5px solid rgba(0, 191, 255, 0.45) !important;
+  border: 1.5px solid rgba(0, 140, 255, 0.45) !important;
   padding: 12px 24px !important;
   font-size: 0.92rem !important;
   font-weight: 500 !important;
@@ -679,19 +680,19 @@ img, svg {
 }
 
 .hero-btn-secondary:hover {
-  background: rgba(0, 191, 255, 0.15) !important;
-  border-color: #00BFFF !important;
-  color: #00BFFF !important;
+  background: rgba(0, 140, 255, 0.15) !important;
+  border-color: #00A3FF !important;
+  color: #00A3FF !important;
   transform: translateY(-2px);
-  box-shadow: 0 0 18px rgba(0, 191, 255, 0.35) !important;
+  box-shadow: 0 0 18px rgba(0, 140, 255, 0.4) !important;
 }
 
 /* --- 5-Item Solutions Bar Section --- */
 .hero-solutions-bar-section {
   width: 100%;
   background: #020C1C;
-  border-top: 1px solid rgba(0, 191, 255, 0.18);
-  border-bottom: 1px solid rgba(0, 191, 255, 0.18);
+  border-top: 1px solid rgba(0, 140, 255, 0.2);
+  border-bottom: 1px solid rgba(0, 140, 255, 0.2);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
   position: relative;
   z-index: 10;
@@ -711,7 +712,7 @@ img, svg {
   text-align: center;
   padding: 34px 16px;
   text-decoration: none;
-  border-right: 1px solid rgba(0, 191, 255, 0.12);
+  border-right: 1px solid rgba(0, 140, 255, 0.14);
   transition: all var(--transition-base);
   position: relative;
   background: transparent;
@@ -722,7 +723,7 @@ img, svg {
 }
 
 .solution-bar-item:hover {
-  background: rgba(0, 191, 255, 0.05);
+  background: rgba(0, 140, 255, 0.06);
 }
 
 .solution-bar-icon {
@@ -731,7 +732,7 @@ img, svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #00BFFF;
+  color: #0099FF;
   margin-bottom: 14px;
   transition: transform var(--transition-fast), color var(--transition-fast), filter var(--transition-fast);
 }
@@ -739,13 +740,13 @@ img, svg {
 .solution-bar-icon svg {
   width: 38px;
   height: 38px;
-  filter: drop-shadow(0 0 10px rgba(0, 191, 255, 0.45));
+  filter: drop-shadow(0 0 10px rgba(0, 140, 255, 0.5));
 }
 
 .solution-bar-item:hover .solution-bar-icon {
   transform: translateY(-3px) scale(1.08);
-  color: #00E5FF;
-  filter: drop-shadow(0 0 16px rgba(0, 229, 255, 0.75));
+  color: #38BDF8;
+  filter: drop-shadow(0 0 16px rgba(0, 163, 255, 0.8));
 }
 
 .solution-bar-label {
@@ -801,17 +802,17 @@ img, svg {
   transform: translate(-50%, -50%);
   width: 34px;
   height: 3.5px;
-  background: #00BFFF;
+  background: var(--accent-cyan);
   border-radius: 3px;
-  box-shadow: 0 0 12px #00BFFF, 0 0 20px rgba(0, 191, 255, 0.8);
+  box-shadow: 0 0 12px var(--accent-cyan), 0 0 20px var(--accent-glow);
 }
 
 /* Clean Horizontal Divider Line (Matching Reference Template) */
 .hero-stats-divider {
   width: 100%;
   height: 1px;
-  background: linear-gradient(90deg, rgba(0, 191, 255, 0.15) 0%, rgba(0, 229, 255, 0.5) 45%, rgba(0, 191, 255, 0.4) 75%, rgba(0, 191, 255, 0.15) 100%);
-  box-shadow: 0 0 10px rgba(0, 191, 255, 0.35);
+  background: linear-gradient(90deg, rgba(0, 140, 255, 0.15) 0%, rgba(0, 163, 255, 0.5) 45%, rgba(0, 140, 255, 0.4) 75%, rgba(0, 140, 255, 0.15) 100%);
+  box-shadow: 0 0 10px rgba(0, 140, 255, 0.35);
   margin-top: 0;
   position: relative;
   z-index: 5;
@@ -821,8 +822,8 @@ img, svg {
 .stats-strip {
   background: #020B19;
   background-image: 
-    radial-gradient(ellipse at 85% 50%, rgba(0, 191, 255, 0.08) 0%, transparent 60%),
-    radial-gradient(circle at 12% 50%, rgba(8, 125, 255, 0.08) 0%, transparent 50%);
+    radial-gradient(ellipse at 85% 50%, rgba(0, 140, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 12% 50%, rgba(0, 102, 255, 0.08) 0%, transparent 50%);
   border-bottom: 1px solid var(--border-subtle);
   padding: 18px 0 22px;
   position: relative;
@@ -855,10 +856,10 @@ img, svg {
   display: block;
   width: 48px;
   height: 3px;
-  background: #00BFFF;
+  background: var(--accent-cyan);
   border-radius: 2px;
   margin-bottom: 8px;
-  box-shadow: 0 0 12px #00BFFF, 0 0 22px rgba(0, 191, 255, 0.85);
+  box-shadow: 0 0 12px var(--accent-cyan), 0 0 22px var(--accent-glow);
 }
 
 .stats-intro-title {
@@ -1691,8 +1692,8 @@ img, svg {
   .hero-home-section {
     padding: 64px 0 52px;
     min-height: 480px;
-    background-size: 100% 100%, auto 85%;
-    background-position: 0 0, calc(100% + 35px) center;
+    background-size: 100% 100%, 100% 100%, auto 85%;
+    background-position: 0 0, 0 0, calc(100% + 35px) center;
   }
   .hero-solutions-bar {
     grid-template-columns: repeat(5, 1fr);

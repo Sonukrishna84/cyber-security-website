@@ -27,7 +27,9 @@ dist-ssr/
 # Operating System Files
 .DS_Store
 Thumbs.db
-*.backup.png
+# Scratch and temporary scripts
+scratch/
+*.backup.*
 
 # Environment variables
 .env

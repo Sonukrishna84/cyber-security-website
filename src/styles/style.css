@@ -5712,12 +5712,12 @@ nav.breadcrumbs {
   top: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%) translateY(10px);
-  width: min(960px, calc(100vw - 32px));
+  width: min(920px, calc(100vw - 32px));
   background: rgba(3, 14, 32, 0.97);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(0, 191, 255, 0.25);
-  border-radius: 18px;
+  border-radius: 16px;
   box-shadow: 0 24px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(0, 122, 255, 0.15);
   opacity: 0;
   visibility: hidden;
@@ -5807,15 +5807,15 @@ nav.breadcrumbs {
 .megamenu-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px 12px;
-  padding: 16px 20px;
+  gap: 10px 14px;
+  padding: 20px 22px;
 }
 
 .megamenu-item {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 14px;
+  padding: 11px 14px;
   border-radius: 10px;
   text-decoration: none;
   background: rgba(255, 255, 255, 0.015);

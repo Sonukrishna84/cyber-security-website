@@ -172,24 +172,6 @@ export default function Navbar() {
                   aria-labelledby="services-nav-item"
                 >
                   <div className="megamenu-inner">
-                    <div className="megamenu-header-row">
-                      <div className="megamenu-header-title">
-                        <span className="megamenu-badge">OUR EXPERTISE</span>
-                        <h4>Cybersecurity Solutions &amp; Practices</h4>
-                      </div>
-                      <Link 
-                        to="/services" 
-                        className="megamenu-view-all"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        <span>View All Services Overview</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                      </Link>
-                    </div>
-
                     {/* 9 Services 3x3 Grid */}
                     <div className="megamenu-grid">
                       {SERVICE_CATEGORIES.map((cat) => (
@@ -208,29 +190,6 @@ export default function Navbar() {
                           </div>
                         </Link>
                       ))}
-                    </div>
-
-                    {/* Mega-menu Bottom Strip */}
-                    <div className="megamenu-footer-strip">
-                      <div className="megamenu-footer-note">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <line x1="12" y1="16" x2="12" y2="12"></line>
-                          <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                        </svg>
-                        <span>Need tailored consulting or architectural guidance? Our experts assist enterprise teams nationwide.</span>
-                      </div>
-                      <Link 
-                        to="/contact" 
-                        className="megamenu-footer-cta"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        <span>Talk to an Expert</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                          <line x1="5" y1="12" x2="19" y2="12"></line>
-                          <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                      </Link>
                     </div>
                   </div>
                 </div>

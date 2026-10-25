@@ -10,6 +10,7 @@
     "deploy": "node scripts/deploy-gh-pages.cjs"
   },
   "dependencies": {
+    "isomorphic-git": "^1.44.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.26.2"
@@ -18,6 +19,7 @@
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
+    "pngjs": "^7.0.0",
     "vite": "^5.4.2"
   }
 }

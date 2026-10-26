@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="dpdpBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071C33"/>
+      <stop offset="100%" stop-color="#020B19"/>
+    </linearGradient>
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00BFFF"/>
+      <stop offset="100%" stop-color="#087DFF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="420" rx="14" fill="url(#dpdpBg)" stroke="rgba(0, 191, 255, 0.2)" stroke-width="1.5"/>
+
+  <!-- Header Section -->
+  <text x="40" y="45" font-family="'Inter', sans-serif" font-size="14" font-weight="700" fill="#00BFFF" letter-spacing="1">DPDP ACT, 2023 COMPLIANCE ARCHITECTURE</text>
+  <text x="40" y="68" font-family="'Inter', sans-serif" font-size="11" fill="#A8B8CC">Structured technical safeguards &amp; organizational governance framework</text>
+
+  <!-- Flow Steps Box 1: Data Principals -->
+  <g transform="translate(40, 95)">
+    <rect width="150" height="135" rx="10" fill="#06162B" stroke="rgba(0, 191, 255, 0.25)" stroke-width="1.5"/>
+    <circle cx="75" cy="40" r="18" fill="rgba(0, 191, 255, 0.15)" stroke="#00BFFF" stroke-width="1.5"/>
+    <!-- User Icon -->
+    <circle cx="75" cy="35" r="6" fill="#00BFFF"/>
+    <path d="M 64 50 C 64 45 69 43 75 43 C 81 43 86 45 86 50" stroke="#00BFFF" stroke-width="1.5" fill="none"/>
+    <text x="75" y="78" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#F5F8FC" text-anchor="middle">Data Principals</text>
+    <text x="75" y="96" font-family="'Inter', sans-serif" font-size="9" fill="#A8B8CC" text-anchor="middle">Individuals whose</text>
+    <text x="75" y="110" font-family="'Inter', sans-serif" font-size="9" fill="#A8B8CC" text-anchor="middle">personal data is processed</text>
+    <text x="75" y="122" font-family="'Inter', sans-serif" font-size="8" font-weight="600" fill="#00BFFF" text-anchor="middle">Notice &amp; Consent</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 195 162 L 225 162" stroke="url(#glowLine)" stroke-width="2" stroke-dasharray="4 2"/>
+  <polygon points="225,158 232,162 225,166" fill="#00BFFF"/>
+
+  <!-- Flow Steps Box 2: Data Fiduciary (Core) -->
+  <g transform="translate(235, 90)">
+    <rect width="170" height="145" rx="10" fill="#041224" stroke="#00BFFF" stroke-width="2"/>
+    <circle cx="85" cy="40" r="20" fill="rgba(8, 125, 255, 0.2)" stroke="#087DFF" stroke-width="1.5"/>
+    <!-- Shield Icon -->
+    <path d="M 85 28 L 97 34 V 44 C 97 51 85 55 85 55 C 85 55 73 51 73 44 V 34 Z" fill="#00BFFF" opacity="0.8"/>
+    <text x="85" y="80" font-family="'Inter', sans-serif" font-size="12" font-weight="700" fill="#F5F8FC" text-anchor="middle">Data Fiduciary</text>
+    <text x="85" y="98" font-family="'Inter', sans-serif" font-size="9" fill="#A8B8CC" text-anchor="middle">Your Organization</text>
+    <text x="85" y="112" font-family="'Inter', sans-serif" font-size="9" fill="#A8B8CC" text-anchor="middle">Governance &amp; Accountability</text>
+    <rect x="25" y="122" width="120" height="16" rx="4" fill="rgba(0, 191, 255, 0.15)"/>
+    <text x="85" y="133" font-family="'Inter', sans-serif" font-size="8" font-weight="700" fill="#00BFFF" text-anchor="middle">REASONABLE SAFEGUARDS</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 410 162 L 440 162" stroke="url(#glowLine)" stroke-width="2" stroke-dasharray="4 2"/>
+  <polygon points="440,158 447,162 440,166" fill="#087DFF"/>
+
+  <!-- Flow Steps Box 3: Data Processors & Safeguards -->
+  <g transform="translate(450, 95)">
+    <rect width="115" height="135" rx="10" fill="#06162B" stroke="rgba(0, 191, 255, 0.25)" stroke-width="1.5"/>
+    <circle cx="57" cy="40" r="18" fill="rgba(0, 191, 255, 0.15)" stroke="#00BFFF" stroke-width="1.5"/>
+    <!-- Server Icon -->
+    <rect x="47" y="32" width="20" height="6" rx="1.5" fill="#00BFFF"/>
+    <rect x="47" y="41" width="20" height="6" rx="1.5" fill="#00BFFF"/>
+    <text x="57" y="78" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#F5F8FC" text-anchor="middle">Safeguards</text>
+    <text x="57" y="96" font-family="'Inter', sans-serif" font-size="9" fill="#A8B8CC" text-anchor="middle">Cloud &amp; Vendor</text>
+    <text x="57" y="110" font-family="'Inter', sans-serif" font-size="9" fill="#A8B8CC" text-anchor="middle">Infrastructure</text>
+    <text x="57" y="122" font-family="'Inter', sans-serif" font-size="8" font-weight="600" fill="#087DFF" text-anchor="middle">Encryption / IAM</text>
+  </g>
+
+  <!-- Bottom 3 Pillars of Compliance Support -->
+  <g transform="translate(40, 260)">
+    <!-- Pillar 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="160" height="130" rx="8" fill="#06162B" stroke="rgba(0, 191, 255, 0.15)" stroke-width="1"/>
+      <circle cx="28" cy="28" r="12" fill="rgba(0, 191, 255, 0.1)"/>
+      <text x="28" y="32" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#00BFFF" text-anchor="middle">01</text>
+      <text x="48" y="32" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#F5F8FC">Data Mapping</text>
+      <text x="16" y="60" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">Systematic inventory of</text>
+      <text x="16" y="75" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">personal data collection,</text>
+      <text x="16" y="90" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">storage, flow &amp; lifecycle</text>
+      <text x="16" y="112" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#00BFFF">Lineage Assessment</text>
+    </g>
+
+    <!-- Pillar 2 -->
+    <g transform="translate(182, 0)">
+      <rect width="160" height="130" rx="8" fill="#06162B" stroke="rgba(0, 191, 255, 0.15)" stroke-width="1"/>
+      <circle cx="28" cy="28" r="12" fill="rgba(0, 191, 255, 0.1)"/>
+      <text x="28" y="32" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#00BFFF" text-anchor="middle">02</text>
+      <text x="48" y="32" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#F5F8FC">Security Controls</text>
+      <text x="16" y="60" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">Review of technical</text>
+      <text x="16" y="75" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">safeguards, encryption,</text>
+      <text x="16" y="90" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">access control &amp; logs</text>
+      <text x="16" y="112" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#00BFFF">Gap Mitigation</text>
+    </g>
+
+    <!-- Pillar 3 -->
+    <g transform="translate(364, 0)">
+      <rect width="160" height="130" rx="8" fill="#06162B" stroke="rgba(0, 191, 255, 0.15)" stroke-width="1"/>
+      <circle cx="28" cy="28" r="12" fill="rgba(0, 191, 255, 0.1)"/>
+      <text x="28" y="32" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#00BFFF" text-anchor="middle">03</text>
+      <text x="48" y="32" font-family="'Inter', sans-serif" font-size="11" font-weight="700" fill="#F5F8FC">Breach Readiness</text>
+      <text x="16" y="60" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">Incident notification</text>
+      <text x="16" y="75" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">protocols for DPBI</text>
+      <text x="16" y="90" font-family="'Inter', sans-serif" font-size="10" fill="#A8B8CC">&amp; affected principals</text>
+      <text x="16" y="112" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#00BFFF">Response Preparedness</text>
+    </g>
+  </g>
+</svg>
+

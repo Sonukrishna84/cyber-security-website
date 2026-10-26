@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="footer-grid">
           
           {/* Column 1: Brand */}
-          <div className="footer-col">
+          <div className="footer-col footer-col-brand">
             <Link to="/" className="brand-link" aria-label="Infronix Technologies & Solutions LLP Home">
               <img 
                 src="/assets/images/logo-stacked-clean.png" 
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
 
           {/* Column 2: Quick Links */}
-          <div className="footer-col">
+          <div className="footer-col footer-col-quicklinks">
             <h4>Quick Links</h4>
             <ul className="footer-links">
               <li><Link to="/">Home</Link></li>
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           {/* Column 3: Services */}
-          <div className="footer-col">
+          <div className="footer-col footer-col-services">
             <h4>Services</h4>
             <ul className="footer-links">
               <li><Link to="/services#endpoint-security">Endpoint Security</Link></li>
@@ -66,7 +66,7 @@ export default function Footer() {
           </div>
 
           {/* Column 4: DPDP Compliance */}
-          <div className="footer-col">
+          <div className="footer-col footer-col-dpdp">
             <h4>DPDP Compliance</h4>
             <ul className="footer-links">
               <li><Link to="/dpdp-compliance">DPDP Compliance Overview</Link></li>
@@ -76,7 +76,7 @@ export default function Footer() {
           </div>
 
           {/* Column 5: Contact Us */}
-          <div className="footer-col">
+          <div className="footer-col footer-col-contact">
             <h4>Contact Us</h4>
             <ul className="footer-contact-list">
               <li className="footer-contact-item">
